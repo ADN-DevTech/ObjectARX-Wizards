@@ -1,0 +1,36 @@
+<?xml version="1.0" standalone="yes" ?>
+<reactors>
+	<reactor name="AcApProfileManagerReactor" header="acprofile.h" templatefile="AcApProfileManagerReactor_tmpl" dbxflag="0"/>
+	<reactor name="AcEditorReactor" header="aced.h" templatefile="AcEditorReactor_tmpl" dbxflag="0" />
+	<reactor name="AcEditorReactor2" header="aced.h" templatefile="AcEditorReactor_tmpl" dbxflag="0" />
+  <reactor name="AcEditorReactor3" header="aced.h" templatefile="AcEditorReactor_tmpl" dbxflag="0" />
+	<reactor name="AcApDocManagerReactor" header="acdocman.h" templatefile="AcApDocManagerReactor_tmpl" dbxflag="0" />
+	<reactor name="AcEdInputContextReactor" header="acedinpt.h" templatefile="AcEdInputContextReactor_tmpl" dbxflag="0"/>
+	<reactor name="AcEdInputPointMonitor" header="acedinpt.h" templatefile="AcEdInputPointMonitor_tmpl" dbxflag="0"/>
+	<reactor name="AcEdInputPointFilter" header="acedinpt.h" templatefile="AcEdInputPointFilter_tmpl" dbxflag="0"/>
+	<reactor name="AcGsReactor" header="gs.h" templatefile="AcGsReactor_tmpl" dbxflag="0"/>
+	<reactor name="AcTransactionReactor" header="dbtrans.h" templatefile="AcTransactionReactor_tmpl" dbxflag="0"/>
+	<reactor name="AcApLongTransactionReactor" header="lngtrans.h" templatefile="AcApLongTransactionReactor_tmpl" dbxflag="0"/>
+	<reactor name="AcEdSSGetFilter" header="acssgetfilter.h" templatefile="AcEdSSGetFilter_tmpl" dbxflag="0"/>
+	<reactor name="AcEdSSGetFilter2" header="acssgetfilter.h" templatefile="AcEdSSGetFilter_tmpl" dbxflag="0"/>
+  <reactor name="AcEdSSGetFilter3" header="acssgetfilter.h" templatefile="AcEdSSGetFilter_tmpl" dbxflag="0"/>
+  <reactor name="AcEdSSGetFilter4" header="acssgetfilter.h" templatefile="AcEdSSGetFilter_tmpl" dbxflag="0"/>
+  <reactor name="AcPublishReactor" header="acpublishreactors.h" templatefile="AcPublishReactor_tmpl" dbxflag="0"/>
+	<reactor name="AcDMMReactor" header="acdmmapi.h" templatefile="AcDMMReactor_tmpl" dbxflag="0"/>
+	<reactor name="AcTcCatalogItemReactor" header="AcTc.h" templatefile="AcTcCatalogItemReactor_tmpl" dbxflag="0"/>
+	<reactor name="AcPlPlotReactor" header="AcPlPlotReactor.h" templatefile="AcPlPlotReactor_tmpl" dbxflag="0" />
+	<reactor name="AcPublishUIReactor" header="acpublishuireactors.h" templatefile="AcPublishUIReactor_tmpl" dbxflag="0" />
+	<reactor name="AcRxDLinkerReactor" header="rxdlinkr.h" templatefile="AcRxDLinkerReactor_tmpl" dbxflag="1"/>
+	<reactor name="AcRxEventReactor" header="rxevent.h" templatefile="AcRxEventReactor_tmpl" dbxflag="1"/>
+	<reactor name="AcDbDatabaseReactor" header="dbmain.h" templatefile="AcDbDatabaseReactor_tmpl" dbxflag="1"/>
+	<reactor name="AcDbSummaryInfoReactor" header="summinfo.h" templatefile="AcDbSummaryInfoReactor_tmpl" dbxflag="1"/>
+	<reactor name="AcDbObjectReactor" header="dbmain.h" templatefile="AcDbObjectReactor_tmpl" dbxflag="1"/>
+	<reactor name="AcDbEntityReactor" header="dbmain.h" templatefile="AcDbEntityReactor_tmpl" dbxflag="1"/>
+	<reactor name="AcDbLayoutManagerReactor" header="dblaymgrrctr.h" templatefile="AcDbLayoutManagerReactor_tmpl" dbxflag="1"/>
+	<reactor name="AcDbRasterImageDefReactor" header="imgdef.h" templatefile="AcDbRasterImageDefReactor_tmpl" dbxflag="1"/>
+	<reactor name="AcDbRasterImageDefTransReactor" header="imgdef.h" templatefile="AcDbRasterImageDefTransReactor_tmpl" dbxflag="1"/>
+	<reactor name="AcDbRasterImageDefFileAccessReactor" header="imgdef.h" templatefile="AcDbRasterImageDefFileAccessReactor_tmpl" dbxflag="1"/>
+	<reactor name="AcDbAppEntityGrips" header="dbappgrip.h" templatefile="AcDbAppEntityGrips_tmpl" dbxflag="1"/>
+	<reactor name="AcDbBlockInsertionPoints" header="dbappgrip.h" templatefile="AcDbBlockInsertionPoints_tmpl" dbxflag="1"/>
+  <reactor name="AcDbAnnotationScaleReactor" header="dbAnnotationScale.h" templatefile="AcDbAnnotationScaleReactor_tmpl" dbxflag="1"/>
+</reactors>

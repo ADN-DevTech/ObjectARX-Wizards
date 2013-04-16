@@ -1,0 +1,868 @@
+<!- Copyright (c) Autodesk, Inc. All rights reserved. -->
+<HTML DIR="LTR">
+	<HEAD>
+		<TITLE></TITLE>
+		<META content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema">
+    	<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+        <META HTTP-EQUIV="MSThemeCompatible" CONTENT="Yes">
+    	<LINK ID="LINKURL" REL="stylesheet" HREF="../../../../../1033/NewStyles.css">
+	    <SCRIPT>
+		    var strURL =window.external.FindSymbol ("PRODUCT_INSTALLATION_DIR") ;
+		    strURL +="VCWizards/" ;
+		    strURL +=window.external.GetHostLocale () ;
+		    strURL +="/NewStyles.css" ;
+    	    document.styleSheets ("LINKURL").href =strURL ;
+    	</SCRIPT>
+		<!--  -->
+		<!-- The SYMBOL tag is used to set the default values for the user-defined symbols.-->
+		<!--  -->
+		<SYMBOL NAME="CLASS_NAME_ROOT" TYPE="text" VALUE=""></SYMBOL>
+		<SYMBOL NAME="CLASS_NAME" TYPE="text" VALUE=""></SYMBOL>
+		<SYMBOL NAME="CHILDCLASS_NAME" TYPE="text" VALUE=""></SYMBOL>
+		<SYMBOL NAME="BASE_CLASS" TYPE="text" VALUE=""></SYMBOL>
+		<SYMBOL NAME="CHILD_DIALOG_NEEDED" TYPE="bool" VALUE="false"></SYMBOL>
+		<SYMBOL NAME="CHILD_RESOURCE_NEEDED" TYPE="bool" VALUE="false"></SYMBOL>
+		<SYMBOL NAME="FILTER_BASE" TYPE="text" VALUE="All"></SYMBOL>
+		<SYMBOL NAME="HEADER_FILE" TYPE="text" VALUE=""></SYMBOL>
+		<SYMBOL NAME="IMPL_FILE" TYPE="text" VALUE=""></SYMBOL>
+		<SYMBOL NAME="CHILDHEADER_FILE" TYPE="text" VALUE=""></SYMBOL>
+		<SYMBOL NAME="CHILDIMPL_FILE" TYPE="text" VALUE=""></SYMBOL>
+		<SYMBOL NAME="HEADER_FILE_VALID" TYPE="bool" VALUE="false"></SYMBOL>
+		<SYMBOL NAME="IMPL_FILE_VALID" TYPE="bool" VALUE="false"></SYMBOL>
+		<SYMBOL NAME="INCLUDE_HEADER" TYPE="text" VALUE=""></SYMBOL>
+		<SYMBOL NAME="IDD_DIALOG" TYPE="text" VALUE=""></SYMBOL>
+		<SYMBOL NAME="CREATE_DIALOG" TYPE="checkbox" VALUE="false"></SYMBOL>
+		<SYMBOL NAME="AUTOMATION_NONE" TYPE="radio" VALUE="true"></SYMBOL>
+		<SYMBOL NAME="AUTOMATION" TYPE="radio" VALUE="false"></SYMBOL>
+		<SYMBOL NAME="CREATABLE" TYPE="radio" VALUE="false"></SYMBOL>
+		<SYMBOL NAME="TYPEID" TYPE="text" VALUE=""></SYMBOL>
+		<SYMBOL NAME="TEMPLATE_HEADER" TYPE="text" VALUE=""></SYMBOL>
+		<SYMBOL NAME="TEMPLATE_IMPL" TYPE="text" VALUE=""></SYMBOL>
+		<SYMBOL NAME="DISPIID_STATIC_CONST_GUID_FORMAT" TYPE="text"></SYMBOL>
+		<SYMBOL NAME="DISPIID_REGISTRY_FORMAT" TYPE="text"></SYMBOL>
+		<SYMBOL NAME="CLSID_REGISTRY_FORMAT" TYPE="text"></SYMBOL>
+		<SYMBOL NAME="CLSID_IMPLEMENT_OLECREATE_FORMAT" TYPE="text"></SYMBOL>
+		<SYMBOL NAME="ACCESSIBILITY" TYPE="checkbox" VALUE="false"></SYMBOL>
+		<SYMBOL NAME="COLESERVERDOC" TYPE="checkbox" VALUE="false"></SYMBOL>
+		<SYMBOL NAME="COLECLIENTITEM" TYPE="checkbox" VALUE="false"></SYMBOL>
+		<SYMBOL NAME="CCOLORDIALOG" TYPE="checkbox" VALUE="false"></SYMBOL>
+		<SYMBOL NAME="CCONNECTIONPOINT" TYPE="checkbox" VALUE="false"></SYMBOL>
+		<SYMBOL NAME="CDOCOBJECTSERVER" TYPE="checkbox" VALUE="false"></SYMBOL>
+		<SYMBOL NAME="CDOCOBJECTSERVERITEM" TYPE="checkbox" VALUE="false"></SYMBOL>
+		<SYMBOL NAME="CFILEDIALOG" TYPE="checkbox" VALUE="false"></SYMBOL>
+		<SYMBOL NAME="CFONTDIALOG" TYPE="checkbox" VALUE="false"></SYMBOL>
+		<SYMBOL NAME="CPAGESETUPDIALOG" TYPE="checkbox" VALUE="false"></SYMBOL>
+		<SYMBOL NAME="CPRINTDIALOG" TYPE="checkbox" VALUE="false"></SYMBOL>
+		<SYMBOL NAME="CINTERNETSESSION" TYPE="checkbox" VALUE="false"></SYMBOL>
+		<SYMBOL NAME="CPROPERTYPAGE" TYPE="checkbox" VALUE="false"></SYMBOL>
+		<SYMBOL NAME="CCONTROLBAR" TYPE="checkbox" VALUE="false"></SYMBOL>
+		<SYMBOL NAME="CVIEW" TYPE="checkbox" VALUE="false"></SYMBOL>
+		<SYMBOL NAME="MAX_DOC_TYPE_NAME" TYPE="num" VALUE="15"></SYMBOL>
+		<SYMBOL NAME="MAX_FILE_NEW_NAME_SHORT" TYPE="num" VALUE="15"></SYMBOL>
+		<SYMBOL NAME="MAX_FILE_TYPE_ID" TYPE="num" VALUE="39"></SYMBOL>
+		<SYMBOL NAME="MAX_FILE_NEW_NAME_LONG" TYPE="num" VALUE="40"></SYMBOL>
+		<SYMBOL NAME="MAX_FILTER_NAME" TYPE="num" VALUE="100"></SYMBOL>
+		<SYMBOL NAME="DOCUMENT_TYPE_NAME" TYPE="text" VALUE=""></SYMBOL>
+		<SYMBOL NAME="DOCUMENT_FILE_EXTENSION" TYPE="text" VALUE=""></SYMBOL>
+		<SYMBOL NAME="DOCUMENT_FILE_TYPE_ID" TYPE="text" VALUE=""></SYMBOL>
+		<SYMBOL NAME="DOCUMENT_FILE_NEW_NAME_SHORT" TYPE="text" VALUE=""></SYMBOL>
+		<SYMBOL NAME="DOCUMENT_FILE_NEW_NAME_LONG" TYPE="text" VALUE=""></SYMBOL>
+		<SYMBOL NAME="DOCUMENT_FILTER_NAME" TYPE="text" VALUE=""></SYMBOL>
+		<SYMBOL NAME="DOCUMENT_MAIN_FRAME_CAPTION" TYPE="text" VALUE=""></SYMBOL>
+		<SYMBOL NAME="MERGE_FILE" TYPE="bool" VALUE="false"></SYMBOL>
+		<SYMBOL NAME="GEN_DOCTEMPLATE" TYPE="checkbox" VALUE="false"></SYMBOL>
+		<SYMBOL NAME="DOCUMENT_CLASS" TYPE="text" VALUE=""></SYMBOL>
+		<SYMBOL NAME="FRAME_CLASS" TYPE="text" VALUE=""></SYMBOL>
+		<SYMBOL NAME="MDI_APP" TYPE="bool" VALUE="false"></SYMBOL>
+	</HEAD>
+	<BODY BGCOLOR="BUTTONFACE" TOPMARGIN="0" LEFTMARGIN="0" RIGHTMARGIN="0" BOTTOMMARGIN="0" ONLOAD="InitDocument(document);" ONKEYDOWN="OnKey();" ONKEYPRESS="OnPress();" TEXT="Blue">
+		<TABLE CLASS="ONE" HEIGHT="100%" WIDTH="100%" BORDER="0" CELLPADDING="0" CELLSPACING="0" ID="Table1">
+			<COL WIDTH="178">
+			<COL>
+			<!--OPEN OF INTRODUCTORY INFORMATION TABLE//-->
+			<TR VALIGN="TOP">
+				<TD HEIGHT="79" WIDTH="100%" COLSPAN="2">
+					<TABLE CLASS="TWO" BORDER="0" CELLPADDING="0" CELLSPACING="0" ID="Table2">
+						<COL WIDTH="12">
+						<COL>
+						<COL WIDTH="12">
+						<TR>
+							<TD VALIGN="TOP" HEIGHT="12" WIDTH="12">
+								&nbsp;
+							</TD>
+							<TD VALIGN="TOP" HEIGHT="12">
+								&nbsp;
+							</TD>
+							<TD VALIGN="TOP" HEIGHT="12" WIDTH="12">
+								&nbsp;
+							</TD>
+							<TD CLASS="IMAGE" VALIGN="BOTTOM" WIDTH="110" ROWSPAN="2">
+								<DIV CLASS="SMALLA" ID="Layer0">
+									<IMG CLASS="SMALLEST" SRC="../../Images/MFCSupport.gif" WIDTH="63" HEIGHT="63" ALT="" BORDER="0">
+								</DIV>
+							</TD>
+							<TD VALIGN="TOP" HEIGHT="12" WIDTH="6" ROWSPAN="2">
+								&nbsp;
+							</TD>
+						</TR>
+						<TR>
+							<TD VALIGN="TOP" HEIGHT="65" WIDTH="12">
+								&nbsp;
+							</TD>
+							<TD VALIGN="TOP" HEIGHT="65">
+								<H4 CLASS="HEAD" ID="HEAD">Welcome</H4>
+							</TD>
+							<TD VALIGN="TOP" HEIGHT="65" WIDTH="12">
+								&nbsp;
+							</TD>
+						</TR>
+						<TR>
+							<TD VALIGN="TOP" CLASS="RULE" COLSPAN="5" HEIGHT="2">
+								<TABLE BORDER="0" WIDTH="100%" HEIGHT="1" CELLPADDING="0" CELLSPACING="0" ID="Table3">
+									<TR VALIGN="TOP">
+										<TD HEIGHT="1" WIDTH="100%" BGCOLOR="BUTTONSHADOW"></TD>
+										<TD HEIGHT="1" WIDTH="1" BGCOLOR="WINDOW"></TD>
+									</TR>
+								</TABLE>
+							</TD>
+						</TR>
+					</TABLE>
+				</TD>
+			</TR>
+			<!--CLOSE OF INTRODUCTORY INFORMATION TABLE//-->
+			<!--OPEN OF NAVIGATION, CONTENT, AND BUTTON TABLES//-->
+			<TR VALIGN="TOP">
+				<TD CLASS="Three" VALIGN="TOP" HEIGHT="100%" WIDTH="100%">
+					<TABLE CLASS="fixedSize" HEIGHT="100%" WIDTH="100%" BORDER="0" CELLPADDING="0" CELLSPACING="0" ID="Table4">
+						<TR VALIGN="TOP">
+							<TD CLASS="threeCustom" VALIGN="TOP" STYLE="BACKGROUND-IMAGE: URL(../../Images/MFCSupportBG.gif);">
+								<!--OPEN OF NAVIGATION TABLE//-->
+								<TABLE CLASS="THREE" BORDER="0" CELLPADDING="0" CELLSPACING="0" ID="Table5">
+									<COL WIDTH="12">
+									<COL WIDTH="166">
+									<COL WIDTH="1">
+									<TR>
+										<TD VALIGN="TOP" COLSPAN="3" HEIGHT="12">
+											&nbsp;
+										</TD>
+									</TR>
+									<TR height="85%">
+										<TD VALIGN="TOP" WIDTH="12">
+											&nbsp;
+										</TD>
+										<TD VALIGN="TOP" WIDTH="165">
+											<!--OPEN OF NAVIGATIONAL LINKS//-->
+											<DIV CLASS="LINKSELECTED">
+												<SPAN CLASS="VERTLINE1"><IMG SRC="../../Images/spacer.gif" WIDTH="1" HEIGHT="1" ALT="" BORDER="0">
+												</SPAN><SPAN CLASS="HORILINE1">
+													<TABLE WIDTH="167" HEIGHT="100%" BORDER="0" CELLPADDING="0" CELLSPACING="0" ID="Table6">
+														<TR VALIGN="TOP">
+															<TD CLASS="DOTTEDLINE" HEIGHT="1">
+															</TD>
+														</TR>
+														<TR VALIGN="TOP">
+															<TD HEIGHT="100%">
+																<IMG SRC="../../Images/spacer.gif" WIDTH="1" HEIGHT="28" ALT="" BORDER="0">
+															</TD>
+														</TR>
+														<TR VALIGN="TOP">
+															<TD CLASS="DOTTEDLINE" HEIGHT="1">
+															</TD>
+														</TR>
+													</TABLE>
+												</SPAN>
+												<TABLE WIDTH="160" HEIGHT="28" BORDER="0" CELLPADDING="0" CELLSPACING="0" CLASS="LINKTEXTSELECTED" ID="Table7">
+													<TR VALIGN="MIDDLE">
+														<TD WIDTH="156">
+															<SPAN ID="Main" TITLE="Specify class and file names as well as type of class to create." onclick="DisplayAboutBox(false);">
+																Names</SPAN>
+														</TD>
+														<TD WIDTH="4">
+															<IMG SRC="../../Images/spacer.gif" HEIGHT="1" WIDTH="4">
+														</TD>
+													</TR>
+												</TABLE>
+											</DIV>
+											<!--CLOSE OF NAVIGATIONAL LINKS//-->
+										</TD>
+										<TD WIDTH="1">
+											<DIV CLASS="VERTLINE">
+												<IMG SRC="../../Images/spacer.gif" WIDTH="1" HEIGHT="1" ALT="" BORDER="0">
+											</DIV>
+										</TD>
+									</TR>
+									<TR>
+										<TD VALIGN="top" WIDTH="12">&nbsp;</TD>
+										<TD VALIGN="top" WIDTH="165">
+											<DIV>
+												<TABLE WIDTH="166" HEIGHT="28" BORDER="0" CELLPADDING="0" CELLSPACING="0" CLASS="LINKTEXT" ID="Table8">
+													<TR VALIGN="bottom" >
+														<TD WIDTH="162">
+															<SPAN CLASS="ACTIVELINK" ID="ABOUT" TITLE="" onclick="DisplayAboutBox(true);" TABINDEX="1">
+																About...</SPAN>
+														</TD>
+														<TD WIDTH="4">
+															<IMG SRC="../../Images/spacer.gif" HEIGHT="1" WIDTH="4">
+														</TD>
+													</TR>
+												</TABLE>
+											</DIV>
+										</TD>
+										<TD WIDTH="1">
+											<DIV CLASS="VERTLINE">
+												<IMG SRC="../../Images/spacer.gif" WIDTH="1" HEIGHT="1" ALT="" BORDER="0">
+											</DIV>
+										</TD>
+									</TR>
+								</TABLE>
+							</TD>
+						</TR>
+					</TABLE>
+					<!--CLOSE OF NAVIGATION TABLE//-->
+				</TD>
+				<TD VALIGN="TOP" HEIGHT="100%">
+					<!--OPEN OF CONTENT AND BUTTON TABLE//-->
+					<TABLE CLASS="ONE" BORDER="0" CELLPADDING="0" CELLSPACING="0" ID="Table9">
+						<COL WIDTH="100%">
+						<TR VALIGN="TOP">
+							<TD HEIGHT="100%">
+								<!--OPEN OF CONTENT//-->
+								<div id="about" style="visibility:hidden; display:none;">
+									<table border="0" cellpadding="0" cellspacing="0" width="100%" height="100%" ID="Table13">
+										<tr>
+											<td colspan="5" height="12"><IMG SRC="../../Images/spacer.gif" WIDTH="1" HEIGHT="1"></td>
+										</tr>
+										<tr height="12">
+											<td width="12" rowspan="11"><IMG SRC="../../Images/spacer.gif" WIDTH="12" HEIGHT="1"></td>
+											<td colspan="3"><b><font size="2"><span id="ABOUTTITLE"></span></font></b></td>
+											<td width="12" rowspan="11"><IMG SRC="../../Images/spacer.gif" WIDTH="12" HEIGHT="1"></td>
+										</tr>
+										<tr height="12">
+											<td colspan="3" id="ABOUTVERSION">Version: </td>
+										</tr>
+										<tr height="12">
+											<td colspan="3">Copyright © Autodesk, Inc. All rights reserved.</td>
+										</tr>
+										<tr>
+											<td colspan="3" height="25"><IMG SRC="../../Images/spacer.gif" WIDTH="1" HEIGHT="1"></td>
+										</tr>
+										<tr height="12">
+											<td width="30"></td>
+											<td colspan="2"><b><u>by Autodesk Developer Technical Services</u></b></td>
+										</tr>
+										<tr height="12">
+											<td></td>
+											<td width="5"></td>
+											<td><b>Fenton Webb</b></td>
+										</tr>
+										<tr height="12">
+											<td></td>
+											<td width="5"></td>
+											<td><b>Cyrille Fauvel</b></td>
+										</tr>
+										<tr height="12">
+											<td></td>
+											<td></td>
+											<td></td>
+										</tr>
+										<tr>
+											<td colspan="3" height="25" width="100%"><IMG SRC="../../Images/spacer.gif" WIDTH="1" HEIGHT="1"></td>
+										</tr>
+										<tr height="12">
+											<td colspan="3">Updates freely available to ADN members on: <a href="http://adn.autodesk.com">
+													<font color="blue">http://adn.autodesk.com</font></a></td>
+										</tr>
+										<tr height="12">
+											<td colspan="3">Email wishlist items, and bug reports to: <a href="mailto:oarxwiz-feedback@autodesk.com">
+													<font color="blue">oarxwiz-feedback@autodesk.com</font></a></td>
+										</tr>
+										<tr>
+											<td colspan="5">&nbsp;</td>
+										</tr>
+									</table>
+								</div>
+								<div id="content">
+									<TABLE CLASS="CONTENT" BORDER="0" CELLPADDING="0" CELLSPACING="0" ID="Table10">
+										<COL WIDTH="12">
+										<COL WIDTH="193">
+										<COL WIDTH="12">
+										<COL WIDTH="193">
+										<COL WIDTH="12">
+										<TR>
+											<TD VALIGN="TOP" HEIGHT="12" COLSPAN="3">
+												&nbsp;
+											</TD>
+										</TR>
+										<TR>
+											<TD VALIGN="TOP" WIDTH="12">
+												&nbsp;
+											</TD>
+											<TD VALIGN="TOP">
+												<SPAN CLASS="itemTextTop" ID="CLASS_NAME_SPAN" TITLE="Name of the new ObjectARX MFC class that will be created.">
+													<LABEL FOR="CLASS_NAME" ID="CLASS_NAME_LABEL">C<U>l</U>ass name:</LABEL>
+													<BR>
+													<INPUT CLASS="sideBtn" ID="CLASS_NAME" TYPE="text" ACCESSKEY="l" VALUE="" onPropertychange="OnClass();" NAME="CLASS_NAME">
+												</SPAN>
+												<P CLASS="ElementSpacer16">&nbsp;</P>
+												<table>
+													<TR>
+														<td>
+															<SPAN CLASS="itemText" ID="BASE_CLASS_SPAN" TITLE="Name of the new ObjectARX MFC class that new class will derive from.">
+																<LABEL FOR="BASE_CLASS" ID="BASE_CLASS_LABEL"><U>B</U>ase class:</LABEL>
+																<BR>
+																<SELECT CLASS="sideBtn" ID="BASE_CLASS" SIZE="1" ACCESSKEY="b" onChange="OnBase();" NAME="BASE_CLASS">
+																</SELECT>
+															</SPAN>
+														</td>
+														<td>
+															<SPAN CLASS="itemText" ID="FILTER_BASE_SPAN" TITLE="Use this to drop down filter the bass classes into collections of specific functionality.">
+																<LABEL FOR="FILTER_BASE" ID="FILTER_BASE_LABLE"><U>F</U>ilter Base Classes by:</LABEL>
+																<BR>
+																<SELECT CLASS="sideBtn" ID="FILTER_BASE" SIZE="1" ACCESSKEY="F" onChange="OnFilterChange();" NAME="FILTER_BASE">
+																</SELECT>
+															</SPAN>
+														</td>
+													</TR>
+												</table>
+												<P CLASS="ElementSpacer6">&nbsp;</P>
+												<SPAN CLASS="itemText" ID="IDD_DIALOG_SPAN" TITLE="ID of dialog resource. Typing in an ID will create a new dialog resource. You can also select from the list if an existing one is available. Only enabled if base class is one of the following: CDialog, CFormView, COlePropertyPage, CPropertyPage or CDHtmlDialog.">
+													<LABEL ID="idd_dialog_title" ACCESSKEY="d" FOR="DialogList"><U>D</U>ialog ID:</LABEL>
+													<BR>
+													<INPUT CLASS="sideBtn" ID="IDD_DIALOG" TYPE="HIDDEN" NAME="IDD_DIALOG"></INPUT>
+													<OBJECT CLASS="itemText" ID="DialogList" ACCESSKEY="d" CLASSID="CLSID:5A0C78A8-07D8-48cd-B1DD-BA9752C79F1C">
+													</OBJECT>
+												</SPAN>
+												<P CLASS="ElementSpacer6">&nbsp;</P>
+												<NOBR><SPAN CLASS="itemText" ID="HEADER_FILE_SPAN" TITLE="Name of header file where class will be defined.">
+														<LABEL FOR="HEADER_FILE" ID="HEADER_FILE_LABEL">.h f<U>i</U>le:</LABEL>
+														<BR>
+														<INPUT CLASS="sideBtn2" ID="HEADER_FILE" ACCESSKEY="i" NAME="IsapiDirectoryName" TYPE="text" onPropertychange="window.external.AddSymbol('HEADER_FILE_VALID', false);">
+														<BUTTON CLASS="buttonClass3Custom" ID="BrowseHeaderBtn" TYPE="BUTTON" TITLE="Browse for header file." onClick="OnBrowseHeaderFile();">
+															...</BUTTON> </SPAN></NOBR>
+												<P CLASS="ElementSpacer6">&nbsp;</P>
+												<NOBR><SPAN CLASS="itemText" ID="IMPL_FILE_SPAN" TITLE="Name of implementation file for this class.">
+														<LABEL FOR="IMPL_FILE" ID="IMPL_FILE_LABEL">.c<U>p</U>p file:</LABEL>
+														<BR>
+														<INPUT CLASS="sideBtn2" ID="IMPL_FILE" ACCESSKEY="p" TYPE="text" onPropertychange="window.external.AddSymbol('IMPL_FILE_VALID', false);" NAME="IMPL_FILE">
+														<BUTTON CLASS="buttonClass3Custom" ID="BrowseImplBtn" TYPE="BUTTON" TITLE="Browse for implementation file." onClick="OnBrowseImplFile();">
+															...</BUTTON> </SPAN></NOBR>
+											</TD>
+											<TD VALIGN="TOP" WIDTH="12">
+												&nbsp;
+											</TD>
+										</TR>
+										<TR>
+											<TD VALIGN="TOP" HEIGHT="100%" COLSPAN="3">
+												&nbsp;
+											</TD>
+										</TR>
+									</TABLE>
+								<!--CLOSE OF CONTENT//-->
+							</TD>
+						</TR>
+						<TR VALIGN="BOTTOM">
+							<TD HEIGHT="48">
+								<!--OPEN OF BUTTON HTML//-->
+								<TABLE HEIGHT="48" BORDER="0" CELLPADDING="0" CELLSPACING="0" ID="Table11">
+									<COL WIDTH="12">
+									<COL>
+									<COL WIDTH="75">
+									<COL WIDTH="4">
+									<COL WIDTH="75">
+									<COL WIDTH="4">
+									<COL WIDTH="75">
+									<COL WIDTH="12">
+									<TR>
+										<TD VALIGN="TOP" CLASS="RULE" COLSPAN="8" HEIGHT="2">
+											<TABLE BORDER="0" WIDTH="100%" HEIGHT="1" CELLPADDING="0" CELLSPACING="0" ID="Table12">
+												<TR VALIGN="TOP">
+													<TD HEIGHT="1" WIDTH="100%" BGCOLOR="BUTTONSHADOW"></TD>
+													<TD HEIGHT="1" WIDTH="1" BGCOLOR="WINDOW"></TD>
+												</TR>
+											</TABLE>
+										</TD>
+									</TR>
+									<TR>
+										<TD VALIGN="TOP" HEIGHT="11" COLSPAN="8">
+											&nbsp;
+										</TD>
+									</TR>
+									<TR>
+										<TD VALIGN="MIDDLE" HEIGHT="23" WIDTH="12">
+											&nbsp;
+										</TD>
+										<TD VALIGN="TOP" HEIGHT="23">
+											&nbsp;
+										</TD>
+										<TD VALIGN="MIDDLE" HEIGHT="23" WIDTH="75">
+											<BUTTON CLASS="BUTTONS" ID="FinishBtn" onClick="OnFinish(document);">Finish</BUTTON>
+										</TD>
+										<TD VALIGN="MIDDLE" HEIGHT="23" WIDTH="4">
+											&nbsp;
+										</TD>
+										<TD VALIGN="MIDDLE" HEIGHT="23" WIDTH="75">
+											<BUTTON CLASS="BUTTONS" ID="CancelBtn" onClick="window.external.Finish(document, 'cancel');">
+												Cancel</BUTTON>
+										</TD>
+										<TD VALIGN="MIDDLE" HEIGHT="23" WIDTH="4">
+											&nbsp;
+										</TD>
+										<TD VALIGN="MIDDLE" HEIGHT="23" WIDTH="75">
+											<BUTTON CLASS="BUTTONS" ID="HelpBtn" onClick="InvokeArxWizardHelp();">Help</BUTTON>
+										</TD>
+										<TD VALIGN="MIDDLE" HEIGHT="23" WIDTH="12">
+											&nbsp;
+										</TD>
+									</TR>
+									<TR>
+										<TD VALIGN="TOP" HEIGHT="12" COLSPAN="8">
+											&nbsp;
+										</TD>
+									</TR>
+								</TABLE>
+								<!--CLOSE OF BUTTON HTML//-->
+							</TD>
+						</TR>
+					</TABLE>
+					<!--CLOSE OF NAVIGATION, CONTENT, AND BUTTON TABLES//-->
+				</TD>
+			</TR>
+		</TABLE>
+	</BODY>
+</HTML>
+<SCRIPT LANGUAGE="JSCRIPT">
+
+var xmlDoc =new ActiveXObject ("Msxml2.DOMDocument") ;
+
+var tab_array =new Array () ;
+tab_array [0] =Main ;
+
+var nDlgIndex ;
+
+function InitDocument (document) {
+	setDirection () ;
+	
+	if ( IsValidAdeskProject (window.external.ProjectObject, 3) == false ) {
+		window.external.Finish (document, 'cancel') ;
+		return ;
+	}
+
+	//- Other texts
+	HEAD.innerText ="Welcome to the " + szArxWizMFCTitle ;
+
+	if (window.external.FindSymbol ("DOCUMENT_FIRST_LOAD") ) {
+		window.external.AddSymbol ("WIZARD_DIALOG_TITLE", szArxWizMFCTitle) ;
+		window.external.SetDefaults (document) ;
+		var strProjName = window.external.FindSymbol ("PROJECT_NAME") ;
+		window.external.AddSymbol ("SAFE_PROJECT_NAME", CreateSafeName (strProjName)) ;
+	}
+	PopulateDialogIDs () ;
+	DialogList.Enabled =false ;
+	nDlgIndex =DialogList.tabIndex ;
+	DialogList.tabIndex =-1 ;
+	idd_dialog_title.disabled =true ;
+
+	xmlDoc.async =false ;
+	xmlDoc.load ("mfcsupport.xml") ;
+	PopulateBaseList (0) ;
+
+	window.external.Load (document) ;
+	
+	PopulateFilterList () ;
+  	
+	var oProj = window.external.ProjectObject ;
+	if ( GetProjectFile (oProj, "IDL") || GetProjectFile(oProj, "ODL") )
+		window.external.AddSymbol ("PROJECT_SUPPORTS_AUTOMATION", true) ;
+	else
+		window.external.AddSymbol ("PROJECT_SUPPORTS_AUTOMATION", false) ;
+
+	OnBase () ;
+}
+
+function PopulateBaseList (param) {
+	//- Clear the bass class list
+	while ( BASE_CLASS.item (0) != null )
+		BASE_CLASS.remove (0) ;
+	//- Read from an XML file (create a dom document)
+	var msDomQuery =".//Entry" ;
+	if ( param != 0 )
+		msDomQuery =".//Entry[@FilterLevel = '" + param + "']" ;
+	var moNodList =xmlDoc.selectNodes (msDomQuery) ;
+	for ( var nCtr =0 ; nCtr < moNodList.length ; nCtr++ ) {
+		var msBaseClass =moNodList.item (nCtr).getAttribute ("name") ;
+		var oOption =document.createElement ("OPTION") ;
+		oOption.text =msBaseClass ;
+		oOption.value =msBaseClass ;
+		BASE_CLASS.add (oOption) ;
+	}
+	BASE_CLASS.selectedIndex =0 ;
+}
+
+function PopulateFilterList () {
+	//- Read from an XML file (create a dom document)
+	//var msDomQuery =".//object[@flag = 'X']" ;
+	var msDomQuery =".//Filter" ;
+	var moNodList =xmlDoc.selectNodes (msDomQuery) ;
+	
+	for ( var nCtr =0 ; nCtr < moNodList.length ; nCtr++ ) {
+		var msBaseClass =moNodList.item (nCtr).getAttribute ("name") ;
+		var oOption =document.createElement ("OPTION") ;
+		oOption.text =msBaseClass ;
+		oOption.value =msBaseClass ;
+		FILTER_BASE.add (oOption) ;
+	}
+	FILTER_BASE.selectedIndex =0 ;
+}
+
+function GetAttribute (msBaseClass, msAttribute) {
+	try {
+		var poNode =xmlDoc.selectSingleNode (".//Entry[@name = '" + msBaseClass + "']") ;
+		return (poNode.getAttribute (msAttribute)) ;
+	} catch ( e ) {
+		return (false) ;
+	}
+}
+
+function OnClass () {
+	var strClassName =CLASS_NAME.value ;
+	//- If dockcontrol bar with a resource Id then we have to create a child dialog
+	window.external.AddSymbol ("CHILDCLASS_NAME", strClassName + "ChildDlg") ;
+	
+	if (   strClassName.length == 0
+		|| (   strClassName.length == 1
+			&& (strClassName.charAt (0) == "C" || strClassName.charAt (0) == "c")
+		)
+	) {
+		if ( DialogList.ListIndex == -1 )
+			DialogList.Value ="" ;
+		HEADER_FILE.value ="" ;
+		IMPL_FILE.value ="" ;
+		
+		//- If dockcontrol bar with a resource Id then we have to create a child dialog
+		window.external.AddSymbol ("CHILDHEADER_FILE", "") ;
+		window.external.AddSymbol ("CHILDIMPL_FILE", "") ;
+	} else {
+		var strSafeProjName = window.external.FindSymbol("SAFE_PROJECT_NAME");
+
+		if ( strClassName.charAt (0) == "C" || strClassName.charAt (0) == "c" ) {
+			if ( DialogList.ListIndex == -1 )
+				DialogList.Value ="IDD_" + strClassName.substr (1).toUpperCase () ;
+			HEADER_FILE.value =strClassName.substr(1) + ".h" ;
+			IMPL_FILE.value =strClassName.substr(1) + ".cpp" ;
+			//- If dockcontrol bar with a resource Id then we have to create a child dialog
+			window.external.AddSymbol ("CHILDHEADER_FILE",strClassName.substr (1) + "ChildDlg.h") ;
+			window.external.AddSymbol ("CHILDIMPL_FILE", strClassName.substr (1) + "ChildDlg.cpp") ;
+		} else {
+			if ( DialogList.ListIndex == -1 )
+				DialogList.Value ="IDD_" + strClassName.toUpperCase () ;
+			HEADER_FILE.value =strClassName + ".h" ;
+			IMPL_FILE.value =strClassName + ".cpp" ;
+			//- If dockcontrol bar with a resource Id then we have to create a child dialog
+			window.external.AddSymbol ("CHILDHEADER_FILE",strClassName + "ChildDlg.h") ;
+			window.external.AddSymbol ("CHILDIMPL_FILE", strClassName + "ChildDlg.cpp") ;
+		}
+	}
+}
+
+var gbDocView =false ;
+var gbDocViewCheckDone =false ;
+
+function OnBase () {
+	if ( BASE_CLASS.selectedIndex == -1 )
+		return ;
+	var strBaseClass =BASE_CLASS.options [BASE_CLASS.selectedIndex].value ;
+	//- No child dialogs to be created
+	window.external.AddSymbol ("CHILD_DIALOG_NEEDED", false) ;
+	//- Now find out if it supports resource id's
+	var classOption =GetAttribute (strBaseClass, "Flag") ;
+	switch ( classOption ) {
+		case "C": //- Child dialog needed
+		{
+			window.alert ("This type of base class does not support direct resource ID handling.\nHowever, you can enter a resource ID here and a child dialog will be created for you.\nThis will then be included in the base class implementation as a child window.") ;			
+			//- If this class supports child dialog, then check to see if a dialog resource is entered
+			if ( DialogList.Value.length ) {
+				//- Child dialogs to be created
+				window.external.AddSymbol ("CHILD_DIALOG_NEEDED", true) ;
+			}
+		} ;
+		case "R" : //- Resource supported
+		case "RCW" : //- Resource supported, but actually needs to be a child window 
+		{
+			DialogList.Enabled =true ;
+			DialogList.tabIndex =nDlgIndex ;
+			idd_dialog_title.disabled =false ;
+
+			//- If it actually needs to be a child window like the fields dialog
+			if ( classOption == "RCW" ) {
+				//- Create a new symbol to indicate we require the childDialog.rc instead of the dialog.rc
+				window.external.AddSymbol ("CHILD_RESOURCE_NEEDED", true) ;
+			}
+		}
+		break ;
+		
+		default :
+		{
+			DialogList.Enabled =false ;
+			DialogList.tabIndex =-1 ;
+			idd_dialog_title.disabled =true ;
+		} ;
+	}
+}
+
+function OnFilterChange () {
+	PopulateBaseList (FILTER_BASE.selectedIndex) ;
+	OnBase () ;
+}
+
+function PopulateDialogIDs () {
+	if ( window.external.FindSymbol ("IS_PARENT_DIALOG") == "true" ) {
+		DialogList.AddItem (window.external.FindSymbol ("ITEM_NAME")) ;
+		DialogList.ListIndex =0 ;
+		return ;
+	}
+	var GNS =window.external.ProjectObject.Codemodel ;
+
+	var strDialogIds ="" ;
+	try {
+		strDialogIds =window.external.GetDialogIds () ;
+	} catch (e) {
+		var L_WarningLocation_Text ="Error in default.htm PopulateDialogIDs():\r\n" ;
+		var L_Warning1_Text ="Cannot access resource information. Check if the .rc file is opened in another editor." ;
+		window.external.ReportError (L_WarningLocation_Text + L_Warning1_Text) ;
+	}
+
+	var len =strDialogIds.length ;
+	var iBegin =0 ;
+	var iEnd =0 ;
+	while ( iEnd >= 0 ) {
+		var strDialogId ;
+		iEnd =strDialogIds.indexOf (",", iBegin) ;
+		if ( iEnd >= 0 ) {
+			strDialogId =strDialogIds.substr (iBegin, iEnd-iBegin) ;
+			iBegin =iEnd + 1 ;
+		} else {
+			strDialogId =strDialogIds.substr (iBegin) ;
+		}
+		var classes =GNS.DialogClasses (strDialogId) ;
+		if ( classes.Count > 0 )
+			continue ;
+		DialogList.AddItem (strDialogId) ;
+	}
+}
+
+function SetSymbols () {
+	var strBaseClass =BASE_CLASS.options [BASE_CLASS.selectedIndex].value ;
+
+	if ( DialogList.Enabled ) {
+		if ( DialogList.ListIndex == -1 ) {
+			var strDialogID =DialogList.Value ;
+			//- If the dialog ID is valid
+			if ( strDialogID.length ) {
+				var bDlgExists =false ;
+				for ( var nCntr =0 ; nCntr < DialogList.Count ; nCntr++ ) {
+					if ( strDialogID == DialogList.Item (nCntr) ) {
+						bDlgExists =true ;
+						break ;
+					}				
+				}
+				if ( !bDlgExists )
+					window.external.AddSymbol ("CREATE_DIALOG", true) ;
+			}
+		}
+		IDD_DIALOG.value =DialogList.Value ;
+	}
+	var strTemplateHeader =GetAttribute (strBaseClass, "template") + ".h" ;
+	var strTemplateImpl =GetAttribute (strBaseClass, "template") + ".cpp" ;
+	var strIncludeHeader =GetAttribute (strBaseClass, "header") ;
+	
+	window.external.AddSymbol ("TEMPLATE_HEADER", strTemplateHeader) ;
+	window.external.AddSymbol ("TEMPLATE_IMPL", strTemplateImpl) ;
+	window.external.AddSymbol ("INCLUDE_HEADER", strIncludeHeader) ;
+	
+	var strClassName =CLASS_NAME.value ;
+	var strSafeClassName =CreateSafeName (strClassName) ;
+	if ( strSafeClassName.substr (0, 1) == "C" )
+		strSafeClassName =strSafeClassName.substr (1, strSafeClassName.length) ;
+	window.external.AddSymbol ("CLASS_NAME_ROOT", strSafeClassName) ;
+}
+
+function OnBrowseHeaderFile () {
+	var strFile ;
+	try {
+		L_Title1_Text ="VS Wizards Select File" ;
+		L_Title2_Text ="Visual C++ Header Files (*.h)\0*.h\0\0" ;
+		strFile =window.external.GetOpenFileNameViaDlg (L_Title1_Text, window.external.FindSymbol ("PROJECT_PATH"),  L_Title2_Text, HEADER_FILE.value) ;
+	} catch ( e ) {
+		if ( e.number != OLE_E_PROMPTSAVECANCELLED ) {
+			var L_ErrMsg1_Text ="Error in OnBrowseHeaderFile()" ;
+			if ( e.description.length != 0 ) {
+				L_ErrMsg1_Text +=": " ;
+				L_ErrMsg1_Text +=e.description ;
+			}
+			window.external.ReportError (L_ErrMsg1_Text) ;
+		}
+		return ;
+	}
+	HEADER_FILE.value =strFile ;
+}
+
+function OnBrowseImplFile () {
+	var strFile ;
+	try {
+		L_Title3_Text ="VS Wizards Select File" ;
+		L_Title4_Text ="Visual C++ Files (*.cpp;*.h;*.inl;*.c)\0*.cpp;*.h;*.inl;*.c\0\0" ;
+		strFile =window.external.GetOpenFileNameViaDlg (L_Title3_Text, window.external.FindSymbol ("PROJECT_PATH"), L_Title4_Text, IMPL_FILE.value) ;
+	} catch ( e ) {
+		if ( e.number != OLE_E_PROMPTSAVECANCELLED ) {
+			var L_ErrMsg2_Text ="Error in OnBrowseImplFile()" ;
+			if ( e.description.length != 0 ) {
+				L_ErrMsg2_Text +=": " ;
+				L_ErrMsg2_Text +=e.description ;
+			}
+			window.external.ReportError (L_ErrMsg2_Text) ;
+		}
+		return ;
+	}
+	IMPL_FILE.value =strFile ;
+}
+
+function ValidateInput () {
+	var oInvalid =null ;
+	if ( !Validate (CLASS_NAME) )
+		oInvalid =CLASS_NAME ;
+	if ( oInvalid == null )
+		if ( !Validate (BASE_CLASS) )
+			oInvalid =BASE_CLASS ;
+	//- Check the dialog resource id's
+	if ( oInvalid == null ) {
+		//- But before we do that, find out if we are allowed to have nothing in the ID input
+		var strBaseClass =BASE_CLASS.options [BASE_CLASS.selectedIndex].value ;
+		//- Now find out if it supports resource id's
+		var classOption =GetAttribute (strBaseClass, "Flag") ;
+		//- Ok, test to see if a child dialog is not wanted, if not then make sure we have a resource id
+		if ( classOption != "C" ) {
+			if ( !Validate (DialogList) ) {
+				window.alert ("Please select a resource ID or enter one so that it can be created for you.") ;
+				return (false) ;
+			}
+		}
+	}
+	if ( oInvalid == null )
+		if ( !Validate (HEADER_FILE) )
+			oInvalid =HEADER_FILE ;
+	if ( oInvalid == null )
+		if ( !Validate (IMPL_FILE) )
+			oInvalid =IMPL_FILE ;
+	if ( oInvalid != null ) {
+		if ( gbShowError )
+			window.external.ReportError () ;
+		else
+			gbShowError =true ;
+		oInvalid.focus () ;
+		return (false) ;
+	}
+
+	return (true) ;
+}
+
+var gbShowError =true ;
+
+function Validate (obj) {
+	var bValid =true ;
+	switch ( obj.id ) {
+		case "CLASS_NAME":
+			bValid =window.external.ParentObject.ValidateMember (obj.value, vsCMElementClass) ;
+			break ;
+		case "BASE_CLASS":
+			if ( BASE_CLASS.selectedIndex == -1 )
+				bValid =false ;
+			break ;
+		case "DialogList":
+			if ( DialogList.Enabled )
+				bValid =window.external.ProjectObject.CodeModel.IsValidID (DialogList.Value) ;
+			break ;
+		case "HEADER_FILE":
+			if ( !window.external.FindSymbol ("HEADER_FILE_VALID") ) {
+				gbShowError =bValid =CanUseFileName (obj.value, true) ;
+				if ( !bValid )
+					break ;
+				window.external.AddSymbol ("HEADER_FILE_VALID", true) ;
+			}
+			bValid =ValidateFileNameAndEnsureInProject (obj.value) ;
+			if ( !bValid )
+				break ;
+			if ( HEADER_FILE.value == IMPL_FILE.value ) {
+				var L_ErrMsg_Text ="Header and implementation files cannot have the same name." ;
+				oErrObj =new Error (L_ErrMsg_Text) ;
+				SetErrorInfo (oErrObj) ;
+				bValid =false ;
+			}
+			break ;
+		case "IMPL_FILE":
+			if ( !window.external.FindSymbol ("IMPL_FILE_VALID") ) {
+				gbShowError =bValid =CanUseFileName (obj.value, false, false, true) ;
+				if ( !bValid )
+					break ;
+				window.external.AddSymbol ("IMPL_FILE_VALID", true) ;
+			}
+			bValid =ValidateFileNameAndEnsureInProject (obj.value, vsCMValidateFileExtCppSource) ;
+			break ;
+		default:
+			break ;
+	}
+
+	if ( typeof(bValid) == "undefined" )
+		bValid =false ;
+
+	return (bValid) ;
+}
+
+function DisplayAboutBox (flag) {
+	if ( flag == true ) {
+		content.style.visibility ="hidden" ;
+		content.style.display ="none" ;
+		about.style.display ="block" ;
+		about.style.visibility ="visible" ;
+		ABOUTTITLE.innerText =szArxWizMFCTitle ;
+		ABOUTVERSION.innerText ='Version: ' + szWizardsVersion ;
+	} else {
+		about.style.display ="none" ;
+		content.style.display ="block" ;
+		content.style.visibility ="visible" ;
+		about.style.visibility ="hidden" ;
+	}
+}
+
+function Next (document, linkto) {
+	if ( CLASS_NAME.length && !ValidateInput () )
+		return ;
+	SetSymbols () ;
+	window.external.Next (document, linkto) ;
+}
+
+function OnFinish (document) {
+	OnBase () ;
+	if ( !ValidateInput () )
+		return ;
+	
+	SetSymbols () ;
+	IDD_DIALOG.value =DialogList.Value ;
+	
+	OnWizFinish (document) ;
+}
+
+</SCRIPT>
+<SCRIPT language="JSCRIPT" id="INCLUDE_SCRIPT"></SCRIPT>
+<SCRIPT language="JSCRIPT" id="INCLUDE_COMMON"></SCRIPT>
+<SCRIPT language="JSCRIPT" id="INCLUDE_ARXCOMMON"></SCRIPT>
+<SCRIPT>
+document.scripts ("INCLUDE_SCRIPT").src =window.external.FindSymbol ("SCRIPT_COMMON_PATH") + "/Script.js" ;
+document.scripts ("INCLUDE_COMMON").src =window.external.FindSymbol ("SCRIPT_COMMON_PATH") + "/Common.js" ;
+
+var strPath =window.external.FindSymbol ("ABSOLUTE_PATH") ;
+strPath =strPath.substring (0, strPath.lastIndexOf ("\\") + 1) ;
+document.scripts ("INCLUDE_ARXCOMMON").src =strPath + "ArxWizCommon/arxCommon.js" ;
+</SCRIPT>
+<SCRIPT FOR="DialogList" EVENT="KeyDown(nKeyCode)">
+	OnWizComboKeyDown(nKeyCode);
+</SCRIPT>

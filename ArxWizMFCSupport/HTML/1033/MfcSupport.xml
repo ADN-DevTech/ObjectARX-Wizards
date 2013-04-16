@@ -1,0 +1,133 @@
+<?xml version="1.0" standalone="yes"?>
+<mfcsupport>
+	<Classes>
+		<!--	name        =Class Name -->
+		<!--	header      =Include Header -->
+		<!--	template    =Template Filename -->
+		<!--	FilterLevel =Filter level (see array below this one) -->
+		<!--	Flag        =Flags(R=Use Resource TypeID, C=ChildDialog, N=Not Used, RCW=Use resource/use childWin) -->
+
+		<!-- Dialog -->
+		<Entry name="CAdUiBaseDialog" header="adui.h" template="Dialog" FilterLevel="1" Flag="R"/>
+		<Entry name="CAdUiDialog" header="adui.h" template="Dialog" FilterLevel="1" Flag="R"/>
+		<Entry name="CAcUiDialog" header="acui.h" template="Dialog" FilterLevel="1" Flag="R"/>
+		<Entry name="CAdUiFileDialog" header="adui.h" template="FileDialog" FilterLevel="1" Flag="N"/>
+		<Entry name="CAcUiFileDialog" header="acui.h" template="FileDialog" FilterLevel="1" Flag="N"/>
+		<Entry name="CAdUiDialogBar" header="adui.h" template="Dialog" FilterLevel="1" Flag="R"/>
+		<Entry name="CAcUiDialogBar" header="acui.h" template="Dialog" FilterLevel="1" Flag="R"/>
+		<Entry name="CAdUiTabMainDialog" header="adui.h" template="Dialog" FilterLevel="1" Flag="R"/>
+		<Entry name="CAcUiTabMainDialog" header="acui.h" template="Dialog" FilterLevel="1" Flag="R"/>
+		<Entry name="CAdUiTabChildDialog" header="adui.h" template="TabDialog" FilterLevel="1" Flag="R"/>
+		<Entry name="CAcUiTabChildDialog" header="acui.h" template="TabDialog" FilterLevel="1" Flag="R"/>
+		<Entry name="CAcUiAlertDialog" header="acui.h" template="TabDialog" FilterLevel="1" Flag="R"/>
+		<Entry name="CAdUiDialogWorksheet" header="adui.h" template="Dialog" FilterLevel="1" Flag="R"/>
+		<Entry name="CAcUiDialogWorksheet" header="acui.h" template="Dialog" FilterLevel="1" Flag="R"/>
+		<Entry name="CNavDialog" header="acui.h" template="FileNavDialog" FilterLevel="1" Flag="N"/>
+		<Entry name="CAcUiNavDialog" header="acui.h" template="FileNavDialog" FilterLevel="1" Flag="N"/>
+
+    <!-- Tip windows -->
+		<Entry name="CAdUiTipWindow" header="adui.h" template="Control" FilterLevel="2" Flag="N"/>
+		<Entry name="CAdUiTextTip" header="adui.h" template="Control" FilterLevel="2" Flag="N"/>
+		<Entry name="CAdUiDrawTipText" header="adui.h" template="Control" FilterLevel="2" Flag="N"/>
+		
+		<!-- Tab Extensibility -->
+		<Entry name="CAdUiTab" header="adui.h" template="Control" FilterLevel="3" Flag="N"/>
+		<Entry name="CAcUiTab" header="acui.h" template="Control" FilterLevel="3" Flag="N"/>
+		<Entry name="CAdUiTabMainDialog" header="adui.h" template="Dialog" FilterLevel="3" Flag="R"/>
+		<Entry name="CAdUiTabChildDialog" header="adui.h" template="TabDialog" FilterLevel="3" Flag="R"/>
+		<Entry name="CAcUiTabMainDialog" header="acui.h" template="Dialog" FilterLevel="3" Flag="R"/>
+		<Entry name="CAcUiTabChildDialog" header="acui.h" template="TabDialog" FilterLevel="3" Flag="R"/>
+		
+		<!-- Control Bars -->
+		<Entry name="CAdUiDockControlBar" header="adui.h" template="DockControlBar" FilterLevel="4" Flag="C"/>
+		<Entry name="CAcUiDockControlBar" header="acui.h" template="DockControlBar" FilterLevel="4" Flag="C"/>
+		<Entry name="CAdUiPaletteSet" header="adui.h" template="PaletteSet" FilterLevel="4" Flag="N"/>
+		<Entry name="CAcTcUiToolPaletteSet" header="adui.h" template="PaletteSet" FilterLevel="4" Flag="N"/>
+
+		<!-- Edit Controls -->
+		<Entry name="CAdUiEdit" header="adui.h" template="Control" FilterLevel="5" Flag="N"/>
+		<Entry name="CAcUiEdit" header="acui.h" template="Control" FilterLevel="5" Flag="N"/>
+		<Entry name="CAcUiAngleEdit" header="acui.h" template="Control" FilterLevel="5" Flag="N"/>
+		<Entry name="CAcUiNumericEdit" header="acui.h" template="Control" FilterLevel="5" Flag="N"/>
+		<Entry name="CAcUiStringEdit" header="acui.h" template="Control" FilterLevel="5" Flag="N"/>
+		<Entry name="CAcUiSymbolEdit" header="acui.h" template="Control" FilterLevel="5" Flag="N"/>
+		<Entry name="CAdUiListBox" header="adui.h" template="Control" FilterLevel="5" Flag="N"/>
+		<Entry name="CAcUiListBox" header="acui.h" template="Control" FilterLevel="5" Flag="N"/>
+		<Entry name="CAdUiListCtrl" header="adui.h" template="Control" FilterLevel="5" Flag="N"/>
+		<Entry name="CAcUiListCtrl" header="acui.h" template="Control" FilterLevel="5" Flag="N"/>
+		<Entry name="CAdUiHeaderCtrl" header="adui.h" template="Control" FilterLevel="5" Flag="N"/>
+		<Entry name="CAcUiHeaderCtrl" header="acui.h" template="Control" FilterLevel="5" Flag="N"/>
+		<Entry name="CAcFdUiFieldFormatList" header="acui.h" template="Control" FilterLevel="5" Flag="N"/>
+		<Entry name="CAdUiGroupCtrl" header="acui.h" template="Control" FilterLevel="5" Flag="N"/>
+		<Entry name="CAdUiCoupledGroupCtrl" header="acui.h" template="Control" FilterLevel="5" Flag="N"/>
+    <Entry name="CAcFdUiFormatList" header="AcFdUiFormatList.h" template="Control" FilterLevel="5" Flag="N"/>
+    <Entry name="CAdUiSearchBox" header="aduiEdit.h" template="Control" FilterLevel="5" Flag="N"/>
+    
+    <!-- ComboBox Controls -->
+		<Entry name="CAdUiComboBox" header="adui.h" template="Control" FilterLevel="6" Flag="N"/>
+		<Entry name="CAcUiComboBox" header="acui.h" template="Control" FilterLevel="6" Flag="N"/>
+		<Entry name="CAcUiAngleComboBox" header="acui.h" template="Control" FilterLevel="6" Flag="N"/>
+		<Entry name="CAcUiNumericComboBox" header="acui.h" template="Control" FilterLevel="6" Flag="N"/>
+		<Entry name="CAcUiStringComboBox" header="acui.h" template="Control" FilterLevel="6" Flag="N"/>
+		<Entry name="CAcUiSymbolComboBox" header="acui.h" template="Control" FilterLevel="6" Flag="N"/>
+		<Entry name="CAcUiLineTypeComboBox" header="acui.h" template="Control" FilterLevel="6" Flag="N"/>
+		
+		<!-- Most Recently Used Combo Boxes -->
+		<Entry name="CAcUiMRUComboBox" header="acui.h" template="Control" FilterLevel="7" Flag="N"/>
+		<Entry name="CAcUiArrowHeadComboBox" header="acui.h" template="Control" FilterLevel="7" Flag="N"/>
+		<Entry name="CAcUiColorComboBox" header="acui.h" template="Control" FilterLevel="7" Flag="N"/>
+		<Entry name="CAcUiLineWeightComboBox" header="acui.h" template="Control" FilterLevel="7" Flag="N"/>
+		<Entry name="CAcUiPlotStyleTablesComboBox" header="acui.h" template="Control" FilterLevel="7" Flag="N"/>
+		<Entry name="CAcUiPlotStyleNamesComboBox" header="acui.h" template="Control" FilterLevel="7" Flag="N"/>
+		<Entry name="CAcUiMRUListBox" header="acui.h" template="Control" FilterLevel="7" Flag="N"/>
+		<Entry name="CAcUiTrueColorComboBox" header="acui.h" template="Control" FilterLevel="6" Flag="N"/>
+		
+		<!-- Button Classes -->
+		<Entry name="CAdUiOwnerDrawButton" header="adui.h" template="Control" FilterLevel="8" Flag="N"/>
+		<Entry name="CAcUiOwnerDrawButton" header="acui.h" template="Control" FilterLevel="8" Flag="N"/>
+		<Entry name="CAdUiBitmapButton" header="adui.h" template="Control" FilterLevel="8" Flag="N"/>
+		<Entry name="CAcUiBitmapButton" header="acui.h" template="Control" FilterLevel="8" Flag="N"/>
+		<Entry name="CAdUiBitmapStatic" header="adui.h" template="Control" FilterLevel="8" Flag="N"/>
+		<Entry name="CAcUiBitmapStatic" header="acui.h" template="Control" FilterLevel="8" Flag="N"/>
+		<Entry name="CAdUiDropSite" header="adui.h" template="Control" FilterLevel="8" Flag="N"/>
+		<Entry name="CAcUiDropSite" header="acui.h" template="Control" FilterLevel="8" Flag="N"/>
+		<Entry name="CAdUiToolButton" header="adui.h" template="Control" FilterLevel="8" Flag="N"/>
+		<Entry name="CAcUiToolButton" header="acui.h" template="Control" FilterLevel="8" Flag="N"/>
+		<Entry name="CAcUiPickButton" header="acui.h" template="Control" FilterLevel="8" Flag="N"/>
+		<Entry name="CAcUiSelectButton" header="acui.h" template="Control" FilterLevel="8" Flag="N"/>
+		
+		<!-- Navigation -->
+		<Entry name="CAcUiNavDialog" header="acui.h" template="FileNavDialog" FilterLevel="9" Flag="N"/>
+		<Entry name="CNavDialog" header="acui.h" template="FileNavDialog" FilterLevel="9" Flag="N"/>
+		<Entry name="CNavListCtrl" header="acui.h" template="Control" FilterLevel="9" Flag="N"/>		
+		
+		<!-- Palettes -->
+		<Entry name="CAdUiPalette" header="adui.h" template="Palette" FilterLevel="10" Flag="C"/>
+		<Entry name="CAdUiPaletteSet" header="adui.h" template="PaletteSet" FilterLevel="10" Flag="N"/>
+		<Entry name="CAcTcUiToolPalette" header="adui.h" template="Palette" FilterLevel="10" Flag="C"/>		
+		<Entry name="CAcTcUiToolPaletteSet" header="adui.h" template="PaletteSet" FilterLevel="10" Flag="N"/>
+
+		<!-- Fields -->
+		<Entry name="CAcFdUiFieldFormatList" header="AcFdUiFieldDialog.h" template="Control" FilterLevel="11" Flag="N"/>
+		<Entry name="CAcFdUiFieldDialog" header="AcFdUiFieldDialog.h" template="FieldDialog" FilterLevel="11" Flag="RCW"/>
+		<Entry name="CAcFdUiFieldFormatDialog" header="AcFdUiFieldFormatDialog.h" template="FieldFormatDialog" FilterLevel="11" Flag="RCW"/>
+		<Entry name="CAcFdUiFieldOptionDialog" header="AcFdUiFieldOptionDialog.h" template="FieldOptionDialog" FilterLevel="11" Flag="RCW"/>
+    <Entry name="CAcFdUiFormatDialog" header="AcFdUiFormatDialog.h" template="FieldOptionDialog" FilterLevel="11" Flag="RCW"/>
+            
+ </Classes>
+  
+	<Filters>
+		<Filter name="All"/>
+		<Filter name="Dialog Classes"/>
+		<Filter name="Tip Windows"/>
+		<Filter name="Tab Extensibility"/>
+		<Filter name="Dock Control Bars"/>
+		<Filter name="Edit Controls"/>
+		<Filter name="ComboBox Controls"/>
+		<Filter name="MRU (Most Recently Used) Combos"/>
+		<Filter name="Button Classes"/>
+		<Filter name="File Navigation"/>
+		<Filter name="Palettes"/>
+		<Filter name="Fields"/>
+	</Filters>
+</mfcsupport>

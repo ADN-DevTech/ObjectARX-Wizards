@@ -1,0 +1,24 @@
+StdAfx.cpp
+StdAfx.h
+[!if DOTNET_MODULE]
+AssemblyInfo.cpp
+[!endif]
+
+[!if APP_ARX_TYPE || APP_CRX_TYPE]
+DocData.cpp
+DocData.h
+[!endif]
+
+OpenFile | acrxEntryPoint.cpp
+root.cpp
+
+root.rc
+Resource.h
+[!if STD_COM_SERVER || ATL_COM_SERVER]
+root.idl
+[!endif]
+[!if ATL_COM_SERVER]
+root.rgs
+[!endif]
+
+OpenFile | ReadMe.txt

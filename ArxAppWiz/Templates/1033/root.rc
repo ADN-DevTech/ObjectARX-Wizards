@@ -1,0 +1,129 @@
+//Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+[!if NO_MFC]
+#include "winres.h"
+[!else]
+#include "afxres.h"
+[!endif]
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+	"resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+[!if NO_MFC]
+	"#include ""winres.h""\r\n"
+[!else]
+	"#include ""afxres.h""\r\n"
+[!endif]
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+[!if ATL_COM_SERVER]
+	"1 TYPELIB ""[!output RDS_SYMB][!output PROJECT_NAME].tlb""\r\n"
+[!endif]
+	"\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+	BLOCK "StringFileInfo"
+	BEGIN
+		BLOCK "040904B0"
+		BEGIN
+			VALUE "CompanyName", "\0"
+[!if APP_ARX_TYPE]
+			VALUE "FileDescription", "[!output PROJECT_NAME] ObjectARX application\0"
+[!else]
+			VALUE "FileDescription", "[!output PROJECT_NAME] ObjectDBX application\0"
+[!endif]
+			VALUE "FileVersion", "1, 0, 0, 1\0"
+			VALUE "InternalName", "[!output PROJECT_NAME]\0"
+			VALUE "LegalCopyright", "Copyright © 2012\0"
+[!if APP_ARX_TYPE]
+			VALUE "OriginalFilename", "[!output RDS_SYMB][!output PROJECT_NAME].arx\0"
+[!else]
+			VALUE "OriginalFilename", "[!output RDS_SYMB][!output PROJECT_NAME].dbx\0"
+[!endif]
+			VALUE "ProductName", "[!output PROJECT_NAME] Application\0"
+			VALUE "ProductVersion", "1, 0, 0, 1\0"
+[!if ATL_COM_SERVER]
+			VALUE "OLESelfRegister", "\0"
+[!endif]
+		END
+	END
+	BLOCK "VarFileInfo"
+	BEGIN
+		VALUE "Translation", 0x0409, 0x04B0
+    END
+END
+
+#endif    // !_MAC
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+	IDS_PROJNAME					"[!output PROJECT_NAME]"
+END
+
+
+[!if ATL_COM_SERVER]
+IDR_[!output UPPER_CASE_SAFE_PROJECT_NAME] REGISTRY "[!output PROJECT_NAME].rgs"
+[!endif]
+
+/////////////////////////////////////////////////////////////////////////////
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+[!if ATL_COM_SERVER]
+1 TYPELIB "[!output RDS_SYMB][!output PROJECT_NAME].tlb"
+[!endif]
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

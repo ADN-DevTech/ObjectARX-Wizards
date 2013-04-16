@@ -1,0 +1,48 @@
+	//- Interface definition
+	[
+		object,
+		uuid([!output INTERFACE_IID]),
+[!if INTERFACE_DUAL]
+		dual,
+[!endif]
+[!if AUTOMATION]
+		oleautomation,
+[!endif]
+[!if INTERFACE_DUAL || AUTOMATION]
+		nonextensible,
+[!endif]
+		helpstring("[!output INTERFACE_NAME] Interface"),
+		pointer_default(unique)
+	]
+[!if INTERFACE_DUAL]
+	interface [!output INTERFACE_NAME] : [!if ACAD_ENTITY_INTERFACE]IAcadEntity[!else]IAcadObject[!endif]
+[!else]
+	interface [!output INTERFACE_NAME] : IUnknown
+[!endif]
+	{
+	};
+	//- Library section of interface [!output INTERFACE_NAME]
+[!if CONNECTION_POINTS]
+	[
+		uuid([!output CONNECTION_POINT_IID]),
+		helpstring("_[!output INTERFACE_NAME]Events Interface")
+	]
+	dispinterface _[!output INTERFACE_NAME]Events
+	{
+		properties:
+		methods:
+	};
+[!endif]
+	[
+		uuid([!output CLSID_REGISTRY_FORMAT]),
+		helpstring("[!output TYPE_NAME]")
+	]
+	coclass [!output COCLASS]
+	{
+		[default] interface [!output INTERFACE_NAME];
+[!if CONNECTION_POINTS]
+		[default, source] dispinterface _[!output INTERFACE_NAME]Events;
+[!else]
+		[source] interface IAcadObjectEvents;
+[!endif]
+	};

@@ -1,0 +1,38 @@
+
+acrxEntryPoint.cpp
+
+[!if DOTNET_MODULE]
+AssemblyInfo.cpp
+[!endif]
+
+
+[!if APP_ARX_TYPE && !OMF_APP]
+DocData.cpp
+DocData.h
+[!endif]
+
+[!if APP_ARX_TYPE && MAP_API]
+mapHeaders.h
+[!endif]
+
+[!if OMF_APP && !DOTNET_MODULE]
+OmfApp.cpp
+OmfApp.h
+[!endif]
+[!if OMF_APP]
+omfHeaders.h
+[!endif]
+
+Resource.h
+
+Root.cpp
+Root.rc
+[!if STD_COM_SERVER || ATL_COM_SERVER]
+Root.idl
+[!endif]
+[!if ATL_COM_SERVER]
+Root.rgs
+[!endif]
+
+StdAfx.cpp
+StdAfx.h

@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+
+	<?define RTMProductVersion = "18.0.0"?> <!-- The first one - do not edit -->
+	<?define ProductVersion = "19.1.0"?>
+	<?define UpgradeCode = "{737C88C2-4A99-44F0-AD3D-32EEE71DF54D}"?>
+	
+	<Product 
+		Id="*" 
+		Codepage="1252" 
+		Language="1033" 
+		Manufacturer="Autodesk" 
+		Name="ObjectARX 2014 Wizards" 
+		UpgradeCode="$(var.UpgradeCode)" 
+		Version="$(var.ProductVersion)"
+	>
+	<Package 
+		Id='*'
+		Comments="Autodesk Developer Network" 
+		Compressed="yes"
+		InstallPrivileges="elevated" 			
+		InstallerVersion="300" 
+		Languages="1033" 
+		Manufacturer="by Cyrille Fauvel" 
+		Platform="x86"
+	/>
+
+	<Media Id="1" Cabinet="ObjectARXWizards.cab" EmbedCab="yes" CompressionLevel="high" VolumeLabel="DISK #1'" />
+	<Icon Id="ObjectARXWizards.ico" SourceFile="..\_Installs\VC\vcprojects\Autodesk\ArxAppWiz.ico" />
+	
+	<?include directory.wxi ?>
+	<?include feature.wxi ?>
+	<?include property.wxi ?>
+	<?include UI.wxi ?>
+
+	<Condition Message="Microsoft Visual Studio Pro/Premium/Ultimate 2010/2012 or Visual C++ Express Edition 2010/2012 must be present on the target machine.">
+		<![CDATA[VS2010_PRO_VC OR VC2010_EXPRESS_VC OR VS2012_PRO_VC OR VS2012_EXPRESS_VC]]>
+	</Condition>
+	<Condition Message="This application requires .NET Framework 4.0. Please install the .NET Framework then run this installer again.">
+		<![CDATA[MsiNetAssemblySupport >= "4.0"]]>
+	</Condition>
+	<!-- Condition Message="You need to be an administrator to install this product.">
+		Privileged
+	</Condition -->
+	
+	<!-- http://blogs.msdn.com/b/jschaffe/archive/2012/10/23/creating-wix-custom-actions-in-c-and-passing-parameters.aspx -->
+	<Binary Id="ArxWizPatchFiles.dll" SourceFile="Binary\ArxWizPatchFiles.CA.dll" />
+	<CustomAction Id="CA_PatchVSFiles" BinaryKey="ArxWizPatchFiles.dll" DllEntry="PatchVSFiles" Execute="immediate" Return="check" />
+	<Property Id="VSList" Value="VS2010_PRO_VC;VC2010_EXPRESS_VC;VS2012_PRO_VC;VS2012_EXPRESS_VC" />
+	<Property Id="ArxWizList" Value="ArxAppWiz;ArxAppWiz182;ArxAtlWizComWrapper;ArxAtlWizDynProp;ArxWizCustomObject;ArxWizJig;ArxWizMFCSupport;ArxWizNETWrapper;ArxWizReactors" />
+	<CustomAction Id="CA_PatchHTMLWizFiles" BinaryKey="ArxWizPatchFiles.dll" DllEntry="PatchHTMLWizFiles" Execute="immediate" Return="check" />
+	<CustomAction Id="CA_PatchPropsWizFiles" BinaryKey="ArxWizPatchFiles.dll" DllEntry="PatchPropsWizFiles" Execute="immediate" Return="check" />
+	
+	<InstallUISequence> <!-- msiexec /i -->
+		<Custom Action="CA_TARGETDIR" After="AppSearch"><![CDATA[TARGETDIR=""]]></Custom>
+		<Show Dialog="WelcomeForm" Before="CostFinalize"><![CDATA[Installed="" AND NOT RESUME]]></Show>
+		<Show Dialog="ResumeForm" Before="CostFinalize"><![CDATA[Installed="" AND RESUME]]></Show>
+		<Show Dialog="MaintenanceForm" Before="CostFinalize"><![CDATA[Installed<>""]]></Show>
+		<Show Dialog="ProgressForm" Before="ExecuteAction" />
+		
+		<Show Dialog="FatalErrorForm" OnExit="error"><![CDATA[NOT HideFatalErrorForm]]></Show>
+		<Show Dialog="UserExitForm" OnExit="cancel" />
+		<Show Dialog="FinishedForm" OnExit="success" />
+		
+		<Custom Action="PreventDowngrading" After="FindRelatedProducts"><![CDATA[NEWERPRODUCTFOUND]]></Custom>
+	</InstallUISequence>
+	<InstallExecuteSequence>
+		<Custom Action="CA_TARGETDIR" Before="CostInitialize"><![CDATA[TARGETDIR=""]]></Custom>
+		<Custom Action="CA_PatchVSFiles" After="InstallFinalize"><![CDATA[REINSTALL OR NOT Installed]]></Custom>
+		<Custom Action="CA_PatchHTMLWizFiles" After="InstallFinalize"><![CDATA[REINSTALL OR NOT Installed]]></Custom>
+		<Custom Action="CA_PatchPropsWizFiles" After="InstallFinalize"><![CDATA[REINSTALL OR NOT Installed]]></Custom>
+		
+		<Custom Action="PreventDowngrading" After="FindRelatedProducts"><![CDATA[NEWERPRODUCTFOUND]]></Custom>
+		<RemoveExistingProducts Before="InstallInitialize" /> 
+	</InstallExecuteSequence>
+	
+	<CustomAction Id="CA_AdminUISequence" Property="InAdminUISequence" Value="1" Execute="firstSequence" />
+	<AdminUISequence> <!-- msiexec /a (or ACTION=ADMIN) + full UI or reduced UI -->
+		<Custom Action="CA_TARGETDIR" Before="CostInitialize"><![CDATA[TARGETDIR=""]]></Custom>
+		<Custom Action="CA_AdminUISequence" Before="CostInitialize"></Custom>
+		<Show Dialog="WelcomeForm" Before="CostFinalize"><![CDATA[Installed="" AND NOT RESUME]]></Show>
+		<Show Dialog="ResumeForm" Before="CostFinalize"><![CDATA[Installed="" AND RESUME]]></Show>
+		<Show Dialog="ProgressForm" Before="ExecuteAction" />
+		
+		<Show Dialog="FatalErrorForm" OnExit="error"><![CDATA[NOT HideFatalErrorForm]]></Show>
+		<Show Dialog="UserExitForm" OnExit="cancel" />
+		<Show Dialog="AdminFinishedForm" OnExit="success" />
+	</AdminUISequence>
+	<AdminExecuteSequence>
+		<Custom Action="CA_TARGETDIR" Before="CostInitialize"><![CDATA[TARGETDIR=""]]></Custom>
+		<Custom Action="CA_PatchVSFiles" After="InstallFinalize"><![CDATA[REINSTALL OR NOT Installed]]></Custom>
+		<Custom Action="CA_PatchHTMLWizFiles" After="InstallFinalize"><![CDATA[REINSTALL OR NOT Installed]]></Custom>
+		<Custom Action="CA_PatchPropsWizFiles" After="InstallFinalize"><![CDATA[REINSTALL OR NOT Installed]]></Custom>
+	</AdminExecuteSequence>
+	
+	<AdvertiseExecuteSequence> <!-- msiexec /j (or ACTION=ADVERTISE) -->
+	</AdvertiseExecuteSequence>
+	<!--AdvtExecuteSequence>
+	</AdvtExecuteSequence-->
+
+	<!-- http://mohundro.com/blog/2009/02/23/getting-started-with-wix-and-major-upgrades/ -->
+<!--
+	<CustomAction Id="ERRCA_CANCELNEWERVERSION" Error="[VSDVERSIONMSG]" />
+	<CustomAction Id="ERRCA_UIANDADVERTISED" Error="[VSDUIANDADVERTISED]" />
+	<Property Id="VSDNETURLMSG" Value="This setup requires the .NET Framework version [1].  Please install the .NET Framework and run this setup again.  The .NET Framework can be obtained from the web.  Would you like to do this now?" />
+	<Property Id="VSDIISMSG" Value="This setup requires Internet Information Server 5.1 or higher and Windows XP or higher.  This setup cannot be installed on Windows 2000.  Please install Internet Information Server or a newer operating system and run this setup again." />
+	<Property Id="VSDUIANDADVERTISED" Value="This advertised application will not be installed because it might be unsafe. Contact your administrator to change the installation user interface option of the package to basic." />
+	<Property Id="VSDNETMSG" Value="This setup requires the .NET Framework version [1].  Please install the .NET Framework and run this setup again." />
+	<Property Id="VSDINVALIDURLMSG" Value="The specified path '[2]' is unavailable. The Internet Information Server might not be running or the path exists and is redirected to another machine. Please check the status of this virtual directory in the Internet Services Manager." />
+	<Property Id="VSDVERSIONMSG" Value="Unable to install because a newer version of this product is already installed." />
+-->
+
+	<CustomAction Id="PreventDowngrading" Error="Newer version already installed." /> <!-- Prevent downgrading -->
+	<Upgrade Id="$(var.UpgradeCode)">
+		<UpgradeVersion Minimum="$(var.ProductVersion)" IncludeMinimum="no" OnlyDetect="yes" Property="NEWERPRODUCTFOUND" />
+		<UpgradeVersion Minimum="$(var.RTMProductVersion)" IncludeMinimum="yes" Maximum="$(var.ProductVersion)" IncludeMaximum="no" OnlyDetect="no" Property="UPGRADEFOUND" />
+		<!-- Detect for changes in 4th field only -->
+		<!-- UpgradeVersion Minimum="$(var.version)" IncludeMinimum="yes" Maximum="$(var.version)" IncludeMaximum="yes" OnlyDetect="yes" Property="ANOTHERBUILDINSTALLED" / -->
+	</Upgrade>
+	
+	</Product>
+</Wix>

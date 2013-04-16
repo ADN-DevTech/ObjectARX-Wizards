@@ -1,0 +1,22 @@
+[!if CONNECTION_POINTS]
+	[
+		uuid([!output CONNECTION_POINT_IID]),
+		helpstring("_[!output INTERFACE_NAME]Events Interface")
+	]
+	dispinterface _[!output INTERFACE_NAME]Events
+	{
+		properties:
+		methods:
+	};
+[!endif]
+	[
+		uuid([!output CLSID_REGISTRY_FORMAT]),
+		helpstring("[!output TYPE_NAME]")
+	]
+	coclass [!output COCLASS]
+	{
+		[default] interface [!output INTERFACE_NAME];
+[!if CONNECTION_POINTS]
+		[default, source] dispinterface _[!output INTERFACE_NAME]Events;
+[!endif]
+	};

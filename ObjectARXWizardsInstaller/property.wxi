@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<Include xmlns="http://schemas.microsoft.com/wix/2006/wi">
+
+	<Property Id="DefaultUIFont" Value="VsdDefaultUIFont.524F4245_5254_5341_4C45_534153783400" /> <!-- UI default font -->
+	<Property Id="ErrorDialog" Value="ErrorDialog" /> <!-- Specify the ErrorDialog name in use in UI.wxi -->
+	
+	<!-- Property Id="WelcomeForm_PrevArgs" Value="" / -->
+	<Property Id="WelcomeForm_NextArgs" Value="ObjectARXForm" />
+	<Property Id="ObjectARXForm_PrevArgs" Value="WelcomeForm" />
+	<Property Id="ObjectARXForm_NextArgs" Value="ConfirmInstallForm" />
+	<Property Id="ConfirmInstallForm_PrevArgs" Value="ObjectARXForm" />
+	<!-- Property Id="ConfirmInstallForm_NextArgs" Value="ObjectARXForm" / -->
+	<Property Id="MaintenanceForm_Action" Value="Repair" />
+	<Property Id="AdminMaintenanceForm_Action" Value="Repair" />
+	
+	<CustomAction Id="CA_TARGETDIR" Property="TARGETDIR" Value="[ProgramFilesFolder][Manufacturer]\[ProductName]" Execute="firstSequence" />
+	<!-- Property Id="TARGETDIR"  Value="[ProgramFilesFolder][Manufacturer]\[ProductName]\" / -->
+	<Property Id="ARXPATH" Value="C:\ObjectARX\" />
+	<Property Id="ACAD" Value="C:\Program Files\Autodesk\AutoCAD 2014\">
+		<RegistrySearch Id="__427D247C67494BD09B6055D05EEB4F8D" 
+			Root="HKCU" Key="Software\Autodesk\AutoCAD\R19.1\ACAD-B001\Install" Name="INSTALLDIR" Type="directory" />
+	</Property>
+	
+	<!-- Visual Studio 2010 -->
+	<Property Id="VS2010_PRO">
+		<RegistrySearch Id="__09FBE887D0D0414CB1096FAD32FA896C"
+			Root="HKLM" Key="SOFTWARE\Microsoft\VisualStudio\10.0\Setup\VS" Name="ProductDir" Type="directory" />
+	</Property>
+	<Property Id="VS2010_PRO_VC">
+		<RegistrySearch Id="__B6B3CDB99BEF4EE096CCEB37C1AC8830"
+			Root="HKLM" Key="SOFTWARE\Microsoft\VisualStudio\10.0\Setup\VC" Name="ProductDir" Type="directory" />
+	</Property>
+	<!-- Visual C++ Express 2010 -->
+	<Property Id="VC2010_EXPRESS">
+		<RegistrySearch Id="__4D30CE0342A040108D03078EBFE3F36B"
+			Root="HKLM" Key="SOFTWARE\Microsoft\VCExpress\10.0\Setup\VS" Name="ProductDir" Type="directory" />
+	</Property>
+	<Property Id="VC2010_EXPRESS_VC">
+		<RegistrySearch Id="__FFB846ABBB564D90B18B69BAFBA8BDF2"
+			Root="HKLM" Key="SOFTWARE\Microsoft\VCExpress\10.0\Setup\VC" Name="ProductDir" Type="directory" />
+	</Property>
+	<!-- Visual Studio 2012 -->
+	<Property Id="VS2012_PRO">
+		<RegistrySearch Id="__91A66212460B45AFA6D7FD918D76AFDD"
+			Root="HKLM" Key="SOFTWARE\Microsoft\VisualStudio\11.0\Setup\VS" Name="ProductDir" Type="directory" />
+	</Property>
+	<Property Id="VS2012_PRO_VC">
+		<RegistrySearch Id="__E718C897AAD64502B04D514C941077B0"
+			Root="HKLM" Key="SOFTWARE\Microsoft\VisualStudio\11.0\Setup\VC" Name="ProductDir" Type="directory" />
+	</Property>
+	<!-- Visual C++ Express 2012 -->
+	<Property Id="VC2012_EXPRESS">
+		<RegistrySearch Id="__DBBAA6C6B71E498388BC091059AFB178"
+			Root="HKLM" Key="SOFTWARE\Microsoft\VCExpress\11.0\Setup\VS" Name="ProductDir" Type="directory" />
+	</Property>
+	<Property Id="VC2012_EXPRESS_VC">
+		<RegistrySearch Id="__647D9D4249F84940BC35BF3FA445913A"
+			Root="HKLM" Key="SOFTWARE\Microsoft\VCExpress\11.0\Setup\VC" Name="ProductDir" Type="directory" />
+	</Property>
+
+	<!-- ARP support -->
+	<Property Id="ARPCOMMENTS" Value="Autodesk Developer Network" />
+	<Property Id="ARPCONTACT" Value="by Cyrille Fauvel" />
+	<Property Id="ARPPRODUCTICON" Value="ObjectARXWizards.ico" />
+	<Property Id="ARPHELPLINK" Value="http://www.autodesk.com/developautocad" />
+	<!-- Property Id="ARPREADME" Value="Your README link" / -->
+	<Property Id="ARPURLINFOABOUT" Value="http://www.autodesk.com/adn" />
+	<Property Id="ARPURLUPDATEINFO" Value="http://www.autodesk.com/developautocad" />
+	<Property Id="ARPHELPTELEPHONE" Value="  " />
+	<!-- Property Id="ARPAUTHORIZEDCDFPREFIX" Value="URL of the update channel for the application" / -->
+	<Property Id="ARPSIZE" Value="1200" />
+	<!--
+	<Property Id="ARPNOMODIFY" Value="0" />
+	<Property Id="ARPNOREPAIR" Value="0" />
+	<Property Id="ARPNOREMOVE" Value="0" />
+	<Property Id="ARPSYSTEMCOMPONENT" Value="0" />
+	-->
+
+</Include>

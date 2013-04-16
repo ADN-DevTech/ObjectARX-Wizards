@@ -1,0 +1,2 @@
+	// interface [!output INTERFACE_NAME] has been moved in the library section
+	// Since its definition requires DBX/ARX symbols being defined.

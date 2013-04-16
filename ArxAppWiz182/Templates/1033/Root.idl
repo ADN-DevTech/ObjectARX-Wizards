@@ -1,0 +1,37 @@
+// (C) Copyright 2002-2007 by Autodesk, Inc. 
+
+// [!output PROJECT_NAME].idl : IDL source
+//
+// This file will be processed by the MIDL tool to
+// produce the type library ([!output RDS_SYMB][!output PROJECT_NAME].tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+[!if ACAD_ATL_EXT]
+//import "acadi.idl";
+[!endif]
+
+[
+	uuid([!output LIBID_REGISTRY_FORMAT]),
+	version(1.0),
+	helpstring("[!output RDS_SYMB][!output SAFE_PROJECT_NAME] 1.0 Type Library")
+]
+library [!output RDS_SYMB][!output SAFE_PROJECT_NAME]Lib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+[!if ACAD_ATL_EXT]
+	//----- If the following import fails then it means that the type library 
+	//----- is not on the system path you can fix the problem in two ways:
+	//----- 1. Add it to the system wide PATH environment variable
+	//----- 2. Add it to the executable file list in Developer Studio. You can do
+	//----- this in using the Tools/Option menu and then choosing the 'Directories'
+	//----- tab and finally typing the full path at the Executable files section.
+
+	//----- Importing english is ok here. Autodesk doesn't localize this idl/tlb.
+	//----- axdb16enu.tlb is guaranteed to be available in all locales.
+	//----- If you want to provide localized typelib then you must import
+	//----- localized tlb here.
+	importlib("axdb18enu.tlb");
+[!endif]
+};

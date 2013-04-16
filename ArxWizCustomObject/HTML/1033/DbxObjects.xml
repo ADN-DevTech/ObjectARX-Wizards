@@ -1,0 +1,76 @@
+<?xml version="1.0" standalone="yes"?>
+<dbxobjects>
+	<!--	name         =Class Name -->
+	<!--	header       =Include Header -->
+	<!--	templatefile =Template Filename -->
+	<!--	flag         =Flags (C=Createable By TypeID, A=Automation, N=None, X=Cannot derive from) -->
+	<!--	protocol     =Protocols Supported (1:AcDbObject, 2:AcDbEntity, 3:AcDbCurve) -->
+
+	<dbxobject name="AcDbObject" header="dbmain.h" templatefile="object" flag="A" protocol="1"/>
+	<dbxobject name="AcDbEntity" header="dbmain.h" templatefile="object" flag="A" protocol="2"/>
+	<dbxobject name="AcDbCurve" header="dbcurve.h" templatefile="object" flag="A" protocol="3"/>
+
+	<dbxobject name="AcDb2LineAngularDimension" header="dbdim.h" templatefile="object" flag="A" protocol="2"/>
+	<dbxobject name="AcDb3dSolid" header="dbsol3d.h" templatefile="object" flag="A" protocol="2"/>
+	<dbxobject name="AcDb3PointAngularDimension" header="dbdim.h" templatefile="object" flag="A" protocol="2"/>
+	<dbxobject name="AcDbAlignedDimension" header="dbdim.h" templatefile="object" flag="A" protocol="2"/>
+	<dbxobject name="AcDbArc" header="dbents.h" templatefile="object" flag="A" protocol="3"/>
+	<dbxobject name="AcDbAttribute" header="dbents.h" templatefile="object" flag="A" protocol="2"/>
+	<dbxobject name="AcDbAttributeDefinition" header="dbents.h" templatefile="object" flag="A" protocol="2"/>
+	<dbxobject name="AcDbBlockReference" header="dbents.h" templatefile="object" flag="A" protocol="2"/>
+	<dbxobject name="AcDbBody" header="dbbody.h" templatefile="object" flag="A" protocol="2"/>
+	<dbxobject name="AcDbCircle" header="dbents.h" templatefile="object" flag="A" protocol="3"/>
+	<dbxobject name="AcDbDiametricDimension" header="dbdim.h" templatefile="object" flag="A" protocol="2"/>
+	<dbxobject name="AcDbDictionary" header="dbdict.h" templatefile="object" flag="A" protocol="1"/>
+	<dbxobject name="AcDbDictionaryWithDefault" header="dbdictdflt.h" templatefile="object" flag="A" protocol="1"/>
+	<dbxobject name="AcDbEllipse" header="dbelipse.h" templatefile="object" flag="A" protocol="3"/>
+	<dbxobject name="AcDbFace" header="dbents.h" templatefile="object" flag="A" protocol="2"/>
+	<dbxobject name="AcDbFcf" header="dbfcf.h" templatefile="object" flag="A" protocol="2"/>
+  <dbxobject name="AcDbField" header="dbents.h" templatefile="object" flag="A" protocol="1"/>
+  <dbxobject name="AcDbGroup" header="dbgroup.h" templatefile="object" flag="A" protocol="1"/>
+	<dbxobject name="AcDbHatch" header="dbhatch.h" templatefile="object" flag="A" protocol="2"/>
+  <dbxobject name="AcDbHelix" header="dbhelix.h" templatefile="object" flag="A" protocol="3"/>
+  <dbxobject name="AcDbImage" header="dbimage.h" templatefile="object" flag="A" protocol="2"/>
+	<dbxobject name="AcDbLeader" header="dblead.h" templatefile="object" flag="A" protocol="3"/>
+	<dbxobject name="AcDbLine" header="dbents.h" templatefile="object" flag="A" protocol="3"/>
+	<dbxobject name="AcDbMline" header="dbmline.h" templatefile="object" flag="A" protocol="2"/>
+	<dbxobject name="AcDbMlineStyle" header="dbmstyle.h" templatefile="object" flag="A" protocol="1"/>
+	<dbxobject name="AcDbMPolygon" header="dbMPolygon.h" templatefile="object" flag="A" protocol="2"/>
+	<dbxobject name="AcDbMText" header="dbmtext.h" templatefile="object" flag="A" protocol="2"/>
+	<dbxobject name="AcDbOrdinateDimension" header="dbdim.h" templatefile="object" flag="A" protocol="2"/>
+	<dbxobject name="AcDbPoint" header="dbents.h" templatefile="object" flag="A" protocol="2"/>
+	<dbxobject name="AcDbPolyline" header="dbpl.h" templatefile="object" flag="A" protocol="3"/>
+	<dbxobject name="AcDbRadialDimension" header="dbdim.h" templatefile="object" flag="A" protocol="2"/>
+	<dbxobject name="AcDbRay" header="dbray.h" templatefile="object" flag="A" protocol="3"/>
+	<dbxobject name="AcDbRegion" header="dbregion.h" templatefile="object" flag="A" protocol="2"/>
+	<dbxobject name="AcDbRotatedDimension" header="dbdim.h" templatefile="object" flag="A" protocol="2"/>
+	<dbxobject name="AcDbShape" header="dbents.h" templatefile="object" flag="A" protocol="2"/>
+	<dbxobject name="AcDbSolid" header="dbents.h" templatefile="object" flag="A" protocol="2"/>
+	<dbxobject name="AcDbSpline" header="dbspline.h" templatefile="object" flag="A" protocol="3"/>
+  <dbxobject name="AcDbTable" header="dbents.h" templatefile="object" flag="A" protocol="2"/>
+	<dbxobject name="AcDbText" header="dbents.h" templatefile="object" flag="A" protocol="2"/>
+	<dbxobject name="AcDbTrace" header="dbents.h" templatefile="object" flag="A" protocol="2"/>
+	<dbxobject name="AcDbXline" header="dbxline.h" templatefile="object" flag="A" protocol="3"/>
+
+  <!-- Do not derive from -->
+	<dbxobject name="AcDbDimension" flag="X"/>
+	<dbxobject name="AcDbBlockBegin" flag="X"/>
+	<dbxobject name="AcDbBlockEnd" flag="X"/>
+	<dbxobject name="AcDbSequenceEnd" flag="X"/>
+	<dbxobject name="AcDb2dPolyline" flag="X"/>
+	<dbxobject name="AcDb2dVertex" flag="X"/>
+	<dbxobject name="AcDb3dPolyline" flag="X"/>
+	<dbxobject name="AcDb3dPolylineVertex" flag="X"/>
+	<dbxobject name="AcDbPolygonMesh" flag="X"/>
+	<dbxobject name="AcDbPolygonMeshVertex" flag="X"/>
+	<dbxobject name="AcDbPolyFaceMesh" flag="X"/>
+	<dbxobject name="AcDbPolyFaceMeshVertex" flag="X"/>
+	<dbxobject name="AcDbFaceRecord" flag="X"/>
+	<dbxobject name="AcDbViewport" flag="X"/>
+	<dbxobject name="AcDbMInsertBlock" flag="X"/>
+	<dbxobject name="AcDbVertex" flag="X"/>
+	<dbxobject name="AcDbFrame" flag="X"/>
+	<dbxobject name="AcDbOleFrame" flag="X"/>
+	<dbxobject name="AcDbOle2Frame" flag="X"/>
+	
+</dbxobjects>

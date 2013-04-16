@@ -1,0 +1,28 @@
+HKCR
+{
+	NoRemove AppID
+	{
+		'%APPID%' = s '[!output SAFE_PROJECT_NAME]'
+[!if APP_ARX_TYPE]
+		'[!output RDS_SYMB][!output PROJECT_NAME].arx'
+[!else]
+		'[!output RDS_SYMB][!output PROJECT_NAME].dbx'
+[!endif]
+		{
+			val AppID = s '%APPID%'
+		}
+	}
+[!if SUPPORT_COMPONENT_REGISTRAR && !ATTRIBUTED]
+	NoRemove CLSID
+	{
+		ForceRemove {[!output COMPREG_REGISTRY_FORMAT]} = s 'CompReg Class'
+		{
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{[!output LIBID_REGISTRY_FORMAT]}'
+		}
+	}
+[!endif]
+}
