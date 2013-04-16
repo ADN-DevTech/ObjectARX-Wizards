@@ -1,0 +1,6 @@
+VSWIZARD 7.0
+Wizard=VsWizard.VsWizardEngine.[WIZVERSION]
+Param="WIZARD_NAME = ArxAtlWizDynProp"
+Param="ABSOLUTE_PATH = [TARGETDIR]ArxAtlWizDynProp"
+Param="FALLBACK_LCID = 1033"
+Param="PREPROCESS_FUNCTION = CanAddATLClass"

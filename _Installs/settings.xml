@@ -1,0 +1,19 @@
+<Autodesk>
+  <Wizards>
+    <RDS>[RDS]</RDS>
+    <ObjectARX>
+      <FirstTime>True</FirstTime>
+      <GenerateAcadRx>False</GenerateAcadRx>
+      <ClassExplorer>
+        <DisplaysAtLoadTime>False</DisplaysAtLoadTime>
+        <CategorizeMembers>False</CategorizeMembers>
+      </ClassExplorer>
+      <Helps>
+        <CHM>False</CHM>
+        <First></First>
+        <Second></Second>
+        <Third></Third>
+      </Helps>
+    </ObjectARX>
+  </Wizards>
+</Autodesk>

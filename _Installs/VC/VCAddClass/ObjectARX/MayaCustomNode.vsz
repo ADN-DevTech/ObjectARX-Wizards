@@ -1,0 +1,5 @@
+VSWIZARD 7.0
+Wizard=VsWizard.VsWizardEngine[WIZVERSION]
+Param="WIZARD_NAME = MayaCustomNode"
+Param="ABSOLUTE_PATH = [TARGETDIR]MayaCustomNode"
+Param="FALLBACK_LCID = 1033"
