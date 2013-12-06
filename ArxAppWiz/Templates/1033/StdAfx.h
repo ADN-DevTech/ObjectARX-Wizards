@@ -168,12 +168,12 @@ extern AcApDataManager<CDocData> DocVars ;
 [!if !ATL_COM_SERVER]
 [!if DBX_COM_IMPORT]
 //-----------------------------------------------------------------------------
-#import "axdb19enu.tlb" raw_interfaces_only no_namespace
+#import "axdb20enu.tlb" raw_interfaces_only no_namespace
 
 [!endif]
 [!if ACAD_COM_IMPORT]
 //-----------------------------------------------------------------------------
-#import "acax19enu.tlb" raw_interfaces_only no_namespace
+#import "acax20enu.tlb" raw_interfaces_only no_namespace
 
 [!endif]
 [!endif]

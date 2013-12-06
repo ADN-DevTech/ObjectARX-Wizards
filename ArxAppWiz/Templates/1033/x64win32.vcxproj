@@ -54,11 +54,12 @@
 
 	<ImportGroup Label="PropertySheets">
 		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-		<Import Project="Autodesk.arx-2014.props" />
+		<Import Project="Autodesk.arx-2015.props" />
 	</ImportGroup>
 	<PropertyGroup Label="Configuration">
 		<PlatformToolset Condition="'$(ArxSDKPlatform)'=='v90'">v90</PlatformToolset>
 		<PlatformToolset Condition="'$(ArxSDKPlatform)'=='v100'">v100</PlatformToolset>
+		<PlatformToolset Condition="'$(ArxSDKPlatform)'=='v110'">v110</PlatformToolset>
 	</PropertyGroup>
 	
 	<PropertyGroup Label="UserMacros" />
