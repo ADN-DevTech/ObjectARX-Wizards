@@ -33,6 +33,7 @@
 		<CLRSupport>[!output ARX_CLR_SUPPORT]</CLRSupport>
 		<UseOfMfc>[!output ARX_MFC_SUPPORT]</UseOfMfc>
 		<UseOfAtl>[!output ARX_ATL_SUPPORT]</UseOfAtl>
+		<PlatformToolset>v110</PlatformToolset>
 	</PropertyGroup>
 	<PropertyGroup Condition="'$(Configuration)'=='Release'" Label="Configuration">
 		<UseDebugLibraries>false</UseDebugLibraries>
