@@ -2,7 +2,7 @@
 <Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
 
 	<?define RTMProductVersion = "18.0.0"?> <!-- The first one - do not edit -->
-	<?define ProductVersion = "20.0.0"?>
+	<?define ProductVersion = "21.0.0"?>
 	<?define UpgradeCode = "{737C88C2-4A99-44F0-AD3D-32EEE71DF54D}"?>
 	
 	<Product 
@@ -10,7 +10,7 @@
 		Codepage="1252" 
 		Language="1033" 
 		Manufacturer="Autodesk" 
-		Name="ObjectARX 2015 Wizards" 
+		Name="ObjectARX 2016 Wizards" 
 		UpgradeCode="$(var.UpgradeCode)" 
 		Version="$(var.ProductVersion)"
 	>

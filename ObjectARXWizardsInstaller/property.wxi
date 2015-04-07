@@ -16,9 +16,9 @@
 	<CustomAction Id="CA_TARGETDIR" Property="TARGETDIR" Value="[ProgramFilesFolder][Manufacturer]\[ProductName]" Execute="firstSequence" />
 	<!-- Property Id="TARGETDIR"  Value="[ProgramFilesFolder][Manufacturer]\[ProductName]\" / -->
 	<Property Id="ARXPATH" Value="C:\ObjectARX\" />
-	<Property Id="ACAD" Value="C:\Program Files\Autodesk\AutoCAD 2015\">
+	<Property Id="ACAD" Value="C:\Program Files\Autodesk\AutoCAD 2016\">
 		<RegistrySearch Id="__427D247C67494BD09B6055D05EEB4F8D" 
-			Root="HKCU" Key="Software\Autodesk\AutoCAD\R20.0\ACAD-B001\Install" Name="INSTALLDIR" Type="directory" />
+			Root="HKCU" Key="Software\Autodesk\AutoCAD\R21.0\ACAD-B001\Install" Name="INSTALLDIR" Type="directory" />
 	</Property>
 	
 	<!-- Visual Studio 2010 -->
