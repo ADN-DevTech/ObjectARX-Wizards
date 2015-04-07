@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArxWizPatchFiles", "ArxWizPatchFiles.csproj", "{0183B015-4EEA-4D74-A593-854FD3B2822A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApplication1", "..\ConsoleApplication1\ConsoleApplication1.csproj", "{9F2B4A1C-F232-43F0-8468-79E6D1DDF0DA}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -15,10 +13,6 @@ Global
 		{0183B015-4EEA-4D74-A593-854FD3B2822A}.Debug|x86.Build.0 = Debug|x86
 		{0183B015-4EEA-4D74-A593-854FD3B2822A}.Release|x86.ActiveCfg = Release|x86
 		{0183B015-4EEA-4D74-A593-854FD3B2822A}.Release|x86.Build.0 = Release|x86
-		{9F2B4A1C-F232-43F0-8468-79E6D1DDF0DA}.Debug|x86.ActiveCfg = Debug|x86
-		{9F2B4A1C-F232-43F0-8468-79E6D1DDF0DA}.Debug|x86.Build.0 = Debug|x86
-		{9F2B4A1C-F232-43F0-8468-79E6D1DDF0DA}.Release|x86.ActiveCfg = Release|x86
-		{9F2B4A1C-F232-43F0-8468-79E6D1DDF0DA}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

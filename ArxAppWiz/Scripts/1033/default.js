@@ -49,8 +49,8 @@ function OnFinish (selProj, selObj) {
 			wizard.AddSymbol ("ARX_CLR_SUPPORT", 'false') ;
 		}
 
-		CopyPropsFile ( 'Autodesk.arx-2015.props', strProjectName) ;
-		CopyPropsFile ( 'Autodesk.arx-2015-net.props', strProjectName) ;
+		CopyPropsFile ( 'Autodesk.arx-2016.props', strProjectName) ;
+		CopyPropsFile ( 'Autodesk.arx-2016-net.props', strProjectName) ;
 		CopyPropsFile ( 'crx.props', strProjectName) ;
 		
 		//selProj =CreateProject (strProjectName, strProjectPath) ; //- Use the default Win32 only project template from Visual Studio

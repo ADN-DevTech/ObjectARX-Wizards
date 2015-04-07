@@ -18,7 +18,7 @@ namespace ArxWizPatchFiles {
 
 			string TARGETDIR = session["TARGETDIR"];
 			session.Log(" >> PatchVSFiles: TARGETDIR = " + TARGETDIR);
-			//C:\Program Files (x86)\Autodesk\ObjectARX 2014 Wizards\
+			//C:\Program Files (x86)\Autodesk\ObjectARX 2016 Wizards\
 
 			string pVSList = session["VSList"];
 			//session.Log(" >> PatchVSFiles: VSList = " + pVSList);
@@ -83,7 +83,7 @@ namespace ArxWizPatchFiles {
 			string TARGETDIR = session["TARGETDIR"];
 			string RDS = session["RDS"];
 			session.Log(" >> PatchHTMLWizFiles: RDS = " + RDS +" / TARGETDIR = " + TARGETDIR);
-			//C:\Program Files (x86)\Autodesk\ObjectARX 2014 Wizards\
+			//C:\Program Files (x86)\Autodesk\ObjectARX 2016 Wizards\
 
 			DirectoryInfo di = new DirectoryInfo(TARGETDIR);
 			FileInfo[] files = di.GetFiles("default.htm", SearchOption.AllDirectories)
@@ -116,12 +116,12 @@ namespace ArxWizPatchFiles {
 			string TARGETDIR = session["TARGETDIR"];
 			string ARXPATH = session["ARXPATH"];
 			session.Log(" >> PatchPropsWizFiles: ARXPATH = " + ARXPATH + " / TARGETDIR = " + TARGETDIR);
-			//C:\Program Files (x86)\Autodesk\ObjectARX 2014 Wizards\
+			//C:\Program Files (x86)\Autodesk\ObjectARX 2016 Wizards\
 			string ACAD = session["ACAD"];
 			session.Log(" >> PatchPropsWizFiles: ACAD = " + ACAD);
 
 			DirectoryInfo di = new DirectoryInfo(TARGETDIR);
-			FileInfo[] files = di.GetFiles("*2015*.props", SearchOption.AllDirectories).ToArray();
+			FileInfo[] files = di.GetFiles("*2016*.props", SearchOption.AllDirectories).ToArray();
 			session.Log(" >> PatchPropsWizFiles:   DirectoryInfo = " + files.Length.ToString());
 			foreach (FileInfo file in files)
 			{
@@ -130,8 +130,8 @@ namespace ArxWizPatchFiles {
 					session.Log(" >> PatchPropsWizFiles:   =>> " + file.FullName);
 					string szData = System.IO.File.ReadAllText(file.FullName);
 					szData = szData.Replace(@"<ArxSdkDir>C:\ObjectARX\</ArxSdkDir>", @"<ArxSdkDir>" + ARXPATH + "</ArxSdkDir>");
-					szData = szData.Replace("<AcadDir Condition=\"'$(Platform)'=='x64'\">C:\\Program Files\\Autodesk\\AutoCAD 2015\\</AcadDir>", "<AcadDir Condition=\"'$(Platform)'=='x64'\">" + ACAD + "</AcadDir>") ;
-					szData = szData.Replace("<AcadDir Condition=\"'$(Platform)'=='Win32'\">C:\\Program Files (x86)\\Autodesk\\AutoCAD 2015\\</AcadDir>", "<AcadDir Condition=\"'$(Platform)'=='Win32'\">" + ACAD + "</AcadDir>") ;
+					szData = szData.Replace("<AcadDir Condition=\"'$(Platform)'=='x64'\">C:\\Program Files\\Autodesk\\AutoCAD 2016\\</AcadDir>", "<AcadDir Condition=\"'$(Platform)'=='x64'\">" + ACAD + "</AcadDir>") ;
+					szData = szData.Replace("<AcadDir Condition=\"'$(Platform)'=='Win32'\">C:\\Program Files (x86)\\Autodesk\\AutoCAD 2016\\</AcadDir>", "<AcadDir Condition=\"'$(Platform)'=='Win32'\">" + ACAD + "</AcadDir>") ;
 					System.IO.File.WriteAllText(file.FullName, szData);
 				}
 				catch
