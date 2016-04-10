@@ -49,8 +49,8 @@ function OnFinish (selProj, selObj) {
 			wizard.AddSymbol ("ARX_CLR_SUPPORT", 'false') ;
 		}
 
-		CopyPropsFile ( 'Autodesk.arx-2014.props', strProjectName) ;
-		CopyPropsFile ( 'Autodesk.arx-2014-net.props', strProjectName) ;
+		CopyPropsFile ( 'Autodesk.arx-2017.props', strProjectName) ;
+		CopyPropsFile ( 'Autodesk.arx-2017-net.props', strProjectName) ;
 		CopyPropsFile ( 'crx.props', strProjectName) ;
 		
 		//selProj =CreateProject (strProjectName, strProjectPath) ; //- Use the default Win32 only project template from Visual Studio
@@ -58,7 +58,6 @@ function OnFinish (selProj, selObj) {
 		selProj =CreateArxProject (strProjectName, strProjectPath, strProjTemplate) ;
 		SetupFilters (selProj) ;
 		AddFilesToNewProjectWithInfFile (selProj, strProjectName) ;
-		
 		selProj.Object.Save () ;
 	} catch (e) {
 		if ( e.description.length != 0 )
@@ -70,8 +69,8 @@ function OnFinish (selProj, selObj) {
 //-----------------------------------------------------------------------------
 function CreateArxProject (strProjectName, strProjectPath, strProjTemplate) {
 	try {
-		//var strProjTemplatePath =wizard.FindSymbol ("ABSOLUTE_PATH") ;
-		//var strProjTemplate =strProjTemplatePath + "\\Templates\\1033\\x64win32.vcxproj" ;
+		var strProjTemplatePath =wizard.FindSymbol ("ABSOLUTE_PATH") ;
+		var strProjTemplate =strProjTemplatePath + "\\Templates\\1033\\x64win32.vcxproj" ;
 
 		var Solution =dte.Solution ;
 		var strSolutionName ="" ;
@@ -84,7 +83,7 @@ function CreateArxProject (strProjectName, strProjectPath, strProjTemplate) {
 			}
 		}
 
-		var strProjectNameWithExt =strProjectName + ".vcxproj" ;
+		var strProjectNameWithExt =strProjectName + ".vcxproj" ; ;
 		var oTarget =wizard.FindSymbol ("TARGET") ;
 		var oProj ;
 		if ( wizard.FindSymbol ("WIZARD_TYPE") == vsWizardAddSubProject ) {  // vsWizardAddSubProject

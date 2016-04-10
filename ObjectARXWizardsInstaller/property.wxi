@@ -16,9 +16,9 @@
 	<CustomAction Id="CA_TARGETDIR" Property="TARGETDIR" Value="[ProgramFilesFolder][Manufacturer]\[ProductName]" Execute="firstSequence" />
 	<!-- Property Id="TARGETDIR"  Value="[ProgramFilesFolder][Manufacturer]\[ProductName]\" / -->
 	<Property Id="ARXPATH" Value="C:\ObjectARX\" />
-	<Property Id="ACAD" Value="C:\Program Files\Autodesk\AutoCAD 2014\">
+	<Property Id="ACAD" Value="C:\Program Files\Autodesk\AutoCAD 2017\">
 		<RegistrySearch Id="__427D247C67494BD09B6055D05EEB4F8D" 
-			Root="HKCU" Key="Software\Autodesk\AutoCAD\R19.1\ACAD-B001\Install" Name="INSTALLDIR" Type="directory" />
+			Root="HKCU" Key="Software\Autodesk\AutoCAD\R22.0\ACAD-B001\Install" Name="INSTALLDIR" Type="directory" />
 	</Property>
 	
 	<!-- Visual Studio 2010 -->
@@ -57,6 +57,35 @@
 		<RegistrySearch Id="__647D9D4249F84940BC35BF3FA445913A"
 			Root="HKLM" Key="SOFTWARE\Microsoft\VCExpress\11.0\Setup\VC" Name="ProductDir" Type="directory" />
 	</Property>
+	
+		<!-- Visual Studio 2013 -->
+	<Property Id="VS2013_PRO">
+		<RegistrySearch Id="__3918A99A3EB4438F9FDDA546C78A2063"
+			Root="HKLM" Key="SOFTWARE\Microsoft\VisualStudio\12.0\Setup\VS" Name="ProductDir" Type="directory" />
+	</Property>
+	<Property Id="VS2013_PRO_VC">
+		<RegistrySearch Id="__3A0508C781E6463D8EE1C89DD2719B30"
+			Root="HKLM" Key="SOFTWARE\Microsoft\VisualStudio\12.0\Setup\VC" Name="ProductDir" Type="directory" />
+	</Property>
+	<!-- Visual C++ Express 2013 -->
+	<Property Id="VC2013_EXPRESS">
+		<RegistrySearch Id="__502E5C2659A543CB8F0D4853C3DD8119"
+			Root="HKLM" Key="SOFTWARE\Microsoft\VCExpress\12.0\Setup\VS" Name="ProductDir" Type="directory" />
+	</Property>
+	<Property Id="VC2013_EXPRESS_VC">
+		<RegistrySearch Id="__B659F89FD8AF4A159FFE6B7AD5478E1A"
+			Root="HKLM" Key="SOFTWARE\Microsoft\VCExpress\12.0\Setup\VC" Name="ProductDir" Type="directory" />
+	</Property>
+  
+  <Property Id="VS2015_PRO_VC">
+    <RegistrySearch Id="__3B0508C781E6463D8EE1C89DD2719B30"
+			Root="HKLM" Key="SOFTWARE\Microsoft\VisualStudio\14.0\Setup\VC" Name="ProductDir" Type="directory" />
+  </Property>
+  
+  <Property Id="VS2015_PRO">
+    <RegistrySearch Id="__3918A99A3EB4438F9FDDA546C78B2063"
+			Root="HKLM" Key="SOFTWARE\Microsoft\VisualStudio\14.0\Setup\VS" Name="ProductDir" Type="directory" />
+  </Property>
 
 	<!-- ARP support -->
 	<Property Id="ARPCOMMENTS" Value="Autodesk Developer Network" />
