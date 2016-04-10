@@ -8,7 +8,7 @@ subst w: "C:\Program Files (x86)\WiX Toolset v3.8"
 w:\bin\candle.exe ObjectARXWizards.wxs -out temp\ObjectARXWizards.wixobj
 w:\bin\light.exe -sw1076 -b .. temp\ObjectARXWizards.wixobj -out ObjectARXWizards.msi 
 rem -ext WixUIExtension
-REM if exist ObjectARXWizards-2016.zip del ObjectARXWizards-2016.zip > nul
-REM "C:\Program Files\WinRAR\WinRAR.exe" a ObjectARXWizards-2016.zip ObjectARXWizards.msi > nul
+ if exist ObjectARXWizards-2017.zip del ObjectARXWizards-2017.zip > nul
+"C:\Program Files\WinRAR\WinRAR.exe" a ObjectARXWizards-2017.zip ObjectARXWizards.msi > nul
 
 pause
