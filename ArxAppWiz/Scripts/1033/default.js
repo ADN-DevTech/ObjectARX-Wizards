@@ -69,9 +69,9 @@ function OnFinish (selProj, selObj) {
 //-----------------------------------------------------------------------------
 function CreateArxProject (strProjectName, strProjectPath, strProjTemplate) {
 	try {
-		var strProjTemplatePath =wizard.FindSymbol ("ABSOLUTE_PATH") ;
+		/* var strProjTemplatePath =wizard.FindSymbol ("ABSOLUTE_PATH") ;
 		var strProjTemplate =strProjTemplatePath + "\\Templates\\1033\\x64win32.vcxproj" ;
-
+ */
 		var Solution =dte.Solution ;
 		var strSolutionName ="" ;
 		if ( wizard.FindSymbol ("CLOSE_SOLUTION") ) {

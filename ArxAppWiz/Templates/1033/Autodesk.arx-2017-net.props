@@ -41,6 +41,9 @@
 		<Reference Include="System" />
 		<Reference Include="System.Data" />
 		<Reference Include="System.Xml" />
+		<!-- To support Metaobjectprovider like acdbObjectId in .NET system.core required.
+		#define GETOBJECTID(id)     (*reinterpret_cast<AcDbObjectId*>(&(id))) -->
+		<Reference Include="System.Core" />
 	</ItemGroup>
 
 </Project>
