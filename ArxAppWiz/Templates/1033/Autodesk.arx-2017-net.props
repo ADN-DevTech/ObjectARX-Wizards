@@ -12,7 +12,8 @@
 	</ImportGroup>
 			
 	<PropertyGroup Label="Globals">
-		<TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+		<!--  For AutoCAD 2017, development requirement -->
+		<TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
 		<RootNamespace>$(TargetName)</RootNamespace>
 	</PropertyGroup>
 

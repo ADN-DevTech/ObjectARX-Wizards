@@ -36,7 +36,7 @@
 	<Condition Message="Microsoft Visual Studio Pro/Premium/Ultimate 2015 or Visual C++ Express Edition 2015 must be present on the target machine.">
 		<![CDATA[_VS2015_PRO_ OR VS2015_PRO_VC]]>
 	</Condition>
-	<Condition Message="This application requires .NET Framework 4.5. Please install the .NET Framework then run this installer again.">
+	<Condition Message="This application requires .NET Framework 4.6. Please install the .NET Framework then run this installer again.">
 		<![CDATA[MsiNetAssemblySupport >= "4.0"]]>
 	</Condition>
 	<!-- Condition Message="You need to be an administrator to install this product.">
