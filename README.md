@@ -1,7 +1,8 @@
 #Copyright &copy; Autodesk, Inc. All rights reserved
 
-*AutoCAD/ObjectARX Wizards for Visual Studio by Cyrille Fauvel - Autodesk Developer Network (ADN)
-Added Support for Visual Studio 2015 by Madhukar Moogala - Autodesk Developer Network (ADN)*
+*AutoCAD/ObjectARX Wizards for Visual Studio by Cyrille Fauvel - Autodesk Developer Network (ADN)*
+
+*Added Support for Visual Studio 2015 by Madhukar Moogala - Autodesk Developer Network (ADN)*
 
 - - -
 
@@ -16,21 +17,23 @@ Added Support for Visual Studio 2015 by Madhukar Moogala - Autodesk Developer Ne
 - - -
 
 
-
-
 **AutoCAD ObjectARX Wizards for Visual Studio 2015**
-1. This wizard is compiled with WixToolset 3.8 and WinRAR.
-1. It is supposed to install WixToolset into folder "C:\Program Files (x86)\WiX 	Toolset v3.8".
-1. It is supposed to install WinRAR into folder "C:\Program Files\WinRAR"
-1. If this is not the case for you, please go to ObjectARXWizardsInstaller\make.bat to correct the path.
+
+This wizard is compiled with WixToolset 3.8 and WinRAR.
+
+
+It is supposed to install WixToolset into folder "C:\Program Files (x86)\WiX 	Toolset v3.8".
+
+It is supposed to install WinRAR into folder "C:\Program Files\WinRAR"If this is not the case for you, please go to ObjectARXWizardsInstaller\make.bat to correct the path.
 
 #How To Build
 
 Build ArxWizPatchFilesCA\ArxWizPatchFiles.sln
 Run ObjectARXWizardsInstaller\make.bat
 If unsuccesful running wizard, pl. follow :
-1. 	Check  if all ascii files that cloned to local directory are of  windows complaint.
-1. 	Check can be done in Notepad++ where in the right bottom corner you ‘ll get to know about EOL.
-1. 	Execute following command to convert all files in directory
-	`find . -type f -print0 | xargs -0 -n 1 -P 4 unix2dos`
 
+1. 	Check  if all ascii files that cloned to local directory are of  windows complaint.
+2. 	Check can be done in Notepad++ where in the right bottom corner you ‘ll get to know about EOL.
+3. 	Execute following command to convert all files in directory
+
+	`find . -type f -print0 | xargs -0 -n 1 -P 4 unix2dos`
