@@ -53,10 +53,10 @@
 //- Modify the following defines if you have to target a platform prior to the ones specified below.
 //- Refer to MSDN for the latest info on corresponding values for different platforms.
 #ifndef WINVER							//- Allow use of features specific to Windows 95 and Windows NT 4 or later.
-#define WINVER 0x0500			//- Change this to the appropriate value to target Windows 98 and Windows 2000 or later.
+#define WINVER 0x0601			//- Change this to the appropriate value to target Windows 98 and Windows 2000 or later.
 #endif
 #ifndef _WIN32_WINNT
-#define _WIN32_WINNT 0x0501
+#define _WIN32_WINNT 0x0601
 #endif
 
 [!if ATL_COM_SERVER]
@@ -168,12 +168,12 @@ extern AcApDataManager<CDocData> DocVars ;
 [!if !ATL_COM_SERVER]
 [!if DBX_COM_IMPORT]
 //-----------------------------------------------------------------------------
-#import "axdb19enu.tlb" raw_interfaces_only no_namespace
+#import "axdb21enu.tlb" raw_interfaces_only no_namespace
 
 [!endif]
 [!if ACAD_COM_IMPORT]
 //-----------------------------------------------------------------------------
-#import "acax19enu.tlb" raw_interfaces_only no_namespace
+#import "acax21enu.tlb" raw_interfaces_only no_namespace
 
 [!endif]
 [!endif]

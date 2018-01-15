@@ -241,7 +241,7 @@
 											<td colspan="3" id="ABOUTVERSION">Version: </td>
 										</tr>
 										<tr height="12">
-											<td colspan="3">Copyright © Autodesk, Inc. All rights reserved.</td>
+											<td colspan="3">Copyright ï¿½ Autodesk, Inc. All rights reserved.</td>
 										</tr>
 										<tr>
 											<td colspan="3" height="25"><IMG SRC="../../Images/spacer.gif" WIDTH="1" HEIGHT="1"></td>
@@ -329,8 +329,11 @@
 													<LABEL ID="idd_dialog_title" ACCESSKEY="d" FOR="DialogList"><U>D</U>ialog ID:</LABEL>
 													<BR>
 													<INPUT CLASS="sideBtn" ID="IDD_DIALOG" TYPE="HIDDEN" NAME="IDD_DIALOG"></INPUT>
-													<OBJECT CLASS="itemText" ID="DialogList" ACCESSKEY="d" CLASSID="CLSID:19db9a07-5ca3-461e-9e7b-b370c91aba2e">
-													</OBJECT>
+													<!--We need to update COM Control ID of VS2015
+														<OBJECT CLASS="itemText" ID="DialogList" ACCESSKEY="d" CLASSID="CLSID:19db9a07-5ca3-461e-9e7b-b370c91aba2e">
+													</OBJECT>-->
+													<OBJECT CLASS="itemText" ID="DialogList" ACCESSKEY="d" CLASSID="CLSID:087da97a-e2f4-472a-bb48-0bcdfaa20fb3">
+													</OBJECT>-->
 												</SPAN>
 												<P CLASS="ElementSpacer6">&nbsp;</P>
 												<NOBR><SPAN CLASS="itemText" ID="HEADER_FILE_SPAN" TITLE="Name of header file where class will be defined.">
@@ -578,7 +581,7 @@ function OnBase () {
 	switch ( classOption ) {
 		case "C": //- Child dialog needed
 		{
-			window.alert ("This type of base class does not support direct resource ID handling.\nHowever, you can enter a resource ID here and a child dialog will be created for you.\nThis will then be included in the base class implementation as a child window.") ;			
+			window.alert ("This type of base class does not support direct resource ID handling.\nHowever, you can enter a resource IDï¿½here and a child dialog will be created for you.\nThis will then be included in the base class implementation as a child window.") ;			
 			//- If this class supports child dialog, then check to see if a dialog resource is entered
 			if ( DialogList.Value.length ) {
 				//- Child dialogs to be created
