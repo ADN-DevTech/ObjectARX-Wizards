@@ -1,46 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?> 
 <Include xmlns="http://schemas.microsoft.com/wix/2006/wi">
 
-	<Directory Id="TARGETDIR" Name="SourceDir">
+	<Directory Id="TARGETDIR" Name="SourceDir" FileSource="..\">
 		<Component Id="C__2C63244EA9004D42B1A8ED79330F5B73" Guid="{3B873C54-A059-4F3A-BCC7-850B09D86DCF}" KeyPath="yes">
 			<File Id="_40710A89F7F94DB2AA13FB5F2A201C82" Name="rxsdk_common.props" Vital="yes" DiskId="1" Source="..\_Installs\rxsdk_common.props" />
 			<File Id="_AEB19F421DAF4198A890D52FD5219690" Name="crx.props" Vital="yes" DiskId="1" Source="..\_Installs\crx.props" />
-			<File Id="_74C44843A147464C801AD3E36F6D5956" Name="Autodesk.arx-2012.props" Vital="yes" DiskId="1" Source="..\_Installs\Autodesk.arx-2012.props" />
-			<File Id="_2C63244EA9004D42B1A8ED79330F5B73" Name="Autodesk.arx-2012-net.props" Vital="yes" DiskId="1" Source="..\_Installs\Autodesk.arx-2012-net.props" />
-			<File Id="_B39D79F6E7B148F0A28294CB81DD02B8" Name="Autodesk.arx-2013.props" Vital="yes" DiskId="1" Source="..\_Installs\Autodesk.arx-2013.props" />
-			<File Id="_F3F48BFC0A3146A885FEF7919CDB2D2C" Name="Autodesk.arx-2013-net.props" Vital="yes" DiskId="1" Source="..\_Installs\Autodesk.arx-2013-net.props" />
-			<File Id="_B39D79F634B148F0A282947681DD02B8" Name="Autodesk.arx-2014.props" Vital="yes" DiskId="1" Source="..\_Installs\Autodesk.arx-2014.props" />
-			<File Id="_F3F48BFC0A3724A885FEF79756DB2D2C" Name="Autodesk.arx-2014-net.props" Vital="yes" DiskId="1" Source="..\_Installs\Autodesk.arx-2014-net.props" />
-			<File Id="_FB16B746A84C4A60B3B7A4400C8D8191" Name="Autodesk.arx-2015.props" Vital="yes" DiskId="1" Source="..\_Installs\Autodesk.arx-2015.props" />
-			<File Id="_2CC7CC873A3D4A78991206C703BFB5B2" Name="Autodesk.arx-2015-net.props" Vital="yes" DiskId="1" Source="..\_Installs\Autodesk.arx-2015-net.props" />
 			<File Id="_FB16B746A84C4A60B3B7B4400C8D8191" Name="Autodesk.arx-2016.props" Vital="yes" DiskId="1" Source="..\_Installs\Autodesk.arx-2016.props" />
 			<File Id="_2CC7CC873A3D4A76991206C703BFB5B2" Name="Autodesk.arx-2016-net.props" Vital="yes" DiskId="1" Source="..\_Installs\Autodesk.arx-2016-net.props" />
 			<File Id="_FB16B746A84C4A60B3B7C4400C8D8191" Name="Autodesk.arx-2017.props" Vital="yes" DiskId="1" Source="..\_Installs\Autodesk.arx-2017.props" />
 			<File Id="_8AC32814944945F4B261466152047095" Name="Autodesk.arx-2017-net.props" Vital="yes" DiskId="1" Source="..\_Installs\Autodesk.arx-2017-net.props" />
 			<File Id="_88634528181F4EAAB9672271A121C07A" Name="Autodesk.arx-2018.props" Vital="yes" DiskId="1" Source="..\_Installs\Autodesk.arx-2018.props" />
 			<File Id="_727E8DD83B104C1DB2636E4E4CCC1595" Name="Autodesk.arx-2018-net.props" Vital="yes" DiskId="1" Source="..\_Installs\Autodesk.arx-2018-net.props" />
+      <File Id="_282302ED25AB4831A7408AD254ADB976" Name="Autodesk.arx-2019.props" Vital="yes" DiskId="1" Source="..\_Installs\Autodesk.arx-2019.props"/>
+      <File Id="_EDFFAE5F321444FB97061F3D5C783160" Name="Autodesk.arx-2019-net.props" Vital="yes" DiskId="1" Source="..\_Installs\Autodesk.arx-2019-net.props"/>      
 		</Component>
-
 		<!-- ArxWizCommon -->
 		<Directory Id="D__F5D99E2E7DD44E308B16EEFFB8AA2760" Name="ArxWizCommon" >
 			<Component Id="C__F5D99E2E7DD44E308B16EEFFB8AA2760" Guid="{0518575C-A69B-4462-8DEB-F67AE4E3D56D}" KeyPath="yes">
-				<File Id="_F5D99E2E7DD44E308B16EEFFB8AA2760" Name="arxCommon.js" Vital="yes" DiskId="1" />
+				<File Id="_F5D99E2E7DD44E308B16EEFFB8AA2760" Name="arxCommon.js" Vital="yes" DiskId="1" Source="..\ArxWizCommon\arxCommon.js" />
 			</Component>
 		</Directory>
 		<!-- ArxAppWiz -->
 		<Directory Id="D__FA04400986564113BBFE81EE0125136E" Name="ArxAppWiz" >
 			<Directory Id="D__A4AB30A418C34C41AB475A34F84BFAB7" Name="1033">
 				<Component Id="C__4C39EBFD0F4047B9AC5E44CE5210FD57" Guid="{3AA40C7B-E814-4B6E-B938-DA090C92EF1E}" KeyPath="yes">
-					<File Id="_4C39EBFD0F4047B9AC5E44CE5210FD57" Name="styles.css" Vital="yes" DiskId="1" />
+					<File Id="_4C39EBFD0F4047B9AC5E44CE5210FD57" Name="styles.css" Vital="yes" DiskId="1" Source="..\ArxAppWiz\1033\styles.css" />
 				</Component>
 			</Directory>
 			<Directory Id="D__2F923BA9EA2040F3B535E8983A202CDB" Name="Images" >
 				<Component Id="C__0EDCD01B118E4E3F90F79031359DFA22" Guid="{10040C74-454E-4C14-B0A5-1979BAD204C3}" KeyPath="yes">
-					<File Id="_0EDCD01B118E4E3F90F79031359DFA22" Name="spacer.gif" Vital="yes" DiskId="1" />
-					<File Id="_38EACF5D8ACC4D06B9382148EBB57DA9" Name="ArxAppWiz.gif" Vital="yes" DiskId="1" />
-					<File Id="_9233312D2D514D0AA94A1AAFFB031A1B" Name="ATL.gif" Vital="yes" DiskId="1" />
-					<File Id="_E736ADD45B6F495CB9B7483F46A72268" Name="MFC.gif" Vital="yes" DiskId="1" />
-					<File Id="_F456BCA7B21C475481C16CD6AB280413" Name="ArxAppWiz_Background.gif" Vital="yes" DiskId="1" />
+					<File Id="_0EDCD01B118E4E3F90F79031359DFA22" Name="spacer.gif" Vital="yes" DiskId="1" Source="..\ArxAppWiz\Images\spacer.gif"/>
+					<File Id="_38EACF5D8ACC4D06B9382148EBB57DA9" Name="ArxAppWiz.gif" Vital="yes" DiskId="1" Source="..\ArxAppWiz\Images\ArxAppWiz.gif" />
+					<File Id="_9233312D2D514D0AA94A1AAFFB031A1B" Name="ATL.gif" Vital="yes" DiskId="1" Source="..\ArxAppWiz\Images\ATL.gif" />
+					<File Id="_E736ADD45B6F495CB9B7483F46A72268" Name="MFC.gif" Vital="yes" DiskId="1" Source="..\ArxAppWiz\Images\MFC.gif"/>
+					<File Id="_F456BCA7B21C475481C16CD6AB280413" Name="ArxAppWiz_Background.gif" Vital="yes" DiskId="1" Source="..\ArxAppWiz\Images\MFC.gif"/>
 				</Component>
 			</Directory>
 			<Directory Id="D__05A2225DD16F4AF28A45A2B0333F80A6" Name="Scripts" >
@@ -66,8 +59,8 @@
 					<Component Id="C__124490A32A154984B9099F86D9EB13AE" Guid="{FD0819D9-488E-4C28-AC7A-88E6C58B1D9A}" KeyPath="yes">
 						<File Id="_DB76CADAEB064776AE0C01754B50EB2C" Name="Templates.inf" Vital="yes" DiskId="1" />
 						<File Id="_1F64FFC27F5346819231EED4E92148B6" Name="x64win32.vcxproj" Vital="yes" DiskId="1" />
-						<File Id="_74010FE82AA242CB9D74FA2CDE580853" Name="Autodesk.arx-2018.props" Vital="yes" DiskId="1" />
-						<File Id="_2CB33E78959E438D923E6A38C414E7B0" Name="Autodesk.arx-2018-net.props" Vital="yes" DiskId="1" />
+						<File Id="_74010FE82AA242CB9D74FA2CDE580853" Name="Autodesk.arx-2019.props" Vital="yes" DiskId="1" />
+						<File Id="_2CB33E78959E438D923E6A38C414E7B0" Name="Autodesk.arx-2019-net.props" Vital="yes" DiskId="1" />
 						<File Id="_84C6F8A1775C47EAABB0AACDCEF7D3D4" Name="crx.props" Vital="yes" DiskId="1" />
 						<File Id="_AB09DEDB791F4FFFBEF8BA410A416D29" Name="acrxEntryPoint.cpp" Vital="yes" DiskId="1" />
 						<File Id="_260F064D91F741959DBFD321C56323D5" Name="AssemblyInfo.cpp" Vital="yes" DiskId="1" />
@@ -351,9 +344,8 @@
 						<File Id="_DF7CCBA2A12E413FB9B9ED641F9B8A6A" Name="childDialog.rc" Vital="yes" DiskId="1" />
 					</Component>
 				</Directory>
-			</Directory>
-			
-			</Directory>
+			</Directory>			
+		</Directory>
 		<!-- ArxWizNETWrapper -->
 		<Directory Id="D__B676AEFA8A054E2AA32BBE44F8F4BB27" Name="ArxWizNETWrapper" >
 			<Directory Id="D__6C841DE524E242B48BCE3E0602A05A4C" Name="Images" >
@@ -468,14 +460,14 @@
 						<File Id="_D7D3FAA751774E3DB4DA7684C212D72C" Name="AcDbRasterImageDefFileAccessReactor_tmpl.h" Vital="yes" DiskId="1" />
 						<File Id="_C6F4D9F2F778443B8CD828751A427827" Name="AcDbRasterImageDefFileAccessReactor_tmpl.cpp" Vital="yes" DiskId="1" />
 						<File Id="_E8C370DAF72F4839926CE3AF8A4FC382" Name="AcPublishReactor_tmpl.h" Vital="yes" DiskId="1" />
-						<File Id="_F1F70CE066504E61A04428D25FCF0478" Name="AcPublishReactor_tmpl.cpp" Vital="yes" DiskId="1" />
+						<File Id="_F1F70CE066504E61A04428D25FCF0478" Name="AcPublishReactor_tmpl.cpp" Vital="yes" DiskId="1" Source="..\ArxWizReactors\Templates\1033\AcPublishReactor_tmpl.cpp" />
 					</Component>
 				</Directory>
 			</Directory>
 		</Directory>
 		
 		<!-- ObjectARX -->
-		<Directory Id="ARXPATH">
+		<Directory Id="ARXPATH" >
 			<Directory Id="D__573C8AF8D15B4114B7BF7F056D74ED13" Name="inc" >
 				<Component Id="C__3CB44E97F42E46E887E1610C0898A33F" Guid="{A486B74C-A95D-4B75-91EF-3B3141044A87}" Permanent="yes" KeyPath="yes">
 					<File Id="_3CB44E97F42E46E887E1610C0898A33F" Name="rxsdk_common.props" Vital="yes" DiskId="1" Source="..\_Installs\rxsdk_common.props" />
@@ -484,201 +476,49 @@
 			</Directory>
 		</Directory>
 
-  <!-- Visual Studio 2015 -->
-    <Directory Id="VS2015_PRO_VC">
-      <Directory Id="D__0AD8EEEF2AC34C67985E09326A0FA549" Name="VCProjects" >
-        <Directory Id="D__4173148965BA43B0A49BC46FD0A82CAD" Name="Autodesk" >
-          <Component Id="C__48D1BDED57B84CD1B42306D18579E7DG" Guid="{3CEC802F-F867-4AB2-99E1-2D369ED5942E}" KeyPath="yes">
-            <Condition><![CDATA[VS2015_PRO_VC AND VS2015_PRO_VC <> TARGETDIR]]></Condition>
-            <File Id="_48D1BDED57B84CD1B42306D18579E7DG" Name="ArxAppWiz.ico" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCProjects\Autodesk\ArxAppWiz.ico" />
-            <File Id="_BC568206D9E547D78106769B06E4EBBD" Name="ArxAppWiz.vsz" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCProjects\Autodesk\ArxAppWiz.vsz" />
-            <File Id="_545328F7922842DDACE90A1E6F18B6CD" Name="ArxAppWiz.vsdir" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCProjects\Autodesk\ArxAppWiz.vsdir" />
-            <File Id="_48D1BDED78B84CD1B89406D18579E7DF" Name="ArxAppWiz182.ico" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCProjects\Autodesk\ArxAppWiz182.ico" />
-            <File Id="_BC568243D9E547D78105999B06E4EBBD" Name="ArxAppWiz182.vsz" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCProjects\Autodesk\ArxAppWiz182.vsz" />
-            <File Id="_54532547922842756BE80A1E6F18B6CD" Name="ArxAppWiz182.vsdir" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCProjects\Autodesk\ArxAppWiz182.vsdir" />
-          </Component>
-        </Directory>
-      </Directory>
-      <Directory Id="D__62854D5D598C4882A86D57B876DA57CD" Name="VCAddClass" >
-        <Directory Id="D__1DAFA0EE56B8404F846FB8EEB0EE9335" Name="ObjectARX" >
-          <Component Id="C__126D0E77114A47DB8812539796A8FFFC" Guid="{76E4CB97-74BA-4041-B231-F94973D91D4A}" KeyPath="yes">
-            <Condition><![CDATA[VS2015_PRO_VC AND VS2015_PRO_VC <> TARGETDIR]]></Condition>
-            <File Id="_F7DE1D6EEEBB4798AFB48B156A1F8B0A" Name="ArxAtlWizComWrapper.ico" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCAddClass\ObjectARX\ArxAtlWizComWrapper.ico" />
-            <File Id="_2E32B71BA98F4DEC805521BFFF31DF9E" Name="ArxAtlWizComWrapper.vsz" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCAddClass\ObjectARX\ArxAtlWizComWrapper.vsz" />
-            <File Id="_7929ED8ED7FE4210B9EC47A457C983D5" Name="ArxAtlWizDynProp.ico" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCAddClass\ObjectARX\ArxAtlWizDynProp.ico" />
-            <File Id="_EB2A71EB9B254C10B84DE59428BF378E" Name="ArxAtlWizDynProp.vsz" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCAddClass\ObjectARX\ArxAtlWizDynProp.vsz" />
-            <File Id="_9E821712BE6353E388927D6571DF69EF" Name="ArxWizCustomObject.ico" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCAddClass\ObjectARX\ArxWizCustomObject.ico" />
-            <File Id="_D389B4C73C4646E1AEEFB918C9A0009B" Name="ArxWizCustomObject.vsz" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCAddClass\ObjectARX\ArxWizCustomObject.vsz" />
-            <File Id="_BF0602B410B8461BAFB9CD00794AD30A" Name="ArxWizJig.ico" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCAddClass\ObjectARX\ArxWizJig.ico" />
-            <File Id="_126D0E77124B47DB8812539796A8FFFC" Name="ArxWizJig.vsz" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCAddClass\ObjectARX\ArxWizJig.vsz" />
-            <File Id="_FA15D0D9C9EA21BC8120F7AF02BFF912" Name="ArxWizMFCSupport.ico" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCAddClass\ObjectARX\ArxWizMFCSupport.ico" />
-            <File Id="_65970F6E622A4BE4968118ECB6B634C6" Name="ArxWizMFCSupport.vsz" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCAddClass\ObjectARX\ArxWizMFCSupport.vsz" />
-            <File Id="_87B0D50A29823C80AF084C48D617EFC5" Name="ArxWizNETWrapper.ico" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCAddClass\ObjectARX\ArxWizNETWrapper.ico" />
-            <File Id="_662760DEA2C451718060433C49AA98E2" Name="ArxWizNETWrapper.vsz" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCAddClass\ObjectARX\ArxWizNETWrapper.vsz" />
-            <File Id="_B2027CB25B623F37AAB7CA5CD54C30EE" Name="ArxWizReactors.ico" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCAddClass\ObjectARX\ArxWizReactors.ico" />
-            <File Id="_8A76692FB2E656409C2348A0E4F9F8DA" Name="ArxWizReactors.vsz" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCAddClass\ObjectARX\ArxWizReactors.vsz" />
-          </Component>
+  <!-- Visual Studio 2017 -->
+    <Directory Id="VS2017_PRO_VC">
+      <Directory Id ="D_VS2017COMMON7FOLDER" Name="Common7">
+        <Directory Id="D_VS2017IDEFOLDER" Name="IDE">
+          <Directory Id ="D_VS2017VCFOLDER" Name="VC">
+            <Directory Id="D__0AD8EEEF2AC34C67985E09326A0FA549" Name="vcprojects" >
+              <Directory Id="D__4173148965BA43B0A49BC46FD0A82CAD" Name="Autodesk" >
+                <Component Id="C__48D1BDED57B84CD1B42306D18579E7DG" Guid="{3CEC802F-F867-4AB2-99E1-2D369ED5942E}" KeyPath="yes">
+                  <Condition><![CDATA[VS2017_PRO_VC AND VS2017_PRO <> TARGETDIR]]></Condition>
+                  <File Id="_48D1BDED57B84CD1B42306D18579E7DG" Name="ArxAppWiz.ico" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCProjects\Autodesk\ArxAppWiz.ico" />
+                  <File Id="_BC568206D9E547D78106769B06E4EBBD" Name="ArxAppWiz.vsz" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCProjects\Autodesk\ArxAppWiz.vsz" />
+                  <File Id="_545328F7922842DDACE90A1E6F18B6CD" Name="ArxAppWiz.vsdir" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCProjects\Autodesk\ArxAppWiz.vsdir" />
+                  <File Id="_48D1BDED78B84CD1B89406D18579E7DF" Name="ArxAppWiz182.ico" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCProjects\Autodesk\ArxAppWiz182.ico" />
+                  <File Id="_BC568243D9E547D78105999B06E4EBBD" Name="ArxAppWiz182.vsz" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCProjects\Autodesk\ArxAppWiz182.vsz" />
+                  <File Id="_54532547922842756BE80A1E6F18B6CD" Name="ArxAppWiz182.vsdir" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCProjects\Autodesk\ArxAppWiz182.vsdir" />
+                </Component>
+              </Directory>
+            </Directory>
+            <!--Two Directories One For ArxProject and other for adding custom wrappers and classes-->
+            <Directory Id="D__62854D5D598C4882A86D57B876DA57CD" Name="vcprojectitems" >
+              <Directory Id="D__1DAFA0EE56B8404F846FB8EEB0EE9335" Name="ObjectARX" >
+                <Component Id="C__126D0E77114A47DB8812539796A8FFFC" Guid="{76E4CB97-74BA-4041-B231-F94973D91D4A}" KeyPath="yes">
+                  <Condition><![CDATA[VS2017_PRO_VC AND VS2017_PRO <> TARGETDIR]]></Condition>
+                  <File Id="_F7DE1D6EEEBB4798AFB48B156A1F8B0A" Name="ArxAtlWizComWrapper.ico" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCAddClass\ObjectARX\ArxAtlWizComWrapper.ico" />
+                  <File Id="_2E32B71BA98F4DEC805521BFFF31DF9E" Name="ArxAtlWizComWrapper.vsz" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCAddClass\ObjectARX\ArxAtlWizComWrapper.vsz" />
+                  <File Id="_7929ED8ED7FE4210B9EC47A457C983D5" Name="ArxAtlWizDynProp.ico" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCAddClass\ObjectARX\ArxAtlWizDynProp.ico" />
+                  <File Id="_EB2A71EB9B254C10B84DE59428BF378E" Name="ArxAtlWizDynProp.vsz" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCAddClass\ObjectARX\ArxAtlWizDynProp.vsz" />
+                  <File Id="_9E821712BE6353E388927D6571DF69EF" Name="ArxWizCustomObject.ico" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCAddClass\ObjectARX\ArxWizCustomObject.ico" />
+                  <File Id="_D389B4C73C4646E1AEEFB918C9A0009B" Name="ArxWizCustomObject.vsz" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCAddClass\ObjectARX\ArxWizCustomObject.vsz" />
+                  <File Id="_BF0602B410B8461BAFB9CD00794AD30A" Name="ArxWizJig.ico" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCAddClass\ObjectARX\ArxWizJig.ico" />
+                  <File Id="_126D0E77124B47DB8812539796A8FFFC" Name="ArxWizJig.vsz" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCAddClass\ObjectARX\ArxWizJig.vsz" />
+                  <File Id="_FA15D0D9C9EA21BC8120F7AF02BFF912" Name="ArxWizMFCSupport.ico" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCAddClass\ObjectARX\ArxWizMFCSupport.ico" />
+                  <File Id="_65970F6E622A4BE4968118ECB6B634C6" Name="ArxWizMFCSupport.vsz" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCAddClass\ObjectARX\ArxWizMFCSupport.vsz" />
+                  <File Id="_87B0D50A29823C80AF084C48D617EFC5" Name="ArxWizNETWrapper.ico" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCAddClass\ObjectARX\ArxWizNETWrapper.ico" />
+                  <File Id="_662760DEA2C451718060433C49AA98E2" Name="ArxWizNETWrapper.vsz" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCAddClass\ObjectARX\ArxWizNETWrapper.vsz" />
+                  <File Id="_B2027CB25B623F37AAB7CA5CD54C30EE" Name="ArxWizReactors.ico" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCAddClass\ObjectARX\ArxWizReactors.ico" />
+                  <File Id="_8A76692FB2E656409C2348A0E4F9F8DA" Name="ArxWizReactors.vsz" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCAddClass\ObjectARX\ArxWizReactors.vsz" />
+                </Component>
+              </Directory>
+            </Directory>
+          </Directory>
         </Directory>
       </Directory>
     </Directory>
-    
-    
-		<!-- Visual Studio 2013 -->
-		<Directory Id="VS2013_PRO_VC">
-			<Directory Id="D__0AD8EEEF2AC34C67985E09326A0FA548" Name="VCProjects" >
-				<Directory Id="D__4173148965BA43B0A49BC46FD0A82CAC" Name="Autodesk" >
-					<Component Id="C__48D1BDED57B84CD1B42306D18579E7DF" Guid="{D5C9E1C8-CD93-4C31-952B-8A27E0CD014F}" KeyPath="yes">
-						<Condition><![CDATA[VS2013_PRO_VC AND VS2013_PRO_VC <> TARGETDIR]]></Condition>
-						<File Id="_48D1BDED57B84CD1B42306D18579E7DF" Name="ArxAppWiz.ico" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCProjects\Autodesk\ArxAppWiz.ico" />
-						<File Id="_BC568206D9E547D78106969B06E4EBBD" Name="ArxAppWiz.vsz" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCProjects\Autodesk\ArxAppWiz.vsz" />
-						<File Id="_545328F7922842DDACE80A1E6F18B6CD" Name="ArxAppWiz.vsdir" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCProjects\Autodesk\ArxAppWiz.vsdir" />
-						<File Id="_48D1BDED78B84CD1B89306D18579E7DF" Name="ArxAppWiz182.ico" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCProjects\Autodesk\ArxAppWiz182.ico" />
-						<File Id="_BC568243D9E547D78106999B06E4EBBD" Name="ArxAppWiz182.vsz" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCProjects\Autodesk\ArxAppWiz182.vsz" />
-						<File Id="_54532547922842756CE80A1E6F18B6CD" Name="ArxAppWiz182.vsdir" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCProjects\Autodesk\ArxAppWiz182.vsdir" />
-					</Component>
-				</Directory>
-			</Directory>
-			<Directory Id="D__62854D5D598C4882A86D47B876DA57CD" Name="VCAddClass" >
-				<Directory Id="D__1DAFA0EE55B8404F846FB8EEB0EE9335" Name="ObjectARX" >
-					<Component Id="C__126D0E77124A47DB8812539796A8FFFC" Guid="{5750CD83-BF35-45CE-8A29-C8FE0CB7E96B}" KeyPath="yes">
-						<Condition><![CDATA[VS2013_PRO_VC AND VS2013_PRO_VC <> TARGETDIR]]></Condition>
-						<File Id="_F7DE1D6EEEBB4998AFB48B156A1F8B0A" Name="ArxAtlWizComWrapper.ico" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCAddClass\ObjectARX\ArxAtlWizComWrapper.ico" />
-						<File Id="_2E32B71BA98F4CEC805521BFFF31DF9E" Name="ArxAtlWizComWrapper.vsz" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCAddClass\ObjectARX\ArxAtlWizComWrapper.vsz" />
-						<File Id="_7929ED8ED7FE4220B9EC47A457C983D5" Name="ArxAtlWizDynProp.ico" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCAddClass\ObjectARX\ArxAtlWizDynProp.ico" />
-						<File Id="_EB2A71EB9B254B10B84DE59428BF378E" Name="ArxAtlWizDynProp.vsz" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCAddClass\ObjectARX\ArxAtlWizDynProp.vsz" />
-						<File Id="_9E821712BE6343E388927D6571DF69EF" Name="ArxWizCustomObject.ico" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCAddClass\ObjectARX\ArxWizCustomObject.ico" />
-						<File Id="_D389B4C73C4546E1AEEFB918C9A0009B" Name="ArxWizCustomObject.vsz" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCAddClass\ObjectARX\ArxWizCustomObject.vsz" />
-						<File Id="_BF0602B410B9461BAFB9CD00794AD30A" Name="ArxWizJig.ico" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCAddClass\ObjectARX\ArxWizJig.ico" />
-						<File Id="_126D0E77124A47DB8812539796A8FFFC" Name="ArxWizJig.vsz" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCAddClass\ObjectARX\ArxWizJig.vsz" />
-						<File Id="_FA15D0D9C9EA41BC8120F7AF02BFF912" Name="ArxWizMFCSupport.ico" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCAddClass\ObjectARX\ArxWizMFCSupport.ico" />
-						<File Id="_65970F6E622A4BE4968118ECB6A634C6" Name="ArxWizMFCSupport.vsz" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCAddClass\ObjectARX\ArxWizMFCSupport.vsz" />
-						<File Id="_87B0D50A29824C80AF084C48D617EFC5" Name="ArxWizNETWrapper.ico" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCAddClass\ObjectARX\ArxWizNETWrapper.ico" />
-						<File Id="_662760DEA2C441718060433C49AA98E2" Name="ArxWizNETWrapper.vsz" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCAddClass\ObjectARX\ArxWizNETWrapper.vsz" />
-						<File Id="_B2027CB25B624F37AAB7CA5CD54C30EE" Name="ArxWizReactors.ico" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCAddClass\ObjectARX\ArxWizReactors.ico" />
-						<File Id="_8A76692FB2E646409C2348A0E4F9F8DA" Name="ArxWizReactors.vsz" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCAddClass\ObjectARX\ArxWizReactors.vsz" />
-					</Component>
-				</Directory>
-			</Directory>
-		</Directory>
-		
-		<!-- Visual C++ Express 2013 -->
-		<Directory Id="VC2013_EXPRESS_VC">
-			<Directory Id="D__5770EA94E804432B8BF54D4CD26C5ECA" Name="Express" >
-				<Directory Id="D__976352D2352E4E24AEC54E11F5D36017" Name="VCProjects" >
-					<Directory Id="D__D9648E6FE7DC4184A8B2C1CEDC95BF3B" Name="Autodesk" >
-						<Component Id="C__B676E2D4EACD4FDB9F3EFC429F40AA19" Guid="{95AF3053-8A80-4CFD-8589-12410DDDAA21}" KeyPath="yes">
-							<Condition><![CDATA[VC2013_EXPRESS_VC AND VC2013_EXPRESS_VC <> TARGETDIR]]></Condition>
-							<File Id="_DCF0119C37BE456D9B187AD0E2646520" Name="ArxAppWiz.ico" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCProjects\Autodesk\ArxAppWiz.ico" />
-							<File Id="_BB6C79F5B44D441D973B0D438BE4066C" Name="ArxAppWiz.vsz" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCProjects\Autodesk\ArxAppWiz.vsz" />
-							<File Id="_B676E2D4EACD4FDB9F3EFC429F40AA19" Name="ArxAppWiz.vsdir" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCProjects\Autodesk\ArxAppWiz.vsdir" />
-							<File Id="_329E691AF0D6448D82EDA9C3D4FDC9E1" Name="ArxAppWiz182.ico" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCProjects\Autodesk\ArxAppWiz182.ico" />
-							<File Id="_329E691576D6448D82EDA9C3D4FDC9E1" Name="ArxAppWiz182.vsz" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCProjects\Autodesk\ArxAppWiz182.vsz" />
-							<File Id="_329E691AF846448D82EDA9C3D4FDC9E1" Name="ArxAppWiz182.vsdir" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCProjects\Autodesk\ArxAppWiz182.vsdir" />
-						</Component>
-					</Directory>
-				</Directory>
-				<Directory Id="D__735FC3D322B344DCA58F543E6C602801" Name="VCAddClass" >
-					<Directory Id="D__755F4A0823F1418A8F6822AE9592B0E2" Name="ObjectARX" >
-						<Component Id="C__07B6DCE28C2846BA97B24D30A0A498DC" Guid="{C2990273-D1C8-4179-89E0-267692E1628C}" KeyPath="yes">
-							<Condition><![CDATA[VC2013_EXPRESS_VC AND VC2013_EXPRESS_VC <> TARGETDIR]]></Condition>
-							<File Id="_BF303A0108404480A4FA8EB9D8E5F904" Name="ArxAtlWizComWrapper.vsz" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCAddClass\ObjectARX\ArxAtlWizComWrapper.vsz" />
-							<File Id="_ED29AC15349C45939C19BC7564C57EA1" Name="ArxAtlWizComWrapper.ico" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCAddClass\ObjectARX\ArxAtlWizComWrapper.ico" />
-							<File Id="_07B6DCE28C2846BA97B24D30A0A498DC" Name="ArxAtlWizDynProp.ico" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCAddClass\ObjectARX\ArxAtlWizDynProp.ico" />
-							<File Id="_A2084015D29B4182A3342FE8B92F2343" Name="ArxAtlWizDynProp.vsz" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCAddClass\ObjectARX\ArxAtlWizDynProp.vsz" />
-							<File Id="_123FF0F41A89470FA25DAA6D95850CCD" Name="ArxWizCustomObject.ico" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCAddClass\ObjectARX\ArxWizCustomObject.ico" />
-							<File Id="_5DA44D6512D947B1B79600E35B0803FA" Name="ArxWizCustomObject.vsz" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCAddClass\ObjectARX\ArxWizCustomObject.vsz" />
-							<File Id="_BF0602B410B6661BAFB9CD00794AD30A" Name="ArxWizJig.ico" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCAddClass\ObjectARX\ArxWizJig.ico" />
-							<File Id="_126D0E77124668DB8812539796A8FFFC" Name="ArxWizJig.vsz" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCAddClass\ObjectARX\ArxWizJig.vsz" />
-							<File Id="_45C7937883204D84A09DDF2FE6CAA045" Name="ArxWizMFCSupport.ico" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCAddClass\ObjectARX\ArxWizMFCSupport.ico" />
-							<File Id="_57D70A338D024E67A281682867653C63" Name="ArxWizMFCSupport.vsz" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCAddClass\ObjectARX\ArxWizMFCSupport.vsz" />
-							<File Id="_201A21904EAD4C788808C0F22E7AAEEE" Name="ArxWizNETWrapper.ico" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCAddClass\ObjectARX\ArxWizNETWrapper.ico" />
-							<File Id="_946C67D3E1214667866936B8CE78AF08" Name="ArxWizNETWrapper.vsz" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCAddClass\ObjectARX\ArxWizNETWrapper.vsz" />
-							<File Id="_E44FCEB1F8A04F798706992569D93E57" Name="ArxWizReactors.ico" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCAddClass\ObjectARX\ArxWizReactors.ico" />
-							<File Id="_3986704861624807A6D564FDCCB17F3D" Name="ArxWizReactors.vsz" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCAddClass\ObjectARX\ArxWizReactors.vsz" />
-						</Component>
-					</Directory>
-				</Directory>
-			</Directory>
-		</Directory>
-
-		<!-- Visual Studio 2012 -->
-		<Directory Id="VS2012_PRO_VC">
-			<Directory Id="D__0AD8EEEF2AC34C67911109326A0FA548" Name="VCProjects" >
-				<Directory Id="D__4173148965BA43B1249BC46FD0A82CAC" Name="Autodesk" >
-					<Component Id="C__48456DED57B84CD1B42306D18579E7DF" Guid="{B3ACCF86-8270-4389-A6A8-F74F967EF9F7}" KeyPath="yes">
-						<Condition><![CDATA[VS2012_PRO_VC AND VS2012_PRO_VC <> TARGETDIR]]></Condition>
-						<File Id="_48D1BDED5D454CD1B42306D18579E7DF" Name="ArxAppWiz.ico" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCProjects\Autodesk\ArxAppWiz.ico" />
-						<File Id="_BC568206D9E54F568106969B06E4EBBD" Name="ArxAppWiz.vsz" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCProjects\Autodesk\ArxAppWiz.vsz" />
-						<File Id="_545328F792C892DDACE80A1E6F18B6CD" Name="ArxAppWiz.vsdir" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCProjects\Autodesk\ArxAppWiz.vsdir" />
-						<File Id="_2BD1C3B5C63549C6BE5CC43EF11A3D14" Name="ArxAppWiz182.ico" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCProjects\Autodesk\ArxAppWiz182.ico" />
-						<File Id="_DBD1C3B5C83549C6BE5CC43EF11A3D14" Name="ArxAppWiz182.vsz" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCProjects\Autodesk\ArxAppWiz182.vsz" />
-						<File Id="_DBD1C3B5668F49C6BE5CC43EF11A3D14" Name="ArxAppWiz182.vsdir" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCProjects\Autodesk\ArxAppWiz182.vsdir" />
-					</Component>
-				</Directory>
-			</Directory>
-			<Directory Id="D__62854D5D598C1282A86D47B876DA57CD" Name="VCAddClass" >
-				<Directory Id="D__1DAFA01255B8404F846FB8EEB0EE9335" Name="ObjectARX" >
-					<Component Id="C__126D0E77124A47DB1212539796A8FFFC" Guid="{5C67CB1F-D47B-49D6-AF36-77690BF67196}" KeyPath="yes">
-						<Condition><![CDATA[VS2012_PRO_VC AND VS2012_PRO_VC <> TARGETDIR]]></Condition>
-						<File Id="_F7DE1D6EEEBB4923AFB48B156A1F8B0A" Name="ArxAtlWizComWrapper.ico" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCAddClass\ObjectARX\ArxAtlWizComWrapper.ico" />
-						<File Id="_2E32B71BA23F4CEC805521BFFF31DF9E" Name="ArxAtlWizComWrapper.vsz" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCAddClass\ObjectARX\ArxAtlWizComWrapper.vsz" />
-						<File Id="_7929ED8E2FE4230B9EC47A457C983D5" Name="ArxAtlWizDynProp.ico" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCAddClass\ObjectARX\ArxAtlWizDynProp.ico" />
-						<File Id="_EB2A71EB92354B10B84DE59428BF378E" Name="ArxAtlWizDynProp.vsz" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCAddClass\ObjectARX\ArxAtlWizDynProp.vsz" />
-						<File Id="_9E821712BE63432348927D6571DF69EF" Name="ArxWizCustomObject.ico" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCAddClass\ObjectARX\ArxWizCustomObject.ico" />
-						<File Id="_D389B4C73C454231AEEFB918C9A0009B" Name="ArxWizCustomObject.vsz" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCAddClass\ObjectARX\ArxWizCustomObject.vsz" />
-						<File Id="_BF0602B410B9461BAFB9C750794AD30A" Name="ArxWizJig.ico" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCAddClass\ObjectARX\ArxWizJig.ico" />
-						<File Id="_126D0E77124A47DB8812539775A8FFFC" Name="ArxWizJig.vsz" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCAddClass\ObjectARX\ArxWizJig.vsz" />
-						<File Id="_FA15D032C9EA41BC8120F7AF02BFF912" Name="ArxWizMFCSupport.ico" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCAddClass\ObjectARX\ArxWizMFCSupport.ico" />
-						<File Id="_65970F62322A4BE4968118ECB6A634C6" Name="ArxWizMFCSupport.vsz" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCAddClass\ObjectARX\ArxWizMFCSupport.vsz" />
-						<File Id="_87B0D50A29824C823F084C48D617EFC5" Name="ArxWizNETWrapper.ico" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCAddClass\ObjectARX\ArxWizNETWrapper.ico" />
-						<File Id="_662760DEA33441718060433C49AA98E2" Name="ArxWizNETWrapper.vsz" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCAddClass\ObjectARX\ArxWizNETWrapper.vsz" />
-						<File Id="_BF06022310B9461BAFB9CD00794AD30A" Name="ArxWizReactors.ico" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCAddClass\ObjectARX\ArxWizReactors.ico" />
-						<File Id="_126D0E23124A47DB8812539796A8FFFC" Name="ArxWizReactors.vsz" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCAddClass\ObjectARX\ArxWizReactors.vsz" />
-					</Component>
-				</Directory>
-			</Directory>
-		</Directory>
-		
-		<!-- Visual C++ Express 2012 -->
-		<Directory Id="VC2012_EXPRESS_VC">
-			<Directory Id="D__5770EA94E80443289BF54D4CD26C5ECA" Name="Express" >
-				<Directory Id="D__976352D2352E4E2489C54E11F5D36017" Name="VCProjects" >
-					<Directory Id="D__D9648E6FE7DC418489B2C1CEDC95BF3B" Name="Autodesk" >
-						<Component Id="C__B676E894EACD4FDB9F3EFC429F40AA19" Guid="{043F597A-F7B3-43EA-9FB1-37F6669232E0}" KeyPath="yes">
-							<Condition><![CDATA[VC2012_EXPRESS_VC AND VC2012_EXPRESS_VC <> TARGETDIR]]></Condition>
-							<File Id="_DCF0119C37BE456D89187AD0E2646520" Name="ArxAppWiz.ico" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCProjects\Autodesk\ArxAppWiz.ico" />
-							<File Id="_BB6C79F5B44D441D893B0D438BE4066C" Name="ArxAppWiz.vsz" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCProjects\Autodesk\ArxAppWiz.vsz" />
-							<File Id="_B676E2D4EACD4FD99F3EFC429F40AA19" Name="ArxAppWiz.vsdir" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCProjects\Autodesk\ArxAppWiz.vsdir" />
-							<File Id="_6523E2C1B32F48308D9829B09F57CFFC" Name="ArxAppWiz182.ico" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCProjects\Autodesk\ArxAppWiz182.ico" />
-							<File Id="_6523E2C1B32F4834759829B09F57CFFC" Name="ArxAppWiz182.vsz" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCProjects\Autodesk\ArxAppWiz182.vsz" />
-							<File Id="_6523E2C4562F48308D9829B09F57CFFC" Name="ArxAppWiz182.vsdir" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCProjects\Autodesk\ArxAppWiz182.vsdir" />
-						</Component>
-					</Directory>
-				</Directory>
-				<Directory Id="D__735FC3D322B367DCA58F543E6C602801" Name="VCAddClass" >
-					<Directory Id="D__755F4A0823F1678A8F6822AE9592B0E2" Name="ObjectARX" >
-						<Component Id="C__07B6DCE2867846BA97B24D30A0A498DC" Guid="{998F1933-A76D-4C42-B418-B9BF1A029505}" KeyPath="yes">
-							<Condition><![CDATA[VC2012_EXPRESS_VC AND VC2012_EXPRESS_VC <> TARGETDIR]]></Condition>
-							<File Id="_BF303A0108404480A4FA8679D8E5F904" Name="ArxAtlWizComWrapper.vsz" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCAddClass\ObjectARX\ArxAtlWizComWrapper.vsz" />
-							<File Id="_ED29AC15349C45939C19677564C57EA1" Name="ArxAtlWizComWrapper.ico" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCAddClass\ObjectARX\ArxAtlWizComWrapper.ico" />
-							<File Id="_07B6DCE28C2846BA97B26730A0A498DC" Name="ArxAtlWizDynProp.ico" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCAddClass\ObjectARX\ArxAtlWizDynProp.ico" />
-							<File Id="_A2084015D29B4182A3342678B92F2343" Name="ArxAtlWizDynProp.vsz" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCAddClass\ObjectARX\ArxAtlWizDynProp.vsz" />
-							<File Id="_123FF0F41A89470FA25DA67D95850CCD" Name="ArxWizCustomObject.ico" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCAddClass\ObjectARX\ArxWizCustomObject.ico" />
-							<File Id="_5DA44D6512D947B1B79606735B0803FA" Name="ArxWizCustomObject.vsz" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCAddClass\ObjectARX\ArxWizCustomObject.vsz" />
-							<File Id="_BF0602B410B9461BAFB9CD57794AD30A" Name="ArxWizJig.ico" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCAddClass\ObjectARX\ArxWizJig.ico" />
-							<File Id="_126D0E77124A47DB8812539576A8FFFC" Name="ArxWizJig.vsz" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCAddClass\ObjectARX\ArxWizJig.vsz" />
-							<File Id="_45C7937883204D84A09D672FE6CAA045" Name="ArxWizMFCSupport.ico" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCAddClass\ObjectARX\ArxWizMFCSupport.ico" />
-							<File Id="_57D70A338D024E67A281672867653C63" Name="ArxWizMFCSupport.vsz" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCAddClass\ObjectARX\ArxWizMFCSupport.vsz" />
-							<File Id="_201A21904EAD4C788808C6722E7AAEEE" Name="ArxWizNETWrapper.ico" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCAddClass\ObjectARX\ArxWizNETWrapper.ico" />
-							<File Id="_946C67D3E121466786693667CE78AF08" Name="ArxWizNETWrapper.vsz" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCAddClass\ObjectARX\ArxWizNETWrapper.vsz" />
-							<File Id="_E44FCEB1F8A04F796706992569D93E57" Name="ArxWizReactors.ico" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCAddClass\ObjectARX\ArxWizReactors.ico" />
-							<File Id="_3986704861624807A6D567FDCCB17F3D" Name="ArxWizReactors.vsz" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCAddClass\ObjectARX\ArxWizReactors.vsz" />
-						</Component>
-					</Directory>
-				</Directory>
-			</Directory>
-		</Directory>
-		
-	</Directory>
-		
+ </Directory>	
 </Include>

@@ -7,9 +7,10 @@
         <META HTTP-EQUIV="MSThemeCompatible" CONTENT="Yes">
     	<LINK ID="LINKURL" REL="stylesheet" HREF="../../../../../1033/NewStyles.css">
 	    <SCRIPT>
-		    var strURL =window.external.FindSymbol ("PRODUCT_INSTALLATION_DIR") ;
-		    strURL +="VCWizards/" ;
-		    strURL +=window.external.GetHostLocale () ;
+		    var strURL =window.external.FindSymbol ("PRODUCT_INSTALLATION_DIR") ;			
+			strURL += "Common7/IDE/VC"
+		    strURL += "VCWizards/" ;
+		    strURL += window.external.GetHostLocale () ;
 		    strURL +="/NewStyles.css" ;
     	    document.styleSheets ("LINKURL").href =strURL ;
     	</SCRIPT>

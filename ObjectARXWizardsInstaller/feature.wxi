@@ -55,35 +55,36 @@
 		
 		<!-- ObjectARX -->
 		<ComponentRef Id="C__3CB44E97F42E46E887E1610C0898A33F" />
-		<!-- Visual Studio 2015 -->
-			<Feature Id="_VS2015_PRO_" Level="1">
+		<!-- Visual Studio 2017 -->
+			<Feature Id="_VS2017_PRO_" Level="1">
 			  <!-- Condition Level="1"><![CDATA[VS2010_PRO_VC <> TARGETDIR]]></Condition -->
 			  <ComponentRef Id="C__48D1BDED57B84CD1B42306D18579E7DG" />
 			  <ComponentRef Id="C__126D0E77114A47DB8812539796A8FFFC" />
 			</Feature>
 		  </Feature>
-		<!-- Visual Studio 2013 -->
-		<Feature Id="_VS2013_PRO_" Level="1">
-			<!-- Condition Level="1"><![CDATA[VS2010_PRO_VC <> TARGETDIR]]></Condition -->
+	
+  
+  
+  <!-- 
+		<Feature Id="_VS2013_PRO_" Level="1">			
 			<ComponentRef Id="C__48D1BDED57B84CD1B42306D18579E7DF" />
 			<ComponentRef Id="C__126D0E77124A47DB8812539796A8FFFC" />
 		</Feature>
-		<!-- Visual C++ Express 2013 -->
-		<Feature Id="_VC2013_EXPRESS_" Level="1">
-			<!-- Condition Level="1"><![CDATA[VC2010_EXPRESS_VC <> TARGETDIR]]></Condition -->
+		
+		<Feature Id="_VC2013_EXPRESS_" Level="1">		
 			<ComponentRef Id="C__B676E2D4EACD4FDB9F3EFC429F40AA19" />
 			<ComponentRef Id="C__07B6DCE28C2846BA97B24D30A0A498DC" />
 		</Feature>
-		<!-- Visual Studio 2012 -->
-		<Feature Id="_VS2012_PRO_" Level="1">
-			<!-- Condition Level="1"><![CDATA[VS2012_PRO_VC <> TARGETDIR]]></Condition -->
+	
+		<Feature Id="_VS2012_PRO_" Level="1">		
 			<ComponentRef Id="C__48456DED57B84CD1B42306D18579E7DF" />
 			<ComponentRef Id="C__126D0E77124A47DB1212539796A8FFFC" />
 		</Feature>
-		<!-- Visual C++ Express 2012 -->
-		<Feature Id="_VC2012_EXPRESS_" Level="1">
-			<!-- Condition Level="1"><![CDATA[VC2012_EXPRESS_VC <> TARGETDIR]]></Condition -->
+		
+		<Feature Id="_VC2012_EXPRESS_" Level="1">		
 			<ComponentRef Id="C__B676E894EACD4FDB9F3EFC429F40AA19" />
 			<ComponentRef Id="C__07B6DCE2867846BA97B24D30A0A498DC" />
 		</Feature>
+  -->
+  
  </Include>

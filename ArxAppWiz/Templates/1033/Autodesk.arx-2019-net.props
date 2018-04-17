@@ -3,7 +3,7 @@
 
 	<!-- http://msdn.microsoft.com/en-us/library/ms171458.aspx -->
 	<PropertyGroup>
-		<_ProjectFileVersion>21.0.0.1</_ProjectFileVersion>
+		<_ProjectFileVersion>22.0.0.1</_ProjectFileVersion>
 		<_PropertySheetDisplayName>ObjectARX .Net</_PropertySheetDisplayName>
 		<TargetExt>.dll</TargetExt>
 	</PropertyGroup>
@@ -12,7 +12,8 @@
 	</ImportGroup>
 			
 	<PropertyGroup Label="Globals">
-		<TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+	  <!--  For AutoCAD 2018, development requirement -->
+		<TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
 		<RootNamespace>$(TargetName)</RootNamespace>
 	</PropertyGroup>
 
