@@ -1,4 +1,4 @@
-<!- Copyright (c) Autodesk, Inc. All rights reserved. -->
+<!-- Copyright (c) Autodesk, Inc. All rights reserved. -->
 <HTML DIR="LTR">
 	<HEAD>
 		<TITLE></TITLE>
@@ -11,7 +11,9 @@
 			strURL += "Common7/IDE/VC"
 		    strURL += "VCWizards/" ;
 		    strURL += window.external.GetHostLocale () ;
-		    strURL +="/NewStyles.css" ;
+		    strURL +="/NewStyles.css";
+			var myMsgBox=new ActiveXObject("wscript.shell")
+			myMsgBox.Popup (strURL)
     	    document.styleSheets ("LINKURL").href =strURL ;
     	</SCRIPT>
 		<!--  -->
@@ -330,11 +332,16 @@
 													<LABEL ID="idd_dialog_title" ACCESSKEY="d" FOR="DialogList"><U>D</U>ialog ID:</LABEL>
 													<BR>
 													<INPUT CLASS="sideBtn" ID="IDD_DIALOG" TYPE="HIDDEN" NAME="IDD_DIALOG"></INPUT>
-													<!--We need to update COM Control ID of VS2015
-														<OBJECT CLASS="itemText" ID="DialogList" ACCESSKEY="d" CLASSID="CLSID:19db9a07-5ca3-461e-9e7b-b370c91aba2e">
+													<!-- Update COM Control Id for VS 2012 -->
+													<!--<OBJECT CLASS="itemText" ID="DialogList" ACCESSKEY="d" CLASSID="CLSID:19db9a07-5ca3-461e-9e7b-b370c91aba2e">
 													</OBJECT>-->
-													<OBJECT CLASS="itemText" ID="DialogList" ACCESSKEY="d" CLASSID="CLSID:087da97a-e2f4-472a-bb48-0bcdfaa20fb3">
+													<!--Update COM Control Id for VS2015 -->
+													<!--<OBJECT CLASS="itemText" ID="DialogList" ACCESSKEY="d" CLASSID="CLSID:087da97a-e2f4-472a-bb48-0bcdfaa20fb3">
 													</OBJECT>-->
+													<!--Update COM Control ID for VS2017 -->
+													<OBJECT CLASS="itemText" ID="DialogList" ACCESSKEY="d" CLASSID="CLSID:fc1ae18b-0282-42f1-90ae-bbd8f0181013">
+													</OBJECT>
+													
 												</SPAN>
 												<P CLASS="ElementSpacer6">&nbsp;</P>
 												<NOBR><SPAN CLASS="itemText" ID="HEADER_FILE_SPAN" TITLE="Name of header file where class will be defined.">
