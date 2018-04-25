@@ -1,4 +1,12 @@
 <!-- Copyright (c) Autodesk, Inc. All rights reserved. -->
+<!--Madhukar: To test various intricate behaviors of VS WIZARD
+
+Use:
+var myMsgBox = new ActiveXObject("wscript.shell")
+myMsgBox.Popup (strURL)
+
+
+-->
 <HTML DIR="LTR">
 	<HEAD>
 		<TITLE></TITLE>
@@ -7,13 +15,13 @@
         <META HTTP-EQUIV="MSThemeCompatible" CONTENT="Yes">
     	<LINK ID="LINKURL" REL="stylesheet" HREF="../../../../../1033/NewStyles.css">
 	    <SCRIPT>
-		    var strURL =window.external.FindSymbol ("PRODUCT_INSTALLATION_DIR") ;			
-			strURL += "Common7/IDE/VC"
-		    strURL += "VCWizards/" ;
+		    var strURL =window.external.FindSymbol ("PROJECT_TEMPLATE_PATH");			
+		    strURL += "\\" ;
 		    strURL += window.external.GetHostLocale () ;
-		    strURL +="/NewStyles.css";
-			var myMsgBox=new ActiveXObject("wscript.shell")
-			myMsgBox.Popup (strURL)
+		    strURL += "\\"+"NewStyles.css";
+			/*Madhu: Not required in production
+			var myMsgBox = new ActiveXObject("wscript.shell")
+			myMsgBox.Popup (strURL)*/
     	    document.styleSheets ("LINKURL").href =strURL ;
     	</SCRIPT>
 		<!--  -->

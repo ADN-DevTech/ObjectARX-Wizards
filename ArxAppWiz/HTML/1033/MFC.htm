@@ -1,4 +1,4 @@
-<!- Copyright (c) Autodesk, Inc. All rights reserved. -->
+<!-- Copyright (c) Autodesk, Inc. All rights reserved. -->
 <HTML dir="ltr">
 	<HEAD>
 		<TITLE></TITLE>
@@ -7,11 +7,13 @@
         <META HTTP-EQUIV="MSThemeCompatible" CONTENT="Yes">
     	<LINK ID="LINKURL" REL="stylesheet" HREF="../../../../../1033/NewStyles.css">
 	    <SCRIPT>
-		    var strURL =window.external.FindSymbol ("PRODUCT_INSTALLATION_DIR") ;
-		    strURL +="VCWizards/" ;
-		    strURL +=window.external.GetHostLocale () ;
-		    strURL +="/NewStyles.css" ;
-    	    document.styleSheets ("LINKURL").href =strURL ;
+		    var strURL =window.external.FindSymbol ("PROJECT_TEMPLATE_PATH");
+			strURL += "\\" ;
+		    strURL += window.external.GetHostLocale () ;
+		    strURL += "\\"+"NewStyles.css";
+			/*var myMsgBox = new ActiveXObject("wscript.shell")
+			myMsgBox.Popup (strURL)*/
+    	    document.styleSheets ("LINKURL").href =strURL;
     	</SCRIPT>
 	</HEAD>
 	<BODY onkeypress="OnPress();" onkeydown="OnKey();" bottomMargin="0" bgColor="buttonface" leftMargin="0" topMargin="0" onload="InitDocument(document);" rightMargin="0">

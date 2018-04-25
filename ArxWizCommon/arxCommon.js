@@ -1,8 +1,9 @@
 //- Copyright (c) Autodesk, Inc. All rights reserved.
 //- by Cyrille Fauvel - Autodesk Developer Technical Services
-var szWizardsVersion ="20, 0, 1, 0 - December 5th, 2013" ;
+//- Madhukar Moogala - Autodesk Developer Technical Services
+var szWizardsVersion ="23, 0, 1, 0 - April 24 th, 2018" ;
 
-var szArzWizApplicationTitle ="ObjectARX/DBX Application Wizard for AutoCAD 2015" ;
+var szArzWizApplicationTitle ="ObjectARX/DBX Application Wizard for AutoCAD 2019" ;
 var szArxWizCOMWrapperTitle ="AutoCAD COM Wrapper Object" ;
 var szArxWizDynPropTitle ="AutoCAD Object Dynamic Property" ;
 var szArxWizObjectTitle ="ObjectDBX Custom Object Class Wizard" ;
@@ -16,7 +17,7 @@ var szArxMemVariableWizTitle ="Add Member Variable Wizard" ;
 
 //- Get an AutoCAD release
 function FindAutoCAD() {
-    var szPath = FindAutoCADUsingWMI("c:\\Program Files\\Autodesk\\AutoCAD 2015\\");
+    var szPath = FindAutoCADUsingWMI("C:\\Program Files\\Autodesk\\AutoCAD 2019\\");
     return (szPath);
 }
 
