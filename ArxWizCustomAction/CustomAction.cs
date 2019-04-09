@@ -11,7 +11,7 @@ using System.Diagnostics;
 
 namespace ArxWizCustomAction
 {
-    public class CustomActions
+    public static class CustomActions
     {
 
         /// <summary>
@@ -25,13 +25,14 @@ namespace ArxWizCustomAction
         [CustomAction]
         public static ActionResult PatchVSFiles(Session session)
         {
+#if DEBUG
+            System.Diagnostics.Debugger.Launch();
+#endif
             session.Log("Begin PatchVSFiles");
             string TARGETDIR = session["TARGETDIR"];
             //This gives us the right folder where the wizard files are sitting.
             string vcFolder = session["D_VS2017VCFOLDER"];
-            //This is very ugly trick to find out values while installation is executing.
-            session["WIX_CA_LOGGING"] = vcFolder;
-
+            
             char[] delimiterChars = { ' ', ',', ';', ':', '\t' };
 
             //ArxAppWiz;ArxAppWiz18_2;ArxAtlWizComWrapper;ArxAtlWizDynProp;ArxWizCustomObject;ArxWizJig;ArxWizMFCSupport;ArxWizNETWrapper;ArxWizReactors
@@ -54,9 +55,11 @@ namespace ArxWizCustomAction
                     string szData = System.IO.File.ReadAllText(file.FullName);
                     szData = szData.Replace("[TARGETDIR]", TARGETDIR);
                     System.IO.File.WriteAllText(file.FullName, szData);
+                    session.Log("\n"+szData);
                 }
-                catch
+                catch(Exception ex )
                 {
+                    session.Log(ex.Message);
                 }
             }
             session.Log("Ending PatchVSFiles");
@@ -71,13 +74,14 @@ namespace ArxWizCustomAction
         [CustomAction]
         public static ActionResult PatchHTMLWizFiles(Session session)
         {
-            session.Log("Begin PatchHTMLWizFiles");
-            //Debugger.Break () ;
-
+#if DEBUG
+            System.Diagnostics.Debugger.Launch();
+#endif
+            session.Log("Begin PatchHTMLWizFiles");          
             string TARGETDIR = session["TARGETDIR"];
             string RDS = session["RDS"];
             session.Log(" >> PatchHTMLWizFiles: RDS = " + RDS + " / TARGETDIR = " + TARGETDIR);
-            //C:\Program Files (x86)\Autodesk\ObjectARX 2019 Wizards\
+            //C:\Program Files (x86)\Autodesk\ObjectARX 2020 Wizards\
 
             DirectoryInfo di = new DirectoryInfo(TARGETDIR);
             FileInfo[] files = di.GetFiles("default.htm", SearchOption.AllDirectories)
@@ -92,8 +96,9 @@ namespace ArxWizCustomAction
                     szData = szData.Replace("<SYMBOL NAME='RDS_SYMB' TYPE='text' VALUE='asdk'></SYMBOL>", "<SYMBOL NAME='RDS_SYMB' TYPE='text' VALUE='" + RDS + "'></SYMBOL>");
                     System.IO.File.WriteAllText(file.FullName, szData);
                 }
-                catch
+                catch(Exception ex)
                 {
+                    session.Log(ex.Message);
                 }
             }
 
@@ -101,7 +106,7 @@ namespace ArxWizCustomAction
             return (ActionResult.Success);
         }
         /// <summary>
-        /// This custom action will update ArxSdkDir and ACAD Elements in Autodesk.arx-2019.props file post installation 
+        /// This custom action will update ArxSdkDir and ACAD Elements in Autodesk.arx-2020.props file post installation 
         /// </summary>
         /// <param name="session"></param>
         /// <returns>ActionResult</returns>
@@ -110,7 +115,6 @@ namespace ArxWizCustomAction
         public static ActionResult PatchPropsWizFiles(Session session)
         {
             session.Log("Begin PatchPropsWizFiles");
-            //Debugger.Break () ;
 
             string TARGETDIR = session["TARGETDIR"];
             string ARXPATH = session["ARXPATH"];
@@ -120,7 +124,7 @@ namespace ArxWizCustomAction
             session.Log(" >> PatchPropsWizFiles: ACAD = " + ACAD);
 
             DirectoryInfo di = new DirectoryInfo(TARGETDIR);
-            FileInfo[] files = di.GetFiles("*2019*.props", SearchOption.AllDirectories).ToArray();
+            FileInfo[] files = di.GetFiles("*2020*.props", SearchOption.AllDirectories).ToArray();
             session.Log(" >> PatchPropsWizFiles:   DirectoryInfo = " + files.Length.ToString());
             foreach (FileInfo file in files)
             {
@@ -129,12 +133,13 @@ namespace ArxWizCustomAction
                     session.Log(" >> PatchPropsWizFiles:   =>> " + file.FullName);
                     string szData = System.IO.File.ReadAllText(file.FullName);
                     szData = szData.Replace(@"<ArxSdkDir>C:\ObjectARX\</ArxSdkDir>", @"<ArxSdkDir>" + ARXPATH + "</ArxSdkDir>");
-                    szData = szData.Replace("<AcadDir Condition=\"'$(Platform)'=='x64'\">C:\\Program Files\\Autodesk\\AutoCAD 2019\\</AcadDir>", "<AcadDir Condition=\"'$(Platform)'=='x64'\">" + ACAD + "</AcadDir>");
-                    szData = szData.Replace("<AcadDir Condition=\"'$(Platform)'=='Win32'\">C:\\Program Files (x86)\\Autodesk\\AutoCAD 2019\\</AcadDir>", "<AcadDir Condition=\"'$(Platform)'=='Win32'\">" + ACAD + "</AcadDir>");
+                    szData = szData.Replace("<AcadDir Condition=\"'$(Platform)'=='x64'\">C:\\Program Files\\Autodesk\\AutoCAD 2020\\</AcadDir>", "<AcadDir Condition=\"'$(Platform)'=='x64'\">" + ACAD + "</AcadDir>");
+                    szData = szData.Replace("<AcadDir Condition=\"'$(Platform)'=='Win32'\">C:\\Program Files (x86)\\Autodesk\\AutoCAD 2020\\</AcadDir>", "<AcadDir Condition=\"'$(Platform)'=='Win32'\">" + ACAD + "</AcadDir>");
                     System.IO.File.WriteAllText(file.FullName, szData);
                 }
-                catch
+                catch(Exception ex)
                 {
+                    session.Log(ex.Message);
                 }
 
             }
