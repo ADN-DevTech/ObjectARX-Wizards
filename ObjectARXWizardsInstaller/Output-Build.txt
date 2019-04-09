@@ -1,0 +1,2 @@
+------ Clean started: Project: ObjectARXWizard2020, Configuration: Debug x86 ------
+========== Clean: 1 succeeded, 0 failed, 0 skipped ==========

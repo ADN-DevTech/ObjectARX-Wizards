@@ -3,13 +3,13 @@
 
 	<!-- http://msdn.microsoft.com/en-us/library/ms171458.aspx -->
 	<PropertyGroup>
-		<_ProjectFileVersion>22.0.0.1</_ProjectFileVersion>
-		<_PropertySheetDisplayName>ObjectARX 2018</_PropertySheetDisplayName>
+		<_ProjectFileVersion>23.1.0.1</_ProjectFileVersion>
+		<_PropertySheetDisplayName>ObjectARX 2020</_PropertySheetDisplayName>
 	</PropertyGroup>
 	
 	<PropertyGroup>
-		<AcadDir Condition="'$(Platform)'=='x64'">C:\Program Files\Autodesk\AutoCAD 2017\</AcadDir>
-		<AcadDir Condition="'$(Platform)'=='Win32'">C:\Program Files (x86)\Autodesk\AutoCAD 2017\</AcadDir>
+		<AcadDir Condition="'$(Platform)'=='x64'">C:\Program Files\Autodesk\AutoCAD 2020\</AcadDir>
+		<AcadDir Condition="'$(Platform)'=='Win32'">C:\Program Files (x86)\Autodesk\AutoCAD 2020\</AcadDir>
 		<AcadExe Condition="'$(ArxAppType)'=='dbx' or '$(ArxAppType)'=='dbxnet' or '$(ArxAppType)'=='arx' or '$(ArxAppType)'=='arxnet'">acad.exe</AcadExe>
 		<AcadExe Condition="'$(ArxAppType)'=='crx' or '$(ArxAppType)'=='crxnet'">accoreconsole.exe</AcadExe>
 		<ArxSdkDir>C:\ObjectARX\</ArxSdkDir>
@@ -27,8 +27,8 @@
 		<ArxAmodelerLibs>$(ArxSdkDir)\utils\amodeler\lib-$(Platform)</ArxAmodelerLibs>
 		<ArxBrepLibs>$(ArxSdkDir)\utils\brep\lib-$(Platform)</ArxBrepLibs>
 		<ArxAtilLibs>$(ArxSdkDir)\utils\Atil\Lib-$(Platform)</ArxAtilLibs>
-		<ArxSDKVersion>22.0</ArxSDKVersion>
-		<ArxSDKPlatform>v140</ArxSDKPlatform>
+		<ArxSDKVersion>23.1</ArxSDKVersion>
+		<ArxSDKPlatform>v141</ArxSDKPlatform>
 	</PropertyGroup>
 
 	<ImportGroup Label="PropertySheets">
@@ -37,7 +37,7 @@
 		<Import Condition="'$(ArxAppType)'=='arx' or '$(ArxAppType)'=='arxnet'" Project="$(ArxSdkDir)\inc\arx.props" />
 		<Import Condition="'$(Configuration)'=='Release'" Project="$(ArxSdkDir)\inc\rxsdk_Releasecfg.props" />
 		<Import Condition="'$(Configuration)'=='Debug'" Project="$(ArxSdkDir)\inc\rxsdk_Debugcfg.props" />
-		<Import Condition="'$(ArxAppType)'=='dbxnet' or '$(ArxAppType)'=='crxnet' or '$(ArxAppType)'=='arxnet'" Project="Autodesk.arx-2017-net.props" />
+		<Import Condition="'$(ArxAppType)'=='dbxnet' or '$(ArxAppType)'=='crxnet' or '$(ArxAppType)'=='arxnet'" Project="Autodesk.arx-2020-net.props" />
 	</ImportGroup>
 	
 	<PropertyGroup>

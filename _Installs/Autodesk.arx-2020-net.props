@@ -1,9 +1,9 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 
 	<!-- http://msdn.microsoft.com/en-us/library/ms171458.aspx -->
 	<PropertyGroup>
-		<_ProjectFileVersion>20.0.0.1</_ProjectFileVersion>
+		<_ProjectFileVersion>23.1.0.1</_ProjectFileVersion>
 		<_PropertySheetDisplayName>ObjectARX .Net</_PropertySheetDisplayName>
 		<TargetExt>.dll</TargetExt>
 	</PropertyGroup>
@@ -12,7 +12,8 @@
 	</ImportGroup>
 			
 	<PropertyGroup Label="Globals">
-		<TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+	  <!--  For AutoCAD 2018, development requirement -->
+		<TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
 		<RootNamespace>$(TargetName)</RootNamespace>
 	</PropertyGroup>
 
