@@ -2,9 +2,13 @@
 [Bb]in/
 [Oo]bj/
 
-ObjectARXWizardsInstaller/Binary/*
+
 ObjectARXWizardsInstaller/ObjectARXWizards.wixpdb
 ObjectARXWizardsInstaller/temp/*
+ObjectARXWizardsInstaller/Binary/Microsoft.Deployment.WindowsInstaller.dll
+ObjectARXWizardsInstaller/Binary/Microsoft.Deployment.WindowsInstaller.xml
+
+.vs/
 
 # mstest test results
 TestResults
