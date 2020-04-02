@@ -2,7 +2,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27004.2002
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{930C7802-8A8C-48F9-8165-68863BCCD9DD}") = "ObjectARXWizard2020", "ObjectARXWizard2020.wixproj", "{72A35AED-2F44-4EA1-9D48-6EF062D2AAB4}"
+Project("{930C7802-8A8C-48F9-8165-68863BCCD9DD}") = "ObjectARXWizard2021", "ObjectARXWizard2021.wixproj", "{72A35AED-2F44-4EA1-9D48-6EF062D2AAB4}"
 	ProjectSection(ProjectDependencies) = postProject
 		{AB34FB0F-A2F0-43D7-9FE9-7C155FF9B39A} = {AB34FB0F-A2F0-43D7-9FE9-7C155FF9B39A}
 	EndProjectSection
