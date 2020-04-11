@@ -38,7 +38,7 @@
 	<Condition Message="Microsoft Visual Studio Pro/Premium/Ultimate 2019 must be present on the target machine.">
 		<![CDATA[VS2019_ROOT_FOLDER]]>
 	</Condition>
-	<Condition Message="This application requires .NET Framework 4.6. Please install the .NET Framework then run this installer again.">
+	<Condition Message="This application requires minimum  .NET Framework 4.5. Please install the .NET Framework then run this installer again.">
 		<![CDATA[MsiNetAssemblySupport >= "4.0"]]>
 	</Condition>
 	<!-- Condition Message="You need to be an administrator to install this product.">

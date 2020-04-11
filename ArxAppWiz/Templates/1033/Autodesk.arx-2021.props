@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project DefaultTargets="Build" ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 
 	<!-- http://msdn.microsoft.com/en-us/library/ms171458.aspx -->
 	<PropertyGroup>
-		<_ProjectFileVersion>23.1.0.1</_ProjectFileVersion>
-		<_PropertySheetDisplayName>ObjectARX 2020</_PropertySheetDisplayName>
+		<_ProjectFileVersion>24.0</_ProjectFileVersion>
+		<_PropertySheetDisplayName>ObjectARX 2021</_PropertySheetDisplayName>
 	</PropertyGroup>
 	
     <!--There is No 32 Bit AutoCAD Starting From AutoCAD 2020-->
 	<PropertyGroup>
+		<SmallerTypeCheck Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</SmallerTypeCheck>
 		<AcadDir Condition="'$(Platform)'=='x64'">C:\Program Files\Autodesk\AutoCAD 2021\</AcadDir>	
 		<AcadExe Condition="'$(ArxAppType)'=='dbx' or '$(ArxAppType)'=='dbxnet' or '$(ArxAppType)'=='arx' or '$(ArxAppType)'=='arxnet'">acad.exe</AcadExe>
 		<AcadExe Condition="'$(ArxAppType)'=='crx' or '$(ArxAppType)'=='crxnet'">accoreconsole.exe</AcadExe>
