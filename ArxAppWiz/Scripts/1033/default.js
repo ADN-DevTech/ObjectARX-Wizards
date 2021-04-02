@@ -44,9 +44,10 @@ function OnFinish(selProj, selObj) {
       else wizard.AddSymbol("PRJ_TYPE_APP", "crx");
       wizard.AddSymbol("ARX_CLR_SUPPORT", "false");
     }
-
-    CopyPropsFile("Autodesk.arx-2021.props", strProjectName);
-    CopyPropsFile("Autodesk.arx-2021-net.props", strProjectName);
+    //TOCHANGE Must change for every release.
+    CopyPropsFile("Autodesk.arx-2022.props", strProjectName);
+    CopyPropsFile("Autodesk.arx-2022-net.props", strProjectName);
+    //TOCHANGE
     CopyPropsFile("crx.props", strProjectName);
 
     //selProj =CreateProject (strProjectName, strProjectPath) ; //- Use the default Win32 only project template from Visual Studio

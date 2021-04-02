@@ -2,9 +2,12 @@
 <Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
 
 	<?define RTMProductVersion = "18.0.0"?> <!-- The first one - do not edit -->
-	<?define ProductVersion = "24.0.0"?>
-	<?define UpgradeCode = "{EC180F3B-DCAB-4B1B-8687-27EECC32BA01}"?>
-  <?define ProductCode= "{0404FB62-C6AB-47F5-BBB6-357E3184E87D}"?>
+	<?define ProductVersion = "24.1.0"?>
+  <!--Updated UpgradeCode GUID "{EC180F3B-DCAB-4B1B-8687-27EECC32BA01}"?> for ObjectARX 2022-->
+	<?define UpgradeCode = "{C64D06FE-ED3C-4E5E-9018-3E27F443DB86}"?>
+  <!--Updated Product GUID "{0404FB62-C6AB-47F5-BBB6-357E3184E87D}"?> for ObjectARX 2022-->
+  <?define ProductCode= "{A64757F0-76AD-4751-B213-3BBDC86E3E6C}"?>
+  
   
 
   <Product
@@ -12,7 +15,7 @@
 		Codepage="1252" 
 		Language="1033" 
 		Manufacturer="Autodesk" 
-		Name="ObjectARX 2021 Wizards" 
+		Name="ObjectARX 2022 Wizards" 
 		UpgradeCode="$(var.UpgradeCode)" 
 		Version="$(var.ProductVersion)"
 	>
@@ -23,12 +26,12 @@
 		InstallPrivileges="elevated" 			
 		InstallerVersion="300" 
 		Languages="1033" 
-		Manufacturer="by Cyrille Fauvel" 
-		Platform="x64"     
+		Manufacturer="by Cyrille Fauvel, Madhukar Moogala" 
+		Platform="x64"
 	/>
 
 	<Media Id="1" Cabinet="ObjectARXWizards.cab" EmbedCab="yes" CompressionLevel="high" VolumeLabel="DISK #1'" />
-	<Icon Id="ObjectARXWizards.ico" SourceFile="..\_Installs\VC\vcprojects\Autodesk\ArxAppWiz2021.ico" />
+	<Icon Id="ObjectARXWizards.ico" SourceFile="..\_Installs\VC\vcprojects\Autodesk\ArxAppWiz2022.ico" />
 	
 	<?include directory.wxi ?>
 	<?include feature.wxi ?>
@@ -41,9 +44,11 @@
 	<Condition Message="This application requires minimum  .NET Framework 4.5. Please install the .NET Framework then run this installer again.">
 		<![CDATA[MsiNetAssemblySupport >= "4.0"]]>
 	</Condition>
-	<!-- Condition Message="You need to be an administrator to install this product.">
+	<!-- 
+  Condition Message="You need to be an administrator to install this product.">
 		Privileged
-	</Condition -->
+	</Condition 
+  -->
 	
 	<!-- http://blogs.msdn.com/b/jschaffe/archive/2012/10/23/creating-wix-custom-actions-in-c-and-passing-parameters.aspx -->
 
@@ -53,7 +58,7 @@
 	<Binary Id="ID_CABinary" SourceFile="Binary\ArxWizCustomAction.CA.dll" />
 	<CustomAction Id="CA_PatchVSFiles" BinaryKey="ID_CABinary" DllEntry="PatchVSFiles" Execute="immediate" Return="check" />
 	<Property Id="VSList" Value="VS2019_ROOT_FOLDER" />
-	<Property Id="ArxWizList" Value="ArxAppWiz2021;ArxAppWizOMF2021;ArxAtlWizComWrapper;ArxAtlWizDynProp;ArxWizCustomObject;ArxWizJig;ArxWizMFCSupport;ArxWizNETWrapper;ArxWizReactors" />
+	<Property Id="ArxWizList" Value="ArxAppWiz2022;ArxAppWizOMF2022;ArxAtlWizComWrapper;ArxAtlWizDynProp;ArxWizCustomObject;ArxWizJig;ArxWizMFCSupport;ArxWizNETWrapper;ArxWizReactors" />
 	<CustomAction Id="CA_PatchHTMLWizFiles" BinaryKey="ID_CABinary" DllEntry="PatchHTMLWizFiles" Execute="immediate" Return="check" />
 	<CustomAction Id="CA_PatchPropsWizFiles" BinaryKey="ID_CABinary" DllEntry="PatchPropsWizFiles" Execute="immediate" Return="check" />
 	
@@ -66,8 +71,7 @@
 		
 		<Show Dialog="FatalErrorForm" OnExit="error"><![CDATA[NOT HideFatalErrorForm]]></Show>
 		<Show Dialog="UserExitForm" OnExit="cancel" />
-		<Show Dialog="FinishedForm" OnExit="success" />
-		
+		<Show Dialog="FinishedForm" OnExit="success" />		
 		<Custom Action="PreventDowngrading" After="FindRelatedProducts"><![CDATA[NEWERPRODUCTFOUND]]></Custom>
 	</InstallUISequence>
 	<InstallExecuteSequence>

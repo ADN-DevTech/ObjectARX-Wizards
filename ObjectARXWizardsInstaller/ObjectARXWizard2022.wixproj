@@ -6,13 +6,16 @@
     <ProductVersion>3.10</ProductVersion>
     <ProjectGuid>72a35aed-2f44-4ea1-9d48-6ef062d2aab4</ProjectGuid>
     <SchemaVersion>2.0</SchemaVersion>
-    <OutputName>ObjectARXWizard2021</OutputName>
+    <OutputName>ObjectARXWizard2022</OutputName>
     <OutputType>Package</OutputType>
+    <Name>ObjectARXWizard2022</Name>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
     <OutputPath>bin\$(Configuration)\</OutputPath>
     <IntermediateOutputPath>obj\$(Configuration)\</IntermediateOutputPath>
     <DefineConstants>Debug</DefineConstants>
+    <SuppressAllWarnings>False</SuppressAllWarnings>
+    <Pedantic>True</Pedantic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
     <OutputPath>bin\$(Configuration)\</OutputPath>

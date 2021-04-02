@@ -12,9 +12,14 @@
 	
 	<CustomAction Id="CA_TARGETDIR" Property="TARGETDIR" Value="[ProgramFilesFolder][Manufacturer]\[ProductName]" Execute="firstSequence" />
 	<Property Id="ARXPATH" Value="C:\ObjectARX" />
-	<Property Id="ACAD" Value="C:\Program Files\Autodesk\AutoCAD 2021\">
-		<RegistrySearch Id="__427D247C67494BD09B6055D05EEB4F8D" 
-			Root="HKLM" Key="SOFTWARE\Autodesk\AutoCAD\R24.0\ACAD-4101\Install" Name="INSTALLDIR" Type="directory" />
+	<Property Id="ACAD" Value="C:\Program Files\Autodesk\AutoCAD 2022\">
+    <!--Tip: To find out Install Registry path, launch accoreconsole of Target AutoCAD release.
+      accoreconsole
+      (vl-load-com)
+      (vlax-product-key)
+      -->
+		<RegistrySearch Id="__427D247C67494BD09B6055D05EEB4F8D"    
+			Root="HKLM" Key="SOFTWARE\Autodesk\AutoCAD\R24.1\ACAD-5101\Install" Name="INSTALLDIR" Type="directory" />
 	</Property>
 	 
   <!--VS 2019-->
