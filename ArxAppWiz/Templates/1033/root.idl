@@ -1,4 +1,4 @@
-// (C) Copyright 2002-2012 by Autodesk, Inc. 
+// (C) Copyright 2002-2022 by Autodesk, Inc. 
 
 // [!output PROJECT_NAME].idl : IDL source
 //
@@ -32,6 +32,6 @@ library [!output RDS_SYMB][!output SAFE_PROJECT_NAME]Lib
 	//----- axdb16enu.tlb is guaranteed to be available in all locales.
 	//----- If you want to provide localized typelib then you must import
 	//----- localized tlb here.
-	importlib("axdb19enu.tlb");
+	importlib("axdb24enu.tlb");
 [!endif]
 };

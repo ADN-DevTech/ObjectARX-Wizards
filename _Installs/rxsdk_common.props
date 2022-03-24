@@ -20,7 +20,7 @@
       <ProxyFileName>$(IntDir)%(Filename)_p.c</ProxyFileName>
     </Midl>
     <ClCompile>
-      <PreprocessorDefinitions>_WIN32_IE=0x0600;WIN;WIN32;_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES=1;_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES_COUNT=1;_AFXDLL;_UNICODE;UNICODE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_WIN32_IE=0x0601;WIN;WIN32;_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES=1;_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES_COUNT=1;_AFXDLL;_UNICODE;UNICODE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>..\..\..\inc-$(Platform);..\..\..\..\inc-$(Platform);..\..\..\..\..\inc-$(Platform);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalUsingDirectories>..\..\..\inc-$(Platform);..\..\..\..\inc-$(Platform);..\..\..\..\..\inc-$(Platform);..\..\..\inc;..\..\..\..\inc;..\..\..\..\..\inc;%(AdditionalUsingDirectories)</AdditionalUsingDirectories>
       <StringPooling>true</StringPooling>
@@ -53,7 +53,6 @@
       <OptimizeReferences>true</OptimizeReferences>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <ImportLibrary>$(IntDir)$(TargetName).lib</ImportLibrary>
-      <TargetMachine Condition="'$(Platform)'=='Win32'">MachineX86</TargetMachine>
       <TargetMachine Condition="'$(Platform)'=='x64'">MachineX64</TargetMachine>
       <CLRThreadAttribute>STAThreadingAttribute</CLRThreadAttribute>
       <CLRImageType>ForceIJWImage</CLRImageType>

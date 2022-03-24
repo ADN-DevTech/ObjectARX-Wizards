@@ -1,0 +1,43 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2002
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{930C7802-8A8C-48F9-8165-68863BCCD9DD}") = "ObjectARXWizard2021", "ObjectARXWizard2021.wixproj", "{72A35AED-2F44-4EA1-9D48-6EF062D2AAB4}"
+	ProjectSection(ProjectDependencies) = postProject
+		{AB34FB0F-A2F0-43D7-9FE9-7C155FF9B39A} = {AB34FB0F-A2F0-43D7-9FE9-7C155FF9B39A}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArxWizCustomAction", "..\ArxWizCustomAction\ArxWizCustomAction.csproj", "{AB34FB0F-A2F0-43D7-9FE9-7C155FF9B39A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{72A35AED-2F44-4EA1-9D48-6EF062D2AAB4}.Debug|x64.ActiveCfg = Debug|x86
+		{72A35AED-2F44-4EA1-9D48-6EF062D2AAB4}.Debug|x64.Build.0 = Debug|x86
+		{72A35AED-2F44-4EA1-9D48-6EF062D2AAB4}.Debug|x86.ActiveCfg = Debug|x86
+		{72A35AED-2F44-4EA1-9D48-6EF062D2AAB4}.Debug|x86.Build.0 = Debug|x86
+		{72A35AED-2F44-4EA1-9D48-6EF062D2AAB4}.Release|x64.ActiveCfg = Release|x86
+		{72A35AED-2F44-4EA1-9D48-6EF062D2AAB4}.Release|x64.Build.0 = Release|x86
+		{72A35AED-2F44-4EA1-9D48-6EF062D2AAB4}.Release|x86.ActiveCfg = Release|x86
+		{72A35AED-2F44-4EA1-9D48-6EF062D2AAB4}.Release|x86.Build.0 = Release|x86
+		{AB34FB0F-A2F0-43D7-9FE9-7C155FF9B39A}.Debug|x64.ActiveCfg = Debug|x86
+		{AB34FB0F-A2F0-43D7-9FE9-7C155FF9B39A}.Debug|x64.Build.0 = Debug|x86
+		{AB34FB0F-A2F0-43D7-9FE9-7C155FF9B39A}.Debug|x86.ActiveCfg = Debug|x86
+		{AB34FB0F-A2F0-43D7-9FE9-7C155FF9B39A}.Debug|x86.Build.0 = Debug|x86
+		{AB34FB0F-A2F0-43D7-9FE9-7C155FF9B39A}.Release|x64.ActiveCfg = Release|x86
+		{AB34FB0F-A2F0-43D7-9FE9-7C155FF9B39A}.Release|x64.Build.0 = Release|x86
+		{AB34FB0F-A2F0-43D7-9FE9-7C155FF9B39A}.Release|x86.ActiveCfg = Release|x86
+		{AB34FB0F-A2F0-43D7-9FE9-7C155FF9B39A}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1A117CC4-8D22-44C6-9082-61C1164FBD3F}
+	EndGlobalSection
+EndGlobal

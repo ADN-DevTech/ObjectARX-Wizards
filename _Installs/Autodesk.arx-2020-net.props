@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+	<!-- http://msdn.microsoft.com/en-us/library/ms171458.aspx -->
+	<PropertyGroup>
+		<_ProjectFileVersion>23.1.0.1</_ProjectFileVersion>
+		<_PropertySheetDisplayName>ObjectARX .Net</_PropertySheetDisplayName>
+		<TargetExt>.dll</TargetExt>
+	</PropertyGroup>
+
+	<ImportGroup Label="PropertySheets">
+	</ImportGroup>
+			
+	<PropertyGroup Label="Globals">
+	  <!--  For AutoCAD 2018, development requirement -->
+		<TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+		<RootNamespace>$(TargetName)</RootNamespace>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<ReferencePath>$(ArxSdkIncs);$(ReferencePath)</ReferencePath>
+	</PropertyGroup>
+	
+	<ItemDefinitionGroup>
+		<!-- Copy of Microsoft.Cpp.ManagedExtensions.props (C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0) -->
+		<ClCompile>
+			<ExceptionHandling>Async</ExceptionHandling>
+			<CompileAsManaged>true</CompileAsManaged>
+			<BasicRuntimeChecks>Default</BasicRuntimeChecks>
+			<DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+			<MinimalRebuild></MinimalRebuild>
+			<!-- To defeat the arx.props -->
+			<SmallerTypeCheck>false</SmallerTypeCheck>
+		</ClCompile>
+		<Link>
+			<FixedBaseAddress>false</FixedBaseAddress>
+			<AssemblyDebug Condition="'$(UseDebugLibraries)'=='true'">true</AssemblyDebug>
+		</Link>
+	</ItemDefinitionGroup>
+
+	<ItemGroup>
+		<Reference Include="System" />
+		<Reference Include="System.Data" />
+		<Reference Include="System.Xml" />
+	</ItemGroup>
+
+</Project>

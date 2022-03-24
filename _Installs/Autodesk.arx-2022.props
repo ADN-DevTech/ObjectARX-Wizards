@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="Current"
+	xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+	<!-- http://msdn.microsoft.com/en-us/library/ms171458.aspx -->
+	<PropertyGroup>
+		<_ProjectFileVersion>24.1</_ProjectFileVersion>
+		<_PropertySheetDisplayName>ObjectARX 2022</_PropertySheetDisplayName>
+	</PropertyGroup>
+
+	<!--There is No 32 Bit AutoCAD Starting From AutoCAD 2020-->
+	<PropertyGroup>
+		<AcadDir Condition="'$(Platform)'=='x64'">C:\Program Files\Autodesk\AutoCAD 2022\</AcadDir>
+		<AcadExe Condition="'$(ArxAppType)'=='dbx' or '$(ArxAppType)'=='dbxnet' or '$(ArxAppType)'=='arx' or '$(ArxAppType)'=='arxnet'">acad.exe</AcadExe>
+		<AcadExe Condition="'$(ArxAppType)'=='crx' or '$(ArxAppType)'=='crxnet'">accoreconsole.exe</AcadExe>
+		<ArxSdkDir>C:\ObjectARX\</ArxSdkDir>
+		<ArxSdkIncs Condition="'$(Platform)'=='x64'">$(ArxSdkDir)\inc;$(ArxSdkDir)\inc-x64</ArxSdkIncs>
+		<ArxHlrIncs>$(ArxSdkDir)\utils\HlrApi\inc</ArxHlrIncs>
+		<ArxAmodelerIncs>$(ArxSdkDir)\utils\amodeler\inc</ArxAmodelerIncs>
+		<ArxBrepIncs>$(ArxSdkDir)\utils\brep\inc</ArxBrepIncs>
+		<ArxAtilIncs>$(ArxSdkDir)\utils\Atil\Inc</ArxAtilIncs>
+		<ArxSdkLibs Condition="'$(Platform)'=='x64'">$(ArxSdkDir)\lib-x64</ArxSdkLibs>
+		<ArxHlrLibs>$(ArxSdkDir)\utils\HlrApi\lib-$(Platform)</ArxHlrLibs>
+		<ArxAmodelerLibs>$(ArxSdkDir)\utils\amodeler\lib-$(Platform)</ArxAmodelerLibs>
+		<ArxBrepLibs>$(ArxSdkDir)\utils\brep\lib-$(Platform)</ArxBrepLibs>
+		<ArxAtilLibs>$(ArxSdkDir)\utils\Atil\Lib-$(Platform)</ArxAtilLibs>
+		<ArxSDKVersion>24.1</ArxSDKVersion>
+		<ArxSDKPlatform>v142</ArxSDKPlatform>
+	</PropertyGroup>
+
+	<ImportGroup Label="PropertySheets">
+		<Import Condition="'$(ArxAppType)'=='dbx' or '$(ArxAppType)'=='dbxnet'" Project="$(ArxSdkDir)\inc\dbx.props" />
+		<Import Condition="'$(ArxAppType)'=='crx' or '$(ArxAppType)'=='crxnet'" Project="$(ArxSdkDir)\inc\crx.props" />
+		<Import Condition="'$(ArxAppType)'=='arx' or '$(ArxAppType)'=='arxnet'" Project="$(ArxSdkDir)\inc\arx.props" />
+		<Import Condition="'$(Configuration)'=='Release'" Project="$(ArxSdkDir)\inc\rxsdk_Releasecfg.props" />
+		<Import Condition="'$(Configuration)'=='Debug'" Project="$(ArxSdkDir)\inc\rxsdk_Debugcfg.props" />
+		<Import Condition="'$(ArxAppType)'=='dbxnet' or '$(ArxAppType)'=='crxnet' or '$(ArxAppType)'=='arxnet'" Project="Autodesk.arx-2022-net.props" />
+	</ImportGroup>
+
+	<PropertyGroup>
+		<!-- ExecutablePath>$(ExecutablePath)</ExecutablePath -->
+		<IncludePath>$(ArxSdkIncs);$(ArxHlrIncs);$(ArxAmodelerIncs);$(ArxBrepIncs);$(ArxAtilIncs);$(IncludePath)</IncludePath>
+		<ReferencePath>$(ArxSdkIncs);$(ReferencePath)</ReferencePath>
+		<LibraryPath>$(ArxSdkLibs);$(ArxHlrLibs);$(ArxAmodelerLibs);$(ArxBrepLibs);$(ArxLibIncs);$(LibraryPath)</LibraryPath>
+		<!-- SourcePath>$(SourcePath)</SourcePath -->
+		<!-- ExcludePath>$(ExcludePath)</ExcludePath -->
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<!-- Local Windows debugger -->
+		<LocalDebuggerDebuggerType>Auto</LocalDebuggerDebuggerType>
+		<!-- LocalDebuggerCommand is defined into an empty $(TargetPath) for the property page, it is later redefined to its proper value. -->
+		<LocalDebuggerCommand>$(AcadDir)$(AcadExe)</LocalDebuggerCommand>
+		<LocalDebuggerWorkingDirectory>$(ProjectDir)</LocalDebuggerWorkingDirectory>
+	</PropertyGroup>
+
+	<ItemDefinitionGroup>
+		<Midl>
+			<AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<TypeLibraryName>$(IntDir)$(TargetName).tlb</TypeLibraryName>
+			<HeaderFileName>%(Filename)_i.h</HeaderFileName>
+			<InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+		</Midl>
+		<ClCompile>
+			<PreprocessorDefinitions Condition="'$(ArxAppType)'=='dbx' or '$(ArxAppType)'=='dbxnet'">_DBXAPP;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<PreprocessorDefinitions Condition="'$(ArxAppType)'=='crx' or '$(ArxAppType)'=='crxnet'">_CRXAPP;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<PreprocessorDefinitions Condition="'$(ArxAppType)'=='arx' or '$(ArxAppType)'=='arxnet'">_ACRXAPP;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<AdditionalUsingDirectories>$(ArxSdkDir)\inc-$(Platform);%(AdditionalUsingDirectories)</AdditionalUsingDirectories>
+		</ClCompile>
+		<ResourceCompile>
+			<PreprocessorDefinitions>_UNICODE;UNICODE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<AdditionalIncludeDirectories>$(IntDir)</AdditionalIncludeDirectories>
+		</ResourceCompile>
+		<Link>
+			<AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+			<AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+			<TargetMachine Condition="'$(Platform)'=='x64'">MachineX64</TargetMachine>
+		</Link>
+	</ItemDefinitionGroup>
+</Project>

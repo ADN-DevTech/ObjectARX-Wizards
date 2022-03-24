@@ -1,16 +1,21 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
 
 	<?define RTMProductVersion = "18.0.0"?> <!-- The first one - do not edit -->
-	<?define ProductVersion = "19.1.0"?>
-	<?define UpgradeCode = "{737C88C2-4A99-44F0-AD3D-32EEE71DF54D}"?>
-	
-	<Product 
-		Id="*" 
+	<?define ProductVersion = "24.2.0"?>
+  <!--Updated UpgradeCode GUID "{EC180F3B-DCAB-4B1B-8687-27EECC32BA01}"?> for ObjectARX 2023-->
+	<?define UpgradeCode = "{80ED4BE6-55B8-4B5F-80AD-ACF397B09A18}"?>
+  <!--Updated Product GUID "{0404FB62-C6AB-47F5-BBB6-357E3184E87D}"?> for ObjectARX 2023-->
+  <?define ProductCode= "{B131D267-4B0C-4CC4-93C5-534A9FC0773A}"?>
+  
+  
+
+  <Product
+		Id="$(var.ProductCode)"
 		Codepage="1252" 
 		Language="1033" 
 		Manufacturer="Autodesk" 
-		Name="ObjectARX 2014 Wizards" 
+		Name="ObjectARX 2023 Wizards" 
 		UpgradeCode="$(var.UpgradeCode)" 
 		Version="$(var.ProductVersion)"
 	>
@@ -21,35 +26,41 @@
 		InstallPrivileges="elevated" 			
 		InstallerVersion="300" 
 		Languages="1033" 
-		Manufacturer="by Cyrille Fauvel" 
-		Platform="x86"
+		Manufacturer="by Cyrille Fauvel, Madhukar Moogala" 
+		Platform="x64"
 	/>
 
 	<Media Id="1" Cabinet="ObjectARXWizards.cab" EmbedCab="yes" CompressionLevel="high" VolumeLabel="DISK #1'" />
-	<Icon Id="ObjectARXWizards.ico" SourceFile="..\_Installs\VC\vcprojects\Autodesk\ArxAppWiz.ico" />
+	<Icon Id="ObjectARXWizards.ico" SourceFile="..\_Installs\VC\vcprojects\Autodesk\ArxAppWiz2023.ico" />
 	
 	<?include directory.wxi ?>
 	<?include feature.wxi ?>
 	<?include property.wxi ?>
 	<?include UI.wxi ?>
 
-	<Condition Message="Microsoft Visual Studio Pro/Premium/Ultimate 2010/2012 or Visual C++ Express Edition 2010/2012 must be present on the target machine.">
-		<![CDATA[VS2010_PRO_VC OR VC2010_EXPRESS_VC OR VS2012_PRO_VC OR VS2012_EXPRESS_VC]]>
+	<Condition Message="Microsoft Visual Studio Pro/Premium/Ultimate 2019 must be present on the target machine.">
+		<![CDATA[VS2019_ROOT_FOLDER]]>
 	</Condition>
-	<Condition Message="This application requires .NET Framework 4.0. Please install the .NET Framework then run this installer again.">
+	<Condition Message="This application requires minimum  .NET Framework 4.5. Please install the .NET Framework then run this installer again.">
 		<![CDATA[MsiNetAssemblySupport >= "4.0"]]>
 	</Condition>
-	<!-- Condition Message="You need to be an administrator to install this product.">
+	<!-- 
+  Condition Message="You need to be an administrator to install this product.">
 		Privileged
-	</Condition -->
+	</Condition 
+  -->
 	
 	<!-- http://blogs.msdn.com/b/jschaffe/archive/2012/10/23/creating-wix-custom-actions-in-c-and-passing-parameters.aspx -->
-	<Binary Id="ArxWizPatchFiles.dll" SourceFile="Binary\ArxWizPatchFiles.CA.dll" />
-	<CustomAction Id="CA_PatchVSFiles" BinaryKey="ArxWizPatchFiles.dll" DllEntry="PatchVSFiles" Execute="immediate" Return="check" />
-	<Property Id="VSList" Value="VS2010_PRO_VC;VC2010_EXPRESS_VC;VS2012_PRO_VC;VS2012_EXPRESS_VC" />
-	<Property Id="ArxWizList" Value="ArxAppWiz;ArxAppWiz182;ArxAtlWizComWrapper;ArxAtlWizDynProp;ArxWizCustomObject;ArxWizJig;ArxWizMFCSupport;ArxWizNETWrapper;ArxWizReactors" />
-	<CustomAction Id="CA_PatchHTMLWizFiles" BinaryKey="ArxWizPatchFiles.dll" DllEntry="PatchHTMLWizFiles" Execute="immediate" Return="check" />
-	<CustomAction Id="CA_PatchPropsWizFiles" BinaryKey="ArxWizPatchFiles.dll" DllEntry="PatchPropsWizFiles" Execute="immediate" Return="check" />
+
+  <!--For Debugging-->
+  <Property Id="WIX_CA_LOGGING" Value="0" />
+  <!--End-->
+	<Binary Id="ID_CABinary" SourceFile="Binary\ArxWizCustomAction.CA.dll" />
+	<CustomAction Id="CA_PatchVSFiles" BinaryKey="ID_CABinary" DllEntry="PatchVSFiles" Execute="immediate" Return="check" />
+	<Property Id="VSList" Value="VS2019_ROOT_FOLDER" />
+	<Property Id="ArxWizList" Value="ArxAppWiz2023;ArxAppWizOMF2023;ArxAtlWizComWrapper;ArxAtlWizDynProp;ArxWizCustomObject;ArxWizJig;ArxWizMFCSupport;ArxWizNETWrapper;ArxWizReactors" />
+	<CustomAction Id="CA_PatchHTMLWizFiles" BinaryKey="ID_CABinary" DllEntry="PatchHTMLWizFiles" Execute="immediate" Return="check" />
+	<CustomAction Id="CA_PatchPropsWizFiles" BinaryKey="ID_CABinary" DllEntry="PatchPropsWizFiles" Execute="immediate" Return="check" />
 	
 	<InstallUISequence> <!-- msiexec /i -->
 		<Custom Action="CA_TARGETDIR" After="AppSearch"><![CDATA[TARGETDIR=""]]></Custom>
@@ -60,8 +71,7 @@
 		
 		<Show Dialog="FatalErrorForm" OnExit="error"><![CDATA[NOT HideFatalErrorForm]]></Show>
 		<Show Dialog="UserExitForm" OnExit="cancel" />
-		<Show Dialog="FinishedForm" OnExit="success" />
-		
+		<Show Dialog="FinishedForm" OnExit="success" />		
 		<Custom Action="PreventDowngrading" After="FindRelatedProducts"><![CDATA[NEWERPRODUCTFOUND]]></Custom>
 	</InstallUISequence>
 	<InstallExecuteSequence>
@@ -69,7 +79,6 @@
 		<Custom Action="CA_PatchVSFiles" After="InstallFinalize"><![CDATA[REINSTALL OR NOT Installed]]></Custom>
 		<Custom Action="CA_PatchHTMLWizFiles" After="InstallFinalize"><![CDATA[REINSTALL OR NOT Installed]]></Custom>
 		<Custom Action="CA_PatchPropsWizFiles" After="InstallFinalize"><![CDATA[REINSTALL OR NOT Installed]]></Custom>
-		
 		<Custom Action="PreventDowngrading" After="FindRelatedProducts"><![CDATA[NEWERPRODUCTFOUND]]></Custom>
 		<RemoveExistingProducts Before="InstallInitialize" /> 
 	</InstallExecuteSequence>
@@ -80,8 +89,7 @@
 		<Custom Action="CA_AdminUISequence" Before="CostInitialize"></Custom>
 		<Show Dialog="WelcomeForm" Before="CostFinalize"><![CDATA[Installed="" AND NOT RESUME]]></Show>
 		<Show Dialog="ResumeForm" Before="CostFinalize"><![CDATA[Installed="" AND RESUME]]></Show>
-		<Show Dialog="ProgressForm" Before="ExecuteAction" />
-		
+		<Show Dialog="ProgressForm" Before="ExecuteAction" />		
 		<Show Dialog="FatalErrorForm" OnExit="error"><![CDATA[NOT HideFatalErrorForm]]></Show>
 		<Show Dialog="UserExitForm" OnExit="cancel" />
 		<Show Dialog="AdminFinishedForm" OnExit="success" />

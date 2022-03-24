@@ -1,4 +1,4 @@
-// (C) Copyright 2005-2007 by Autodesk, Inc. 
+// (C) Copyright 2005-2022 by Autodesk, Inc. 
 //
 // Permission to use, copy, modify, and distribute this software in
 // object code form for any purpose and without fee is hereby granted, 

@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Include xmlns="http://schemas.microsoft.com/wix/2006/wi">
 
-	<Binary Id="DefBannerBitmap" SourceFile="Binary\DefBannerBitmap.bmp" />
-	<Binary Id="UpFldrBtn" SourceFile="Binary\UpFldrBtn.ico" />
-	<Binary Id="NewFldrBtn" SourceFile="Binary\NewFldrBtn.ico" />
+	<Binary Id="DefBannerBitmap" SourceFile="Installerbitmaps\DefBannerBitmap.bmp" />
+	<Binary Id="UpFldrBtn" SourceFile="Installerbitmaps\UpFldrBtn.ico" />
+	<Binary Id="NewFldrBtn" SourceFile="Installerbitmaps\NewFldrBtn.ico" />
 
-	<UI>
-	
+	<UI>	
 		<TextStyle Id="VSI_MS_Sans_Serif13.0_0_0" FaceName="MS Sans Serif" Size="9" Red="0" Green="0" Blue="0" />
 		<TextStyle Id="VSI_MS_Sans_Serif16.0_1_0" FaceName="MS Sans Serif" Size="12" Red="0" Green="0" Blue="0" Bold="yes" />
 		<TextStyle Id="VsdDefaultUIFont.524F4245_5254_5341_4C45_534153783400" FaceName="MS Sans Serif" Size="9" Red="0" Green="0" Blue="0" />
