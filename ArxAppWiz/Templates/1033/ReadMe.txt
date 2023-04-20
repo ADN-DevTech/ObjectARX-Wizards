@@ -11,11 +11,11 @@ File, like this:
   #7 	<AcadDir Condition="'$(Platform)'=='x64'">[acad.exe path on your x64 windows platform]</AcadDir>
   #8	<ArxSdkDir>[the location you installed the ObjectARX SDK]</ArxSdkDir>
   
-Note the Wizards installer also provided an ObjectARX 2020.props file for your convenience as example in
+Note the Wizards installer also provided an ObjectARX 2022.props file for your convenience as example in
 case you want to have multiple configuration (Checkout the Wizards install directory).
 To undestand and use .props file, please visit the Microsoft WEB site at http://msdn.microsoft.com/en-us/library/a4xbdz1e.aspx
 and http://blogs.msdn.com/b/visualstudio/archive/2010/05/14/a-guide-to-vcxproj-and-props-file-structure.aspx
-In Visual Studio 2019, the .props editor is in -> View -> Other Windows -> Property Manager
+In Visual Studio 2022, the .props editor is in -> View -> Other Windows -> Property Manager
 
 -----------------------------------------------------------------------------
 StdAfx.h, StdAfx.cpp

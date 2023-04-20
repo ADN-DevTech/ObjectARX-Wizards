@@ -22,7 +22,7 @@
     <CLRSupport>[!output ARX_CLR_SUPPORT]</CLRSupport>
     <UseOfMfc>[!output ARX_MFC_SUPPORT]</UseOfMfc>
     <!-- <UseOfAtl>[!output ARX_ATL_SUPPORT]</UseOfAtl> -->
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)'=='Debug'" Label="Configuration">
     <UseDebugLibraries>true</UseDebugLibraries>
@@ -45,11 +45,10 @@
   </ImportGroup>
   <ImportGroup Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="Autodesk.arx-2022.props" />
+    <Import Project="Autodesk.arx-2024.props" />
   </ImportGroup>
   <PropertyGroup Label="Configuration">
-    <PlatformToolset Condition="'$(ArxSDKPlatform)'=='v141'">v141</PlatformToolset>
-    <PlatformToolset Condition="'$(ArxSDKPlatform)'=='v142'">v142</PlatformToolset>
+    <PlatformToolset Condition="'$(ArxSDKPlatform)'=='v143'">v143</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup />

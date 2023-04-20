@@ -12,18 +12,17 @@
 	
 	<CustomAction Id="CA_TARGETDIR" Property="TARGETDIR" Value="[ProgramFilesFolder][Manufacturer]\[ProductName]" Execute="firstSequence" />
 	<Property Id="ARXPATH" Value="C:\ObjectARX" />
-	<Property Id="ACAD" Value="C:\Program Files\Autodesk\AutoCAD 2022\">
+	<Property Id="ACAD" Value="C:\Program Files\Autodesk\AutoCAD 2024\">
     <!--Tip: To find out Install Registry path, launch accoreconsole of Target AutoCAD release.
       accoreconsole
       (vl-load-com)
       (vlax-product-key)
       -->
 		<RegistrySearch Id="__427D247C67494BD09B6055D05EEB4F8D"    
-			Root="HKLM" Key="SOFTWARE\Autodesk\AutoCAD\R24.1\ACAD-5101\Install" Name="INSTALLDIR" Type="directory" />
+			Root="HKLM" Key="SOFTWARE\Autodesk\AutoCAD\R24.3\ACAD-7101\Install" Name="INSTALLDIR" Type="directory" />
 	</Property>
-	 
-  <!--VS 2019-->
-  <PropertyRef Id="VS2019_ROOT_FOLDER"/>
+	<!--VS 2022-->
+	<PropertyRef Id="VS2022_ROOT_FOLDER"/>
 
 	<!-- ARP support -->
 	<Property Id="ARPCOMMENTS" Value="Autodesk Developer Network" />

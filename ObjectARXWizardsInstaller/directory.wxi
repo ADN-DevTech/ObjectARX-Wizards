@@ -6,10 +6,8 @@
 			<File Id="_40710A89F7F94DB2AA13FB5F2A201C82" Name="rxsdk_common.props" Vital="yes" DiskId="1" Source="..\_Installs\rxsdk_common.props" />
 			<File Id="_AEB19F421DAF4198A890D52FD5219690" Name="crx.props" Vital="yes" DiskId="1" Source="..\_Installs\crx.props" />
       <!--TOCHANGE-->
-      <File Id="_282302ED25AB4831A7408AD254ADB976" Name="Autodesk.arx-2022.props" Vital="yes" DiskId="1" Source="..\_Installs\Autodesk.arx-2022.props"/>
-      <File Id="_EDFFAE5F321444FB97061F3D5C783160" Name="Autodesk.arx-2022-net.props" Vital="yes" DiskId="1" Source="..\_Installs\Autodesk.arx-2022-net.props"/>
-      <File Id="_5E6A401EE70E43B5BCCD272514B109F7" Name="Autodesk.arx-2021.props" Vital="yes" DiskId="1" Source="..\_Installs\Autodesk.arx-2021.props"/>
-      <File Id="_95DC0ED94AEF474CAD07E95DDF2A3456" Name="Autodesk.arx-2021-net.props" Vital="yes" DiskId="1" Source="..\_Installs\Autodesk.arx-2021-net.props"/>
+      <File Id="_282302ED25AB4831A7408AD254ADB976" Name="Autodesk.arx-2024.props" Vital="yes" DiskId="1" Source="..\_Installs\Autodesk.arx-2024.props"/>
+      <File Id="_EDFFAE5F321444FB97061F3D5C783160" Name="Autodesk.arx-2024-net.props" Vital="yes" DiskId="1" Source="..\_Installs\Autodesk.arx-2024-net.props"/>
       <!--TOCHANGE-->
     </Component>
 		<!-- ArxWizCommon -->
@@ -58,8 +56,8 @@
 						<File Id="_DB76CADAEB064776AE0C01754B50EB2C" Name="Templates.inf" Vital="yes" DiskId="1" />
 						<File Id="_1F64FFC27F5346819231EED4E92148B6" Name="x64win32.vcxproj" Vital="yes" DiskId="1" />
             <!--TOCHANGE-->
-						<File Id="_74010FE82AA242CB9D74FA2CDE580853" Name="Autodesk.arx-2022.props" Vital="yes" DiskId="1" />
-						<File Id="_2CB33E78959E438D923E6A38C414E7B0" Name="Autodesk.arx-2022-net.props" Vital="yes" DiskId="1" />
+						<File Id="_74010FE82AA242CB9D74FA2CDE580853" Name="Autodesk.arx-2024.props" Vital="yes" DiskId="1" />
+						<File Id="_2CB33E78959E438D923E6A38C414E7B0" Name="Autodesk.arx-2024-net.props" Vital="yes" DiskId="1" />
             <!--TOCHANGE-->
 						<File Id="_84C6F8A1775C47EAABB0AACDCEF7D3D4" Name="crx.props" Vital="yes" DiskId="1" />
 						<File Id="_AB09DEDB791F4FFFBEF8BA410A416D29" Name="acrxEntryPoint.cpp" Vital="yes" DiskId="1" />
@@ -476,21 +474,21 @@
 			</Directory>
 		</Directory>
 
-  <!-- Visual Studio 2019 -->
-    <Directory Id="VS2019_ROOT_FOLDER">
-      <Directory Id ="D_VS2019COMMON7FOLDER" Name="Common7">
-        <Directory Id="D_VS2019IDEFOLDER" Name="IDE">
-          <Directory Id ="D_VS2019VCFOLDER" Name="VC">
+  <!-- Visual Studio 2022 -->
+    <Directory Id="VS2022_ROOT_FOLDER">
+      <Directory Id ="D_VS2022COMMON7FOLDER" Name="Common7">
+        <Directory Id="D_VS22022IDEFOLDER" Name="IDE">
+          <Directory Id ="D_VS2022VCFOLDER" Name="VC">
             <Directory Id="D__0AD8EEEF2AC34C67985E09326A0FA549" Name="vcprojects" >
               <Directory Id="D__4173148965BA43B0A49BC46FD0A82CAD" Name="Autodesk" >
                 <Component Id="C__48D1BDED57B84CD1B42306D18579E7DG" Guid="{3CEC802F-F867-4AB2-99E1-2D369ED5942E}" KeyPath="yes">
-                  <Condition><![CDATA[VS2019_ROOT_FOLDER <> TARGETDIR]]></Condition>
-                  <File Id="_48D1BDED57B84CD1B42306D18579E7DG" Name="ArxAppWiz2022.ico" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCProjects\Autodesk\ArxAppWiz2022.ico" />
-                  <File Id="_BC568206D9E547D78106769B06E4EBBD" Name="ArxAppWiz2022.vsz" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCProjects\Autodesk\ArxAppWiz2022.vsz" />
-                  <File Id="_545328F7922842DDACE90A1E6F18B6CD" Name="ArxAppWiz2022.vsdir" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCProjects\Autodesk\ArxAppWiz2022.vsdir" />
-                  <File Id="_48D1BDED78B84CD1B89406D18579E7DF" Name="ArxAppWizOMF2022.ico" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCProjects\Autodesk\ArxAppWizOMF2022.ico" />
-                  <File Id="_BC568243D9E547D78105999B06E4EBBD" Name="ArxAppWizOMF2022.vsz" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCProjects\Autodesk\ArxAppWizOMF2022.vsz" />
-                  <File Id="_54532547922842756BE80A1E6F18B6CD" Name="ArxAppWizOMF2022.vsdir" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCProjects\Autodesk\ArxAppWizOMF2022.vsdir" />
+                  <Condition><![CDATA[VS2022_ROOT_FOLDER <> TARGETDIR]]></Condition>
+                  <File Id="_48D1BDED57B84CD1B42306D18579E7DG" Name="ArxAppWiz2024.ico" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCProjects\Autodesk\ArxAppWiz2024.ico" />
+                  <File Id="_BC568206D9E547D78106769B06E4EBBD" Name="ArxAppWiz2024.vsz" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCProjects\Autodesk\ArxAppWiz2024.vsz" />
+                  <File Id="_545328F7922842DDACE90A1E6F18B6CD" Name="ArxAppWiz2024.vsdir" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCProjects\Autodesk\ArxAppWiz2024.vsdir" />
+                  <File Id="_48D1BDED78B84CD1B89406D18579E7DF" Name="ArxAppWizOMF2024.ico" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCProjects\Autodesk\ArxAppWizOMF2024.ico" />
+                  <File Id="_BC568243D9E547D78105999B06E4EBBD" Name="ArxAppWizOMF2024.vsz" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCProjects\Autodesk\ArxAppWizOMF2024.vsz" />
+                  <File Id="_54532547922842756BE80A1E6F18B6CD" Name="ArxAppWizOMF2024.vsdir" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCProjects\Autodesk\ArxAppWizOMF2024.vsdir" />
                 </Component>
               </Directory>
             </Directory>
@@ -498,21 +496,21 @@
             <Directory Id="D__62854D5D598C4882A86D57B876DA57CD" Name="vcprojectitems" >
               <Directory Id="D__1DAFA0EE56B8404F846FB8EEB0EE9335" Name="ObjectARX" >
                 <Component Id="C__126D0E77114A47DB8812539796A8FFFC" Guid="{76E4CB97-74BA-4041-B231-F94973D91D4A}" KeyPath="yes">
-                  <Condition><![CDATA[VS2019_ROOT_FOLDER <> TARGETDIR]]></Condition>
-                  <File Id="_F7DE1D6EEEBB4798AFB48B156A1F8B0A" Name="ArxAtlWizComWrapper.ico" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCAddClass\ObjectARX2022\ArxAtlWizComWrapper.ico" />
-                  <File Id="_2E32B71BA98F4DEC805521BFFF31DF9E" Name="ArxAtlWizComWrapper.vsz" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCAddClass\ObjectARX2022\ArxAtlWizComWrapper.vsz" />
-                  <File Id="_7929ED8ED7FE4210B9EC47A457C983D5" Name="ArxAtlWizDynProp.ico" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCAddClass\ObjectARX2022\ArxAtlWizDynProp.ico" />
-                  <File Id="_EB2A71EB9B254C10B84DE59428BF378E" Name="ArxAtlWizDynProp.vsz" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCAddClass\ObjectARX2022\ArxAtlWizDynProp.vsz" />
-                  <File Id="_9E821712BE6353E388927D6571DF69EF" Name="ArxWizCustomObject.ico" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCAddClass\ObjectARX2022\ArxWizCustomObject.ico" />
-                  <File Id="_D389B4C73C4646E1AEEFB918C9A0009B" Name="ArxWizCustomObject.vsz" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCAddClass\ObjectARX2022\ArxWizCustomObject.vsz" />
-                  <File Id="_BF0602B410B8461BAFB9CD00794AD30A" Name="ArxWizJig.ico" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCAddClass\ObjectARX2022\ArxWizJig.ico" />
-                  <File Id="_126D0E77124B47DB8812539796A8FFFC" Name="ArxWizJig.vsz" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCAddClass\ObjectARX2022\ArxWizJig.vsz" />
-                  <File Id="_FA15D0D9C9EA21BC8120F7AF02BFF912" Name="ArxWizMFCSupport.ico" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCAddClass\ObjectARX2022\ArxWizMFCSupport.ico" />
-                  <File Id="_65970F6E622A4BE4968118ECB6B634C6" Name="ArxWizMFCSupport.vsz" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCAddClass\ObjectARX2022\ArxWizMFCSupport.vsz" />
-                  <File Id="_87B0D50A29823C80AF084C48D617EFC5" Name="ArxWizNETWrapper.ico" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCAddClass\ObjectARX2022\ArxWizNETWrapper.ico" />
-                  <File Id="_662760DEA2C451718060433C49AA98E2" Name="ArxWizNETWrapper.vsz" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCAddClass\ObjectARX2022\ArxWizNETWrapper.vsz" />
-                  <File Id="_B2027CB25B623F37AAB7CA5CD54C30EE" Name="ArxWizReactors.ico" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCAddClass\ObjectARX2022\ArxWizReactors.ico" />
-                  <File Id="_8A76692FB2E656409C2348A0E4F9F8DA" Name="ArxWizReactors.vsz" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCAddClass\ObjectARX2022\ArxWizReactors.vsz" />
+                  <Condition><![CDATA[VS2022_ROOT_FOLDER <> TARGETDIR]]></Condition>
+                  <File Id="_F7DE1D6EEEBB4798AFB48B156A1F8B0A" Name="ArxAtlWizComWrapper.ico" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCAddClass\ObjectARX2024\ArxAtlWizComWrapper.ico" />
+                  <File Id="_2E32B71BA98F4DEC805521BFFF31DF9E" Name="ArxAtlWizComWrapper.vsz" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCAddClass\ObjectARX2024\ArxAtlWizComWrapper.vsz" />
+                  <File Id="_7929ED8ED7FE4210B9EC47A457C983D5" Name="ArxAtlWizDynProp.ico" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCAddClass\ObjectARX2024\ArxAtlWizDynProp.ico" />
+                  <File Id="_EB2A71EB9B254C10B84DE59428BF378E" Name="ArxAtlWizDynProp.vsz" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCAddClass\ObjectARX2024\ArxAtlWizDynProp.vsz" />
+                  <File Id="_9E821712BE6353E388927D6571DF69EF" Name="ArxWizCustomObject.ico" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCAddClass\ObjectARX2024\ArxWizCustomObject.ico" />
+                  <File Id="_D389B4C73C4646E1AEEFB918C9A0009B" Name="ArxWizCustomObject.vsz" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCAddClass\ObjectARX2024\ArxWizCustomObject.vsz" />
+                  <File Id="_BF0602B410B8461BAFB9CD00794AD30A" Name="ArxWizJig.ico" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCAddClass\ObjectARX2024\ArxWizJig.ico" />
+                  <File Id="_126D0E77124B47DB8812539796A8FFFC" Name="ArxWizJig.vsz" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCAddClass\ObjectARX2024\ArxWizJig.vsz" />
+                  <File Id="_FA15D0D9C9EA21BC8120F7AF02BFF912" Name="ArxWizMFCSupport.ico" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCAddClass\ObjectARX2024\ArxWizMFCSupport.ico" />
+                  <File Id="_65970F6E622A4BE4968118ECB6B634C6" Name="ArxWizMFCSupport.vsz" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCAddClass\ObjectARX2024\ArxWizMFCSupport.vsz" />
+                  <File Id="_87B0D50A29823C80AF084C48D617EFC5" Name="ArxWizNETWrapper.ico" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCAddClass\ObjectARX2024\ArxWizNETWrapper.ico" />
+                  <File Id="_662760DEA2C451718060433C49AA98E2" Name="ArxWizNETWrapper.vsz" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCAddClass\ObjectARX2024\ArxWizNETWrapper.vsz" />
+                  <File Id="_B2027CB25B623F37AAB7CA5CD54C30EE" Name="ArxWizReactors.ico" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCAddClass\ObjectARX2024\ArxWizReactors.ico" />
+                  <File Id="_8A76692FB2E656409C2348A0E4F9F8DA" Name="ArxWizReactors.vsz" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCAddClass\ObjectARX2024\ArxWizReactors.vsz" />
                 </Component>
               </Directory>
             </Directory>

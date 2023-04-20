@@ -29,7 +29,7 @@ library [!output RDS_SYMB][!output SAFE_PROJECT_NAME]Lib
 	//----- tab and finally typing the full path at the Executable files section.
 
 	//----- Importing english is ok here. Autodesk doesn't localize this idl/tlb.
-	//----- axdb16enu.tlb is guaranteed to be available in all locales.
+	//----- axdb24enu.tlb is guaranteed to be available in all locales.
 	//----- If you want to provide localized typelib then you must import
 	//----- localized tlb here.
 	importlib("axdb24enu.tlb");

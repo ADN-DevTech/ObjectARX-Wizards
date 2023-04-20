@@ -55,9 +55,8 @@
 
     <!-- ObjectARX -->
     <ComponentRef Id="C__3CB44E97F42E46E887E1610C0898A33F" />
-    <!-- Visual Studio 2019 -->
-    <Feature Id="_VS2019_PRO_" Level="1">
-      <!-- Condition Level="1"><![CDATA[VS2010_PRO_VC <> TARGETDIR]]></Condition -->
+    <!-- Visual Studio 2022 -->
+    <Feature Id="_VS2022_PRO_" Level="1">      
       <ComponentRef Id="C__48D1BDED57B84CD1B42306D18579E7DG" />
       <ComponentRef Id="C__126D0E77114A47DB8812539796A8FFFC" />
     </Feature>

@@ -31,7 +31,7 @@ namespace ArxWizCustomAction
             session.Log("Begin PatchVSFiles");
             string TARGETDIR = session["TARGETDIR"];
             //This gives us the right folder where the wizard files are sitting.
-            string vcFolder = session["D_VS2019VCFOLDER"];
+            string vcFolder = session["D_VS2022VCFOLDER"];
 
             char[] delimiterChars = { ' ', ',', ';', ':', '\t' };
 
@@ -124,7 +124,7 @@ namespace ArxWizCustomAction
             session.Log(" >> PatchPropsWizFiles: ACAD = " + ACAD);
 
             DirectoryInfo di = new DirectoryInfo(TARGETDIR);
-            FileInfo[] files = di.GetFiles("*2022*.props", SearchOption.AllDirectories).ToArray();
+            FileInfo[] files = di.GetFiles("*2024*.props", SearchOption.AllDirectories).ToArray();
             session.Log(" >> PatchPropsWizFiles:   DirectoryInfo = " + files.Length.ToString());
             foreach (FileInfo file in files)
             {
@@ -133,7 +133,7 @@ namespace ArxWizCustomAction
                     session.Log(" >> PatchPropsWizFiles:   =>> " + file.FullName);
                     string szData = System.IO.File.ReadAllText(file.FullName);
                     szData = szData.Replace(@"<ArxSdkDir>C:\ObjectARX\</ArxSdkDir>", @"<ArxSdkDir>" + ARXPATH + "</ArxSdkDir>");
-                    szData = szData.Replace("<AcadDir Condition=\"'$(Platform)'=='x64'\">C:\\Program Files\\Autodesk\\AutoCAD 2022\\</AcadDir>", "<AcadDir Condition=\"'$(Platform)'=='x64'\">" + ACAD + "</AcadDir>");
+                    szData = szData.Replace("<AcadDir Condition=\"'$(Platform)'=='x64'\">C:\\Program Files\\Autodesk\\AutoCAD 2024\\</AcadDir>", "<AcadDir Condition=\"'$(Platform)'=='x64'\">" + ACAD + "</AcadDir>");
                     System.IO.File.WriteAllText(file.FullName, szData);
                 }
                 catch (Exception ex)

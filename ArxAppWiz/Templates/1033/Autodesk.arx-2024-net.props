@@ -4,7 +4,7 @@
 
     <!-- http://msdn.microsoft.com/en-us/library/ms171458.aspx -->
     <PropertyGroup>
-        <_ProjectFileVersion>24.1</_ProjectFileVersion>
+        <_ProjectFileVersion>24.3</_ProjectFileVersion>
         <_PropertySheetDisplayName>ObjectARX .Net</_PropertySheetDisplayName>
         <TargetExt>.dll</TargetExt>
     </PropertyGroup>

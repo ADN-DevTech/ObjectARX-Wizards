@@ -1,5 +1,5 @@
 VSWIZARD 7.0
-Wizard=VsWizard.VsWizardEngine.16.0
+Wizard=VsWizard.VsWizardEngine.17.0
 Param="WIZARD_NAME = MayaCommand"
 Param="ABSOLUTE_PATH = [TARGETDIR]MayaCommand"
 Param="FALLBACK_LCID = 1033"

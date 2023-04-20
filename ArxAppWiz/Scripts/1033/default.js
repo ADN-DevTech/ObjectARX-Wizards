@@ -45,8 +45,8 @@ function OnFinish(selProj, selObj) {
       wizard.AddSymbol("ARX_CLR_SUPPORT", "false");
     }
     //TOCHANGE Must change for every release.
-    CopyPropsFile("Autodesk.arx-2022.props", strProjectName);
-    CopyPropsFile("Autodesk.arx-2022-net.props", strProjectName);
+    CopyPropsFile("Autodesk.arx-2024.props", strProjectName);
+    CopyPropsFile("Autodesk.arx-2024-net.props", strProjectName);
     //TOCHANGE
     CopyPropsFile("crx.props", strProjectName);
 
@@ -66,7 +66,7 @@ function OnFinish(selProj, selObj) {
 function CreateArxProject(strProjectName, strProjectPath, strProjTemplate) {
   try {
     /* var strProjTemplatePath =wizard.FindSymbol ("ABSOLUTE_PATH") ;
-		var strProjTemplate =strProjTemplatePath + "\\Templates\\1033\\x64win32.vcxproj" ;
+    var strProjTemplate =strProjTemplatePath + "\\Templates\\1033\\x64win32.vcxproj" ;
  */
     var Solution = dte.Solution;
     var strSolutionName = "";
@@ -118,7 +118,7 @@ function GetTargetName(strName, strProjectName) {
   }
 }
 
-function SetFileProperties(projfile, strName) {}
+function SetFileProperties(projfile, strName) { }
 
 //-----------------------------------------------------------------------------
 function RenderPrjToTemporaryFile() {
