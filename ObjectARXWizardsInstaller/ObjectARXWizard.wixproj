@@ -6,9 +6,9 @@
     <ProductVersion>3.10</ProductVersion>
     <ProjectGuid>72a35aed-2f44-4ea1-9d48-6ef062d2aab4</ProjectGuid>
     <SchemaVersion>2.0</SchemaVersion>
-    <OutputName>ObjectARXWizard2024</OutputName>
+    <OutputName>ObjectARXWizard</OutputName>
     <OutputType>Package</OutputType>
-    <Name>ObjectARXWizard2024</Name>
+    <Name>ObjectARXWizard</Name>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
     <OutputPath>bin\$(Configuration)\</OutputPath>
@@ -43,8 +43,9 @@
     <Error Text="The WiX Toolset v3.11 (or newer) build tools must be installed to build this project. To download the WiX Toolset, see http://wixtoolset.org/releases/" />
   </Target>
   <PropertyGroup>
-    <PostBuildEvent>del /F $(SolutionDir)$(SolutionName).zip
-7z a -tzip  $(SolutionDir)$(SolutionName).zip $(TargetDir)$(SolutionName).msi</PostBuildEvent>
+    <PostBuildEvent>if exist $(SolutionDir)$(SolutionName).zip del /F $(SolutionDir)$(SolutionName).zip
+7z a -tzip  $(SolutionDir)$(SolutionName).zip $(TargetDir)$(SolutionName).msi
+7z l  $(SolutionDir)$(SolutionName).zip</PostBuildEvent>
   </PropertyGroup>
   <!--
 	To modify your build process, add your task inside one of the targets below and uncomment it.

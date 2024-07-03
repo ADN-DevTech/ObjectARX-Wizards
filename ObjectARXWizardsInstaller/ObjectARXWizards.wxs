@@ -2,11 +2,11 @@
 <Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
 
 	<?define RTMProductVersion = "18.0.0"?> <!-- The first one - do not edit -->
-	<?define ProductVersion = "24.2.0"?>
-  <!--Updated UpgradeCode GUID "{7092FED1-4FCC-4565-A8B6-44DCD4583F92}"?> for ObjectARX 2024-->
-	<?define UpgradeCode = "{7092FED1-4FCC-4565-A8B6-44DCD4583F92}"?>
-  <!--Updated Product GUID "{8046A89B-41DD-4779-A741-64A601603076}"?> for ObjectARX 2024-->
-  <?define ProductCode= "{8046A89B-41DD-4779-A741-64A601603076}"?>
+	<?define ProductVersion = "25.0.0"?>
+    <!--UpgradeCode GUID "{7092FED1-4FCC-4565-A8B6-44DCD4583F92}"?> for ObjectARX 2024-->
+	<?define UpgradeCode = "{02697296-654E-4100-9E4E-144B943DD625}"?>
+	<!--Product GUID "{8046A89B-41DD-4779-A741-64A601603076}"?> for ObjectARX 2024-->
+	<?define ProductCode= "{AB65E222-EAB0-494E-AC65-07BF30A915F3}"?>
   
   
 
@@ -15,7 +15,7 @@
 		Codepage="1252" 
 		Language="1033" 
 		Manufacturer="Autodesk" 
-		Name="ObjectARX 2024 Wizards" 
+		Name="ObjectARX 2025 Wizards" 
 		UpgradeCode="$(var.UpgradeCode)" 
 		Version="$(var.ProductVersion)"
 	>
@@ -31,7 +31,7 @@
 	/>
 
 	<Media Id="1" Cabinet="ObjectARXWizards.cab" EmbedCab="yes" CompressionLevel="high" VolumeLabel="DISK #1'" />
-	<Icon Id="ObjectARXWizards.ico" SourceFile="..\_Installs\VC\vcprojects\Autodesk\ArxAppWiz2024.ico" />
+	<Icon Id="ObjectARXWizards.ico" SourceFile="..\_Installs\VC\vcprojects\Autodesk\ArxAppWiz2025.ico" />
 	
 	<?include directory.wxi ?>
 	<?include feature.wxi ?>
@@ -58,7 +58,7 @@
 	<Binary Id="ID_CABinary" SourceFile="Binary\ArxWizCustomAction.CA.dll" />
 	<CustomAction Id="CA_PatchVSFiles" BinaryKey="ID_CABinary" DllEntry="PatchVSFiles" Execute="immediate" Return="check" />
 	<Property Id="VSList" Value="VS2022_ROOT_FOLDER" />
-	<Property Id="ArxWizList" Value="ArxAppWiz2024;ArxAppWizOMF2024;ArxAtlWizComWrapper;ArxAtlWizDynProp;ArxWizCustomObject;ArxWizJig;ArxWizMFCSupport;ArxWizNETWrapper;ArxWizReactors" />
+	<Property Id="ArxWizList" Value="ArxAppWiz2025;ArxAppWizOMF2025;ArxAtlWizComWrapper;ArxAtlWizDynProp;ArxWizCustomObject;ArxWizJig;ArxWizMFCSupport;ArxWizNETWrapper;ArxWizReactors" />
 	<CustomAction Id="CA_PatchHTMLWizFiles" BinaryKey="ID_CABinary" DllEntry="PatchHTMLWizFiles" Execute="immediate" Return="check" />
 	<CustomAction Id="CA_PatchPropsWizFiles" BinaryKey="ID_CABinary" DllEntry="PatchPropsWizFiles" Execute="immediate" Return="check" />
 	

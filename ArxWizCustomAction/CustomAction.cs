@@ -1,11 +1,13 @@
 using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Linq;
 using Microsoft.Deployment.WindowsInstaller;
-using System.Text.RegularExpressions;
 using System.IO;
+using System.Xml;
+using System.Text.RegularExpressions;
+using System.Xml.Linq;
 using System.Diagnostics;
+using System.Windows.Forms;
 
 //Written by Madhukar Moogala ADN
 
@@ -13,6 +15,7 @@ namespace ArxWizCustomAction
 {
     public static class CustomActions
     {
+
 
         /// <summary>
         /// The Objective of this custom action is, we will replace [TARGETDIRECTORY] which is retrieved at time of Installation session in to
@@ -25,9 +28,7 @@ namespace ArxWizCustomAction
         [CustomAction]
         public static ActionResult PatchVSFiles(Session session)
         {
-#if DEBUG
-            System.Diagnostics.Debugger.Launch();
-#endif
+
             session.Log("Begin PatchVSFiles");
             string TARGETDIR = session["TARGETDIR"];
             //This gives us the right folder where the wizard files are sitting.
@@ -52,36 +53,31 @@ namespace ArxWizCustomAction
                 try
                 {
                     session.Log(" >> PatchVSFiles:   ArxWizList =>> " + file.FullName);
-                    string szData = System.IO.File.ReadAllText(file.FullName);
+                    string szData = File.ReadAllText(file.FullName);
                     szData = szData.Replace("[TARGETDIR]", TARGETDIR);
-                    System.IO.File.WriteAllText(file.FullName, szData);
+                    File.WriteAllText(file.FullName, szData);
                     session.Log("\n" + szData);
                 }
                 catch (Exception ex)
                 {
                     session.Log(ex.Message);
+                    return ActionResult.Failure;
                 }
             }
             session.Log("Ending PatchVSFiles");
             return (ActionResult.Success);
         }
 
-        /// <summary>
-        /// This custom action updates the default.htm with user given registered developer symbol [RDS]
-        /// </summary>
-        /// <param name="session"></param>
-        /// <returns>ActionResult</returns>
+       
         [CustomAction]
         public static ActionResult PatchHTMLWizFiles(Session session)
         {
-#if DEBUG
-            System.Diagnostics.Debugger.Launch();
-#endif
+
             session.Log("Begin PatchHTMLWizFiles");
             string TARGETDIR = session["TARGETDIR"];
-            string RDS = session["RDS"];
+            string RDS = String.IsNullOrEmpty(session["RDS"]) ? "ADSK" : session["RDS"];
             session.Log(" >> PatchHTMLWizFiles: RDS = " + RDS + " / TARGETDIR = " + TARGETDIR);
-            //C:\Program Files (x86)\Autodesk\ObjectARX 2021 Wizards\
+            //C:\Program Files (x86)\Autodesk\ObjectARX 2025 Wizards\
 
             DirectoryInfo di = new DirectoryInfo(TARGETDIR);
             FileInfo[] files = di.GetFiles("default.htm", SearchOption.AllDirectories)
@@ -92,13 +88,14 @@ namespace ArxWizCustomAction
                 try
                 {
                     session.Log(" >> PatchHTMLWizFiles:   =>> " + file.FullName);
-                    string szData = System.IO.File.ReadAllText(file.FullName);
-                    szData = szData.Replace("<SYMBOL NAME='RDS_SYMB' TYPE='text' VALUE='asdk'></SYMBOL>", "<SYMBOL NAME='RDS_SYMB' TYPE='text' VALUE='" + RDS + "'></SYMBOL>");
-                    System.IO.File.WriteAllText(file.FullName, szData);
+                    string szData = File.ReadAllText(file.FullName);
+                    szData = szData.Replace("ADSK", RDS);
+                    File.WriteAllText(file.FullName, szData);
                 }
                 catch (Exception ex)
                 {
                     session.Log(ex.Message);
+                    return ActionResult.Failure;
                 }
             }
 
@@ -114,31 +111,45 @@ namespace ArxWizCustomAction
         [CustomAction]
         public static ActionResult PatchPropsWizFiles(Session session)
         {
+#if DEBUG
+            int processId = Process.GetCurrentProcess().Id;
+            string message = string.Format("Please attach the debugger to process [{0}].", processId);
+            MessageBox.Show(message, "Debug");
+#endif    
             session.Log("Begin PatchPropsWizFiles");
+            //Debugger.Break () ;
 
             string TARGETDIR = session["TARGETDIR"];
             string ARXPATH = session["ARXPATH"];
             session.Log(" >> PatchPropsWizFiles: ARXPATH = " + ARXPATH + " / TARGETDIR = " + TARGETDIR);
-            //C:\Program Files (x86)\Autodesk\ObjectARX 2022 Wizards\
+            //C:\Program Files (x86)\Autodesk\ObjectARX 2025 Wizards\
             string ACAD = session["ACAD"];
             session.Log(" >> PatchPropsWizFiles: ACAD = " + ACAD);
 
             DirectoryInfo di = new DirectoryInfo(TARGETDIR);
-            FileInfo[] files = di.GetFiles("*2024*.props", SearchOption.AllDirectories).ToArray();
+            FileInfo[] files = di.GetFiles("*2025.props", SearchOption.AllDirectories).ToArray();
             session.Log(" >> PatchPropsWizFiles:   DirectoryInfo = " + files.Length.ToString());
+            var _arxpath = ARXPATH;
+            var _acad = ACAD;
             foreach (FileInfo file in files)
             {
                 try
                 {
                     session.Log(" >> PatchPropsWizFiles:   =>> " + file.FullName);
-                    string szData = System.IO.File.ReadAllText(file.FullName);
-                    szData = szData.Replace(@"<ArxSdkDir>C:\ObjectARX\</ArxSdkDir>", @"<ArxSdkDir>" + ARXPATH + "</ArxSdkDir>");
-                    szData = szData.Replace("<AcadDir Condition=\"'$(Platform)'=='x64'\">C:\\Program Files\\Autodesk\\AutoCAD 2024\\</AcadDir>", "<AcadDir Condition=\"'$(Platform)'=='x64'\">" + ACAD + "</AcadDir>");
-                    System.IO.File.WriteAllText(file.FullName, szData);
+                    string content = File.ReadAllText(file.FullName);
+                    content = content.Replace(@"C:\ObjectARX\", _arxpath);
+                    var from = @"C:\Program Files\Autodesk\AutoCAD 2025\"; 
+                    var to = _acad;
+                    session.Log($" >> PatchPropsWizFiles:   =>> replacing {from} with {to}");
+                    content = content.Replace(from, to);
+                    File.WriteAllText(file.FullName, content);
+                    session.Log(" >> PatchPropsWizFiles:   =>> saving"); 
+
                 }
                 catch (Exception ex)
                 {
                     session.Log(ex.Message);
+                    return ActionResult.Failure;
                 }
 
             }

@@ -1,26 +1,30 @@
-<?xml version="1.0" encoding="utf-8"?> 
+<?xml version="1.0" encoding="utf-8"?>
 <Include xmlns="http://schemas.microsoft.com/wix/2006/wi">
 
-	<Property Id="DefaultUIFont" Value="VsdDefaultUIFont.524F4245_5254_5341_4C45_534153783400" /> <!-- UI default font -->
-	<Property Id="ErrorDialog" Value="ErrorDialog" /> <!-- Specify the ErrorDialog name in use in UI.wxi -->
+	<Property Id="DefaultUIFont" Value="VsdDefaultUIFont.524F4245_5254_5341_4C45_534153783400" />
+	<!-- UI default font -->
+	<Property Id="ErrorDialog" Value="ErrorDialog" />
+	<!-- Specify the ErrorDialog name in use in UI.wxi -->
 	<Property Id="WelcomeForm_NextArgs" Value="ObjectARXForm" />
 	<Property Id="ObjectARXForm_PrevArgs" Value="WelcomeForm" />
 	<Property Id="ObjectARXForm_NextArgs" Value="ConfirmInstallForm" />
 	<Property Id="ConfirmInstallForm_PrevArgs" Value="ObjectARXForm" />
 	<Property Id="MaintenanceForm_Action" Value="Repair" />
 	<Property Id="AdminMaintenanceForm_Action" Value="Repair" />
-	
+
 	<CustomAction Id="CA_TARGETDIR" Property="TARGETDIR" Value="[ProgramFilesFolder][Manufacturer]\[ProductName]" Execute="firstSequence" />
-	<Property Id="ARXPATH" Value="C:\ObjectARX" />
-	<Property Id="ACAD" Value="C:\Program Files\Autodesk\AutoCAD 2024\">
-    <!--Tip: To find out Install Registry path, launch accoreconsole of Target AutoCAD release.
+	<Property Id="ARXPATH" Value="C:\ObjectARX"/>
+    <Property Id="RDS" Value="TST"/>
+	<Property Id="ACAD" Value="C:\Program Files\Autodesk\AutoCAD 2025\">
+     
+	  <!--Tip: To find out Install Registry path, launch accoreconsole of Target AutoCAD release.
       accoreconsole
       (vl-load-com)
       (vlax-product-key)
       -->
-		<RegistrySearch Id="__427D247C67494BD09B6055D05EEB4F8D"    
-			Root="HKLM" Key="SOFTWARE\Autodesk\AutoCAD\R24.3\ACAD-7101\Install" Name="INSTALLDIR" Type="directory" />
+		<RegistrySearch Id="__427D247C67494BD09B6055D05EEB4F8D" Root="HKLM" Key="SOFTWARE\Autodesk\AutoCAD\R25.0\ACAD-8101\Install" Name="INSTALLDIR" Type="directory" />
 	</Property>
+    
 	<!--VS 2022-->
 	<PropertyRef Id="VS2022_ROOT_FOLDER"/>
 

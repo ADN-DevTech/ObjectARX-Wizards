@@ -2,7 +2,7 @@
 //- by Cyrille Fauvel - Autodesk Developer Technical Services
 var szWizardsVersion ="20, 0, 1, 0 - December 5th, 2013" ;
 
-var szArzWizApplicationTitle ="ObjectARX/DBX Application Wizard for AutoCAD 2015" ;
+var szArzWizApplicationTitle ="ObjectARX/DBX Application Wizard for AutoCAD 2025" ;
 var szArxWizCOMWrapperTitle ="AutoCAD COM Wrapper Object" ;
 var szArxWizDynPropTitle ="AutoCAD Object Dynamic Property" ;
 var szArxWizObjectTitle ="ObjectDBX Custom Object Class Wizard" ;
@@ -16,7 +16,7 @@ var szArxMemVariableWizTitle ="Add Member Variable Wizard" ;
 
 //- Get an AutoCAD release
 function FindAutoCAD() {
-    var szPath = FindAutoCADUsingWMI("c:\\Program Files\\Autodesk\\AutoCAD 2015\\");
+    var szPath = FindAutoCADUsingWMI("C:\\Program Files\\Autodesk\\AutoCAD 2025\\");
     return (szPath);
 }
 

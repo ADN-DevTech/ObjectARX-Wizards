@@ -37,7 +37,7 @@ function OnFinish(selProj, selObj) {
       if (bArxAppType) wizard.AddSymbol("PRJ_TYPE_APP", "arxnet");
       else if (bDbxAppType) wizard.AddSymbol("PRJ_TYPE_APP", "dbxnet");
       else wizard.AddSymbol("PRJ_TYPE_APP", "crxnet");
-      wizard.AddSymbol("ARX_CLR_SUPPORT", "true");
+      wizard.AddSymbol("ARX_CLR_SUPPORT", "NetCore");
     } else {
       if (bArxAppType) wizard.AddSymbol("PRJ_TYPE_APP", "arx");
       else if (bDbxAppType) wizard.AddSymbol("PRJ_TYPE_APP", "dbx");
@@ -45,8 +45,8 @@ function OnFinish(selProj, selObj) {
       wizard.AddSymbol("ARX_CLR_SUPPORT", "false");
     }
     //TOCHANGE Must change for every release.
-    CopyPropsFile("Autodesk.arx-2024.props", strProjectName);
-    CopyPropsFile("Autodesk.arx-2024-net.props", strProjectName);
+    CopyPropsFile("Autodesk.arx-2025.props", strProjectName);
+    CopyPropsFile("Autodesk.arx-2025-net.props", strProjectName);
     //TOCHANGE
     CopyPropsFile("crx.props", strProjectName);
 

@@ -4,13 +4,13 @@
 
 	<!-- http://msdn.microsoft.com/en-us/library/ms171458.aspx -->
 	<PropertyGroup>
-		<_ProjectFileVersion>24.3</_ProjectFileVersion>
-		<_PropertySheetDisplayName>ObjectARX 2024</_PropertySheetDisplayName>
+		<_ProjectFileVersion>25.0</_ProjectFileVersion>
+		<_PropertySheetDisplayName>ObjectARX 2025</_PropertySheetDisplayName>
 	</PropertyGroup>
 
 	<!--There is No 32 Bit AutoCAD Starting From AutoCAD 2020-->
 	<PropertyGroup>
-		<AcadDir Condition="'$(Platform)'=='x64'">C:\Program Files\Autodesk\AutoCAD 2024\</AcadDir>
+		<AcadDir Condition="'$(Platform)'=='x64'">C:\Program Files\Autodesk\AutoCAD 2025\</AcadDir>
 		<AcadExe Condition="'$(ArxAppType)'=='dbx' or '$(ArxAppType)'=='dbxnet' or '$(ArxAppType)'=='arx' or '$(ArxAppType)'=='arxnet'">acad.exe</AcadExe>
 		<AcadExe Condition="'$(ArxAppType)'=='crx' or '$(ArxAppType)'=='crxnet'">accoreconsole.exe</AcadExe>
 		<ArxSdkDir>C:\ObjectARX\</ArxSdkDir>
@@ -24,8 +24,8 @@
 		<ArxAmodelerLibs>$(ArxSdkDir)\utils\amodeler\lib-$(Platform)</ArxAmodelerLibs>
 		<ArxBrepLibs>$(ArxSdkDir)\utils\brep\lib-$(Platform)</ArxBrepLibs>
 		<ArxAtilLibs>$(ArxSdkDir)\utils\Atil\Lib-$(Platform)</ArxAtilLibs>
-		<ArxSDKVersion>24.1</ArxSDKVersion>
-		<ArxSDKPlatform>v142</ArxSDKPlatform>
+		<ArxSDKVersion>25.0</ArxSDKVersion>
+		<ArxSDKPlatform>v143</ArxSDKPlatform>
 	</PropertyGroup>
 
 	<ImportGroup Label="PropertySheets">
@@ -34,7 +34,7 @@
 		<Import Condition="'$(ArxAppType)'=='arx' or '$(ArxAppType)'=='arxnet'" Project="$(ArxSdkDir)\inc\arx.props" />
 		<Import Condition="'$(Configuration)'=='Release'" Project="$(ArxSdkDir)\inc\rxsdk_Releasecfg.props" />
 		<Import Condition="'$(Configuration)'=='Debug'" Project="$(ArxSdkDir)\inc\rxsdk_Debugcfg.props" />
-		<Import Condition="'$(ArxAppType)'=='dbxnet' or '$(ArxAppType)'=='crxnet' or '$(ArxAppType)'=='arxnet'" Project="Autodesk.arx-2022-net.props" />
+		<Import Condition="'$(ArxAppType)'=='dbxnet' or '$(ArxAppType)'=='crxnet' or '$(ArxAppType)'=='arxnet'" Project="Autodesk.arx-2025-net.props" />
 	</ImportGroup>
 
 	<PropertyGroup>

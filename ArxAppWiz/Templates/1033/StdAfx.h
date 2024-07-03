@@ -27,9 +27,11 @@
 #pragma once
 #define [!output UPPER_CASE_PROJECT_NAME]_MODULE
 
-/*#ifndef
+/*
+#ifndef _ALLOW_RTCc_IN_STL
 #define _ALLOW_RTCc_IN_STL
-#endif*/
+#endif
+*/
 
 [!if IMPL_DEBUG]
 //-----------------------------------------------------------------------------
