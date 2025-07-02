@@ -1,14 +1,38 @@
 @echo off
-%~d0
-cd /d %~dp0
+setlocal enabledelayedexpansion
 
-if exist w:\nul subst w: /d
-subst w: "C:\Program Files (x86)\WiX Toolset v3.11"
+:: Set WiX tool paths - adjust if you installed WiX elsewhere
+set WIX_BIN="%ProgramFiles(x86)%\WiX Toolset v3.14\bin"
+set CANDLE=%WIX_BIN%\candle.exe
+set LIGHT=%WIX_BIN%\light.exe
+set EXT_PATH=%WIX_BIN%\WixVSExtension.dll
 
-w:\bin\candle.exe ObjectARXWizards.wxs -out temp\ObjectARXWizards.wixobj
-w:\bin\light.exe -sw1076 -b .. temp\ObjectARXWizards.wixobj -out ObjectARXWizards.msi 
-rem -ext WixUIExtension
-if exist ObjectARXWizards-2019.zip del ObjectARXWizards-2019.zip > nul
-7z a ObjectARXWizards-2019.zip ObjectARXWizards.msi > nul
+:: Input and output files
+set WXS=ObjectARXWizards.wxs
+set WIXOBJ=ObjectARXWizards.wixobj
+set MSI=ObjectARX2026Wizards.msi
 
-pause
+:: Clean old outputs
+if exist %WIXOBJ% del /f %WIXOBJ%
+if exist %MSI% del /f %MSI%
+
+echo =====================================
+echo Building installer for ObjectARX...
+echo =====================================
+
+:: Compile .wxs to .wixobj
+%CANDLE% -I. -ext WixVSExtension %WXS%
+if errorlevel 1 (
+    echo candle.exe failed. Check for syntax or missing .wxi includes.
+    exit /b 1
+)
+
+:: Link .wixobj to .msi
+%LIGHT% -ext WixVSExtension -out %MSI% %WIXOBJ%
+if errorlevel 1 (
+    echo light.exe failed. Check for unresolved symbols or bad paths.
+    exit /b 2
+)
+
+echo  Build succeeded: %MSI%
+exit /b 0

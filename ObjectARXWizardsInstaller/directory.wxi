@@ -1,38 +1,38 @@
-<?xml version="1.0" encoding="utf-8"?> 
+<?xml version="1.0" encoding="utf-8"?>
 <Include xmlns="http://schemas.microsoft.com/wix/2006/wi">
 
 	<Directory Id="TARGETDIR" Name="SourceDir" FileSource="..\">
 		<Component Id="C__2C63244EA9004D42B1A8ED79330F5B73" Guid="{3B873C54-A059-4F3A-BCC7-850B09D86DCF}" KeyPath="yes">
 			<File Id="_40710A89F7F94DB2AA13FB5F2A201C82" Name="rxsdk_common.props" Vital="yes" DiskId="1" Source="..\_Installs\rxsdk_common.props" />
 			<File Id="_AEB19F421DAF4198A890D52FD5219690" Name="crx.props" Vital="yes" DiskId="1" Source="..\_Installs\crx.props" />
-      <!--TOCHANGE-->
-      <File Id="_282302ED25AB4831A7408AD254ADB976" Name="Autodesk.arx-2025.props" Vital="yes" DiskId="1" Source="..\_Installs\Autodesk.arx-2025.props"/>
-      <File Id="_EDFFAE5F321444FB97061F3D5C783160" Name="Autodesk.arx-2025-net.props" Vital="yes" DiskId="1" Source="..\_Installs\Autodesk.arx-2025-net.props"/>
-      <!--TOCHANGE-->
-    </Component>
+			<!--TOCHANGE-->
+			<File Id="_282302ED25AB4831A7408AD254ADB976" Name="Autodesk.arx-2026.props" Vital="yes" DiskId="1" Source="..\_Installs\Autodesk.arx-2026.props"/>
+			<File Id="_EDFFAE5F321444FB97061F3D5C783160" Name="Autodesk.arx-2026-net.props" Vital="yes" DiskId="1" Source="..\_Installs\Autodesk.arx-2026-net.props"/>
+			<!--TOCHANGE-->
+		</Component>
 		<!-- ArxWizCommon -->
-		<Directory Id="D__F5D99E2E7DD44E308B16EEFFB8AA2760" Name="ArxWizCommon" >
+		<Directory Id="D__F5D99E2E7DD44E308B16EEFFB8AA2760" Name="ArxWizCommon">
 			<Component Id="C__F5D99E2E7DD44E308B16EEFFB8AA2760" Guid="{0518575C-A69B-4462-8DEB-F67AE4E3D56D}" KeyPath="yes">
 				<File Id="_F5D99E2E7DD44E308B16EEFFB8AA2760" Name="arxCommon.js" Vital="yes" DiskId="1" Source="..\ArxWizCommon\arxCommon.js" />
 			</Component>
 		</Directory>
 		<!-- ArxAppWiz -->
-		<Directory Id="D__FA04400986564113BBFE81EE0125136E" Name="ArxAppWiz" >
+		<Directory Id="D__FA04400986564113BBFE81EE0125136E" Name="ArxAppWiz">
 			<Directory Id="D__A4AB30A418C34C41AB475A34F84BFAB7" Name="1033">
 				<Component Id="C__4C39EBFD0F4047B9AC5E44CE5210FD57" Guid="{3AA40C7B-E814-4B6E-B938-DA090C92EF1E}" KeyPath="yes">
 					<File Id="_4C39EBFD0F4047B9AC5E44CE5210FD57" Name="styles.css" Vital="yes" DiskId="1" Source="..\ArxAppWiz\1033\styles.css" />
 				</Component>
 			</Directory>
-			<Directory Id="D__2F923BA9EA2040F3B535E8983A202CDB" Name="Images" >
+			<Directory Id="D__2F923BA9EA2040F3B535E8983A202CDB" Name="Images">
 				<Component Id="C__0EDCD01B118E4E3F90F79031359DFA22" Guid="{10040C74-454E-4C14-B0A5-1979BAD204C3}" KeyPath="yes">
 					<File Id="_0EDCD01B118E4E3F90F79031359DFA22" Name="spacer.gif" Vital="yes" DiskId="1" Source="..\ArxAppWiz\Images\spacer.gif"/>
 					<File Id="_38EACF5D8ACC4D06B9382148EBB57DA9" Name="ArxAppWiz.gif" Vital="yes" DiskId="1" Source="..\ArxAppWiz\Images\ArxAppWiz.gif" />
 					<File Id="_9233312D2D514D0AA94A1AAFFB031A1B" Name="ATL.gif" Vital="yes" DiskId="1" Source="..\ArxAppWiz\Images\ATL.gif" />
 					<File Id="_E736ADD45B6F495CB9B7483F46A72268" Name="MFC.gif" Vital="yes" DiskId="1" Source="..\ArxAppWiz\Images\MFC.gif"/>
-					<File Id="_F456BCA7B21C475481C16CD6AB280413" Name="ArxAppWiz_Background.gif" Vital="yes" DiskId="1" Source="..\ArxAppWiz\Images\MFC.gif"/>
+					<File Id="_F456BCA7B21C475481C16CD6AB280413" Name="ArxAppWiz_Background.gif" Vital="yes" DiskId="1" Source="..\ArxAppWiz\Images\ArxAppWiz_Background.gif"/>
 				</Component>
 			</Directory>
-			<Directory Id="D__05A2225DD16F4AF28A45A2B0333F80A6" Name="Scripts" >
+			<Directory Id="D__05A2225DD16F4AF28A45A2B0333F80A6" Name="Scripts">
 				<Directory Id="D__AA281A72FA584C7788CBF03BD2316D0D" Name="1033">
 					<Component Id="C__083C55C1ED144D42B93CA344361A880D" Guid="{B8A84E6D-6AD2-4D02-B6EB-324A602553E0}" KeyPath="yes">
 						<File Id="_083C55C1ED144D42B93CA344361A880D" Name="default.js" Vital="yes" DiskId="1" />
@@ -55,10 +55,10 @@
 					<Component Id="C__124490A32A154984B9099F86D9EB13AE" Guid="{FD0819D9-488E-4C28-AC7A-88E6C58B1D9A}" KeyPath="yes">
 						<File Id="_DB76CADAEB064776AE0C01754B50EB2C" Name="Templates.inf" Vital="yes" DiskId="1" />
 						<File Id="_1F64FFC27F5346819231EED4E92148B6" Name="x64win32.vcxproj" Vital="yes" DiskId="1" />
-            <!--TOCHANGE-->
-						<File Id="_74010FE82AA242CB9D74FA2CDE580853" Name="Autodesk.arx-2025.props" Vital="yes" DiskId="1" />
-						<File Id="_2CB33E78959E438D923E6A38C414E7B0" Name="Autodesk.arx-2025-net.props" Vital="yes" DiskId="1" />
-            <!--TOCHANGE-->
+						<!--TOCHANGE-->
+						<File Id="_74010FE82AA242CB9D74FA2CDE580853" Name="Autodesk.arx-2026.props" Vital="yes" DiskId="1" Source="..\ArxAppWiz\Templates\1033\Autodesk.arx-2026.props" />
+						<File Id="_2CB33E78959E438D923E6A38C414E7B0" Name="Autodesk.arx-2026-net.props" Vital="yes" DiskId="1" Source="..\ArxAppWiz\Templates\1033\Autodesk.arx-2026-net.props" />
+						<!--TOCHANGE-->
 						<File Id="_84C6F8A1775C47EAABB0AACDCEF7D3D4" Name="crx.props" Vital="yes" DiskId="1" />
 						<File Id="_AB09DEDB791F4FFFBEF8BA410A416D29" Name="acrxEntryPoint.cpp" Vital="yes" DiskId="1" />
 						<File Id="_260F064D91F741959DBFD321C56323D5" Name="AssemblyInfo.cpp" Vital="yes" DiskId="1" />
@@ -77,13 +77,13 @@
 			</Directory>
 		</Directory>
 		<!-- ArxAppWiz182 -->
-		<Directory Id="D__8D34B8803248402897325448061310E6" Name="ArxAppWiz182" >
+		<Directory Id="D__8D34B8803248402897325448061310E6" Name="ArxAppWiz182">
 			<Directory Id="D__73E0123020384B628787769A41D487DF" Name="1033">
 				<Component Id="C__73E0123020384B628787769A41D487DF" Guid="{005D47A2-2EBC-42A3-904A-01920E75EAB2}" KeyPath="yes">
 					<File Id="_73E0123020384B628787769A41D487DF" Name="styles.css" Vital="yes" DiskId="1" />
 				</Component>
 			</Directory>
-			<Directory Id="D__7769E93A6C614949835BE3CA10D2AD76" Name="Images" >
+			<Directory Id="D__7769E93A6C614949835BE3CA10D2AD76" Name="Images">
 				<Component Id="C__512E235A092A4455A15E514D26BB0A62" Guid="{AFC14686-34B0-4779-AB09-3F9C426806C4}" KeyPath="yes">
 					<File Id="_512E235A092A0455A15E514326BB0962" Name="spacer.gif" Vital="yes" DiskId="1" />
 					<File Id="_512E235A092456455A15E514D26BB0A62" Name="ArxAppWiz.gif" Vital="yes" DiskId="1" />
@@ -92,7 +92,7 @@
 					<File Id="_512E235A092A4455A15E514D26BB0A62" Name="ArxAppWiz_Background.gif" Vital="yes" DiskId="1" />
 				</Component>
 			</Directory>
-			<Directory Id="D__5EF0A303825D4A28B6183F9593917F07" Name="Scripts" >
+			<Directory Id="D__5EF0A303825D4A28B6183F9593917F07" Name="Scripts">
 				<Directory Id="D__A49A5B5EF744419BB914369F1B1DAEFE" Name="1033">
 					<Component Id="C__A49A5B5EF744419BB914369F1B1DAEFE" Guid="{248A9372-2F3D-4A6A-826E-20FBEDBD1F61}" KeyPath="yes">
 						<File Id="_A49A5B5EF744419BB914369F1B1DAEFE" Name="default.js" Vital="yes" DiskId="1" />
@@ -138,10 +138,10 @@
 					</Component>
 				</Directory>
 			</Directory>
-		</Directory>		
+		</Directory>
 		<!-- ArxAtlWizComWrapper -->
-		<Directory Id="D__4F3D27358BC44363A6DCD29FB167AABE" Name="ArxAtlWizComWrapper" >
-			<Directory Id="D__CA7BBC26879148CB8885DE413F4F86E3" Name="Images" >
+		<Directory Id="D__4F3D27358BC44363A6DCD29FB167AABE" Name="ArxAtlWizComWrapper">
+			<Directory Id="D__CA7BBC26879148CB8885DE413F4F86E3" Name="Images">
 				<Component Id="C__CA7BBC26879148CB8885DE413F4F86E3" Guid="{932D4D1F-5F34-42DF-8267-BD6A655E1894}" KeyPath="yes">
 					<File Id="_C56FB087D9DC41A7A83A1037A4CDCA7F" Name="spacer.gif" Vital="yes" DiskId="1" />
 					<File Id="_79B1D97D03294BB7935666C9F9D4BF2D" Name="ComWrapper.gif" Vital="yes" DiskId="1" />
@@ -157,14 +157,14 @@
 					</Component>
 				</Directory>
 			</Directory>
-			<Directory Id="D__0747C6BB29614E4A99907E71F7907557" Name="Scripts" >
+			<Directory Id="D__0747C6BB29614E4A99907E71F7907557" Name="Scripts">
 				<Directory Id="D__79DB8AEFECF5480EB45B52BF29391A7D" Name="1033">
 					<Component Id="C__79DB8AEFECF5480EB45B52BF29391A7D" Guid="{7A14EB27-4E63-4A9D-9B33-816FF73290CF}" KeyPath="yes">
 						<File Id="_13EE0EC414D144A294F6D80B60A28F0F" Name="default.js" Vital="yes" DiskId="1" />
 					</Component>
 				</Directory>
 			</Directory>
-			<Directory Id="D__091424D59EEB4603A2ED8C4F8E1EDDA7" Name="Templates" >
+			<Directory Id="D__091424D59EEB4603A2ED8C4F8E1EDDA7" Name="Templates">
 				<Directory Id="D__2679C606A26D4204AAACC34D513C2727" Name="1033">
 					<Component Id="C__2679C606A26D4204AAACC34D513C2727" Guid="{BB2B7011-7116-446B-B018-2CF45123D7D7}" KeyPath="yes">
 						<File Id="_E5CBE3F1B1674FF794B30525A175B140" Name="object.h" Vital="yes" DiskId="1" />
@@ -178,8 +178,8 @@
 			</Directory>
 		</Directory>
 		<!-- ArxAtlWizDynProp -->
-		<Directory Id="D__9AC2F5B55A3E4001ACBF2E06DB2CC40C" Name="ArxAtlWizDynProp" >
-			<Directory Id="D__79780A60E9734AC696C0FB1C80DF0CFF" Name="Images" >
+		<Directory Id="D__9AC2F5B55A3E4001ACBF2E06DB2CC40C" Name="ArxAtlWizDynProp">
+			<Directory Id="D__79780A60E9734AC696C0FB1C80DF0CFF" Name="Images">
 				<Component Id="C__79780A60E9734AC696C0FB1C80DF0CFF" Guid="{B643F1A9-B207-4A46-B3FE-2328D7EA42C6}" KeyPath="yes">
 					<File Id="_7472C8A42E9B4CEEBEDA67ABAE09986A" Name="spacer.gif" Vital="yes" DiskId="1" />
 					<File Id="_9A3AD8CEFDBE48948046270E6278BD0D" Name="DynProp.gif" Vital="yes" DiskId="1" />
@@ -195,14 +195,14 @@
 					</Component>
 				</Directory>
 			</Directory>
-			<Directory Id="D__C9F36040518143F6A1A83AB6C1F719D7" Name="Scripts" >
+			<Directory Id="D__C9F36040518143F6A1A83AB6C1F719D7" Name="Scripts">
 				<Directory Id="D__7A201455F0A2430A95261F93036063A7" Name="1033">
 					<Component Id="C__7A201455F0A2430A95261F93036063A7" Guid="{8F14C94D-AC91-4DEC-8BAC-2F59C09FDE0F}" KeyPath="yes">
 						<File Id="_60F73A3EBC9149FC8CE438BBC4BCED39" Name="default.js" Vital="yes" DiskId="1" />
 					</Component>
 				</Directory>
 			</Directory>
-			<Directory Id="D__A82039C0C17749D19F7C4427BC9D1282" Name="Templates" >
+			<Directory Id="D__A82039C0C17749D19F7C4427BC9D1282" Name="Templates">
 				<Directory Id="D__1A721FEF262944A99A31C7B317015CC6" Name="1033">
 					<Component Id="C__1A721FEF262944A99A31C7B317015CC6" Guid="{C7F08809-C862-48DD-BFD6-12C5F528BCED}" KeyPath="yes">
 						<File Id="_997BB2462BAA4477967F98618EECDA90" Name="dynprop.h" Vital="yes" DiskId="1" />
@@ -216,15 +216,15 @@
 			</Directory>
 		</Directory>
 		<!-- ArxWizCustomObject -->
-		<Directory Id="D__C79B25054C6F4DF1BFB802965B68CC84" Name="ArxWizCustomObject" >
-			<Directory Id="D__A12E876AD7BE41B2804191F87FC1DE02" Name="Images" >
+		<Directory Id="D__C79B25054C6F4DF1BFB802965B68CC84" Name="ArxWizCustomObject">
+			<Directory Id="D__A12E876AD7BE41B2804191F87FC1DE02" Name="Images">
 				<Component Id="C__2F56D80B7A1A4FDDB93C74FF200A6A7B" Guid="{09A7FE5C-73A8-4F78-8AD4-BDB8CE6F088A}" KeyPath="yes">
 					<File Id="_2F56D80B7A1A4FDDB93C74FF200A6A7B" Name="spacer.gif" Vital="yes" DiskId="1" />
 					<File Id="_402A5F2646904A3292F8D599686062FE" Name="CustomObjectBG.gif" Vital="yes" DiskId="1" />
 					<File Id="_7DF070E78BD2479B8CDE73AC86EEDAA0" Name="CustomObject.gif" Vital="yes" DiskId="1" />
 				</Component>
 			</Directory>
-			<Directory Id="D__E1EE0E1317FE400DB33FEC3E20E84DE7" Name="Scripts" >
+			<Directory Id="D__E1EE0E1317FE400DB33FEC3E20E84DE7" Name="Scripts">
 				<Directory Id="D__76FFC02E9CA749DD9C12812F6458DB95" Name="1033">
 					<Component Id="C__0CA4BCDEFEC6413E8333BB3D494A42EC" Guid="{38C4DA90-D28D-4717-8352-70AB168A64E8}" KeyPath="yes">
 						<File Id="_0CA4BCDEFEC6413E8333BB3D494A42EC" Name="default.js" Vital="yes" DiskId="1" />
@@ -241,7 +241,7 @@
 					</Component>
 				</Directory>
 			</Directory>
-			<Directory Id="D__EF350D9436724006A4CCAA22E0E5A6D7" Name="Templates" >
+			<Directory Id="D__EF350D9436724006A4CCAA22E0E5A6D7" Name="Templates">
 				<Directory Id="D__43744DD9E03E4B2ABB403BB8F0E62EB9" Name="1033">
 					<Component Id="C__9C81BACF342C4609892C98A3F0E4C4F5" Guid="{52CC5189-9093-4157-AA91-B92E760BD7B2}" KeyPath="yes">
 						<File Id="_9C81BACF342C4609892C98A3F0E4C4F5" Name="object.h" Vital="yes" DiskId="1" />
@@ -251,8 +251,8 @@
 			</Directory>
 		</Directory>
 		<!-- ArxWizJig -->
-		<Directory Id="D__5198255675D24473BF046CBD04AF4D8A" Name="ArxWizJig" >
-			<Directory Id="D__A8F53BD3FE8842FFA70F769FAC784B93" Name="Images" >
+		<Directory Id="D__5198255675D24473BF046CBD04AF4D8A" Name="ArxWizJig">
+			<Directory Id="D__A8F53BD3FE8842FFA70F769FAC784B93" Name="Images">
 				<Component Id="C__A8F53BD3FE8842FFA70F769FAC784B93" Guid="{07DB56BC-940F-4B9C-9379-39AEFCC015D3}" KeyPath="yes">
 					<File Id="_821A9E904E6B45DCAC87F9600DB3114C" Name="ArxWizJigBG.gif" Vital="yes" DiskId="1" />
 					<File Id="_C3394D6C68CA455689A278319943283B" Name="ArxWizJig.gif" Vital="yes" DiskId="1" />
@@ -266,14 +266,14 @@
 					</Component>
 				</Directory>
 			</Directory>
-			<Directory Id="D__D5EC6E07BD61479A8433E4D2FE91CA8D" Name="Scripts" >
+			<Directory Id="D__D5EC6E07BD61479A8433E4D2FE91CA8D" Name="Scripts">
 				<Directory Id="D__45D9C957C3F64ADDBAAD210E7B468605" Name="1033">
 					<Component Id="C__45D9C957C3F64ADDBAAD210E7B468605" Guid="{8888C041-A68C-40F3-BAAD-90F88B5913E4}" KeyPath="yes">
 						<File Id="_36BEECC0735F48669CD4A55179F8F6D7" Name="default.js" Vital="yes" DiskId="1" />
 					</Component>
 				</Directory>
 			</Directory>
-			<Directory Id="D__A7910070B0884668A70F56B9BFC94AB2" Name="Templates" >
+			<Directory Id="D__A7910070B0884668A70F56B9BFC94AB2" Name="Templates">
 				<Directory Id="D__63A76B38EC3442269E1BEA251FFDD2E5" Name="1033">
 					<Component Id="C__63A76B38EC3442269E1BEA251FFDD2E5" Guid="{44EC001C-FF20-43BE-9E56-7C905CE88DA8}" KeyPath="yes">
 						<File Id="_990635F1F2D24A06B103E5B94D3234AF" Name="Jig.h" Vital="yes" DiskId="1" />
@@ -283,8 +283,8 @@
 			</Directory>
 		</Directory>
 		<!-- ArxWizMFCSupport -->
-		<Directory Id="D__751C5A92BA104EB39A7CB5442C24176F" Name="ArxWizMFCSupport" >
-			<Directory Id="D__1579A6E04D46403F8C7FCF4819A0FBC3" Name="Images" >
+		<Directory Id="D__751C5A92BA104EB39A7CB5442C24176F" Name="ArxWizMFCSupport">
+			<Directory Id="D__1579A6E04D46403F8C7FCF4819A0FBC3" Name="Images">
 				<Component Id="C__14BA017F9F894A6DADC1613D6EB5AD8E" Guid="{77D935A8-17FB-4980-BCF7-A70E10B9E40B}" KeyPath="yes">
 					<File Id="_16D2E32389B643C5ACB081CE4D721150" Name="spacer.gif" Vital="yes" DiskId="1" />
 					<File Id="_14BA017F9F894A6DADC1613D6EB5AD8E" Name="MFCSupport.gif" Vital="yes" DiskId="1" />
@@ -302,14 +302,14 @@
 					</Component>
 				</Directory>
 			</Directory>
-			<Directory Id="D__9F46A584E5BE4B2CB4A329F356108866" Name="Scripts" >
+			<Directory Id="D__9F46A584E5BE4B2CB4A329F356108866" Name="Scripts">
 				<Directory Id="D__B3C5A348287C4D42B2D2E93EFADD476D" Name="1033">
 					<Component Id="C__DDD9270E04814AFB87A8B706287ADF15" Guid="{A0933B01-6177-4FDC-8136-6C3A4A4DCCCE}" KeyPath="yes">
 						<File Id="_DDD9270E04814AFB87A8B706287ADF15" Name="default.js" Vital="yes" DiskId="1" />
 					</Component>
 				</Directory>
 			</Directory>
-			<Directory Id="D__DCA84E8C1F8E4FEBB7316E9AFA0551CF" Name="Templates" >
+			<Directory Id="D__DCA84E8C1F8E4FEBB7316E9AFA0551CF" Name="Templates">
 				<Directory Id="D__D7B5AB0A6CCE4EF28674F2B7EE6BB0D6" Name="1033">
 					<Component Id="C__09D496C61C424968B3A935A17374F6EA" Guid="{3FE3BD40-1D56-47D6-BA8D-7B5E5BD28A42}" KeyPath="yes">
 						<File Id="_09D496C61C424968B3A935A17374F6EA" Name="AcFdUiFormatDialog.h" Vital="yes" DiskId="1" />
@@ -342,18 +342,18 @@
 						<File Id="_DF7CCBA2A12E413FB9B9ED641F9B8A6A" Name="childDialog.rc" Vital="yes" DiskId="1" />
 					</Component>
 				</Directory>
-			</Directory>			
+			</Directory>
 		</Directory>
 		<!-- ArxWizNETWrapper -->
-		<Directory Id="D__B676AEFA8A054E2AA32BBE44F8F4BB27" Name="ArxWizNETWrapper" >
-			<Directory Id="D__6C841DE524E242B48BCE3E0602A05A4C" Name="Images" >
+		<Directory Id="D__B676AEFA8A054E2AA32BBE44F8F4BB27" Name="ArxWizNETWrapper">
+			<Directory Id="D__6C841DE524E242B48BCE3E0602A05A4C" Name="Images">
 				<Component Id="C__2F8D246B72B54545A8BB5A9D990B04EF" Guid="{A87F250C-5152-499A-B5F4-A83977E04B05}" KeyPath="yes">
 					<File Id="_351257BE8B9743BDA7395F6CB8E26FAD" Name="spacer.gif" Vital="yes" DiskId="1" />
 					<File Id="_2F8D246B72B54545A8BB5A9D990B04EF" Name="NETSupportBG.gif" Vital="yes" DiskId="1" />
 					<File Id="_3C623298666F40F8A88E70BA3360C60D" Name="NETSupport.gif" Vital="yes" DiskId="1" />
 				</Component>
 			</Directory>
-			<Directory Id="D__FDE3EB7FE531461FBAFCB878F5398AF6" Name="Scripts" >
+			<Directory Id="D__FDE3EB7FE531461FBAFCB878F5398AF6" Name="Scripts">
 				<Directory Id="D__E3A3874478194F59B62EB15812866134" Name="1033">
 					<Component Id="C__F5B8A1535BBB435AA72C53A55A968EB5" Guid="{D655C0C1-648E-4C94-9F6D-C95085A1849F}" KeyPath="yes">
 						<File Id="_F5B8A1535BBB435AA72C53A55A968EB5" Name="default.js" Vital="yes" DiskId="1" />
@@ -367,7 +367,7 @@
 					</Component>
 				</Directory>
 			</Directory>
-			<Directory Id="D__625435530C6542AE9B02523DF601A590" Name="Templates" >
+			<Directory Id="D__625435530C6542AE9B02523DF601A590" Name="Templates">
 				<Directory Id="D__932B147579EC41B58BDE50F31DEEC87A" Name="1033">
 					<Component Id="C__36D4350C79B9416591BB06E295F708B6" Guid="{2ACFDA2C-0BB6-402B-82E9-2A2F74E5E963}" KeyPath="yes">
 						<File Id="_BA4E3720F52046C4B135D20F77BEF7A4" Name="managedWrapper.h" Vital="yes" DiskId="1" />
@@ -377,15 +377,15 @@
 			</Directory>
 		</Directory>
 		<!-- ArxWizReactors -->
-		<Directory Id="D__EB1413B0E5394B08825EA37070E3F63D" Name="ArxWizReactors" >
-			<Directory Id="D__94E2EC7FB112403DBFCE76FF1E55AA5D" Name="Images" >
+		<Directory Id="D__EB1413B0E5394B08825EA37070E3F63D" Name="ArxWizReactors">
+			<Directory Id="D__94E2EC7FB112403DBFCE76FF1E55AA5D" Name="Images">
 				<Component Id="C__143CE4FBA7FD42B1B610EFFFAA00E09D" Guid="{F74E426A-F27E-4BCA-BC82-91C8C1FE748E}" KeyPath="yes">
 					<File Id="_143CE4FBA7FD42B1B610EFFFAA00E09D" Name="spacer.gif" Vital="yes" DiskId="1" />
 					<File Id="_528336CE16594412A9676CE538435FB7" Name="Reactors.gif" Vital="yes" DiskId="1" />
 					<File Id="_6274B6111BE24DB6862FC307065B0CB4" Name="ReactorsBG.gif" Vital="yes" DiskId="1" />
 				</Component>
 			</Directory>
-			<Directory Id="D__B4265D25D6354AC8A44D52A5D1B94EFE" Name="Scripts" >
+			<Directory Id="D__B4265D25D6354AC8A44D52A5D1B94EFE" Name="Scripts">
 				<Directory Id="D__A5A203283BFA4DEF9F050EB8C4255496" Name="1033">
 					<Component Id="C__2C7672E5210E4799830DBE2524E46D09" Guid="{A1774DA5-D404-45BD-8ED8-5A8BEB8841D2}" KeyPath="yes">
 						<File Id="_2C7672E5210E4799830DBE2524E46D09" Name="default.js" Vital="yes" DiskId="1" />
@@ -400,7 +400,7 @@
 					</Component>
 				</Directory>
 			</Directory>
-			<Directory Id="D__AEB4E6578CFB404E988B400699F2DB9F" Name="Templates" >
+			<Directory Id="D__AEB4E6578CFB404E988B400699F2DB9F" Name="Templates">
 				<Directory Id="D__7DFD29BB780548E186B526B6CA60A967" Name="1033">
 					<Component Id="C__02E715ACEB904B219362AB70DA1560F3" Guid="{F21DA939-2422-4978-942F-8104A0A5725C}" KeyPath="yes">
 						<File Id="_13600A2C8FAE4823913E921B38C1241D" Name="AcDbSummaryInfoReactor_tmpl.h" Vital="yes" DiskId="1" />
@@ -463,61 +463,61 @@
 				</Directory>
 			</Directory>
 		</Directory>
-		
+
 		<!-- ObjectARX -->
 		<Directory Id="ARXPATH">
-			<Directory Id="D__573C8AF8D15B4114B7BF7F056D74ED13" Name="inc" >
+			<Directory Id="D__573C8AF8D15B4114B7BF7F056D74ED13" Name="inc">
 				<Component Id="C__3CB44E97F42E46E887E1610C0898A33F" Guid="{A486B74C-A95D-4B75-91EF-3B3141044A87}" Permanent="yes" KeyPath="yes">
 					<File Id="_3CB44E97F42E46E887E1610C0898A33F" Name="rxsdk_common.props" Vital="yes" DiskId="1" Source="..\_Installs\rxsdk_common.props" />
 					<File Id="_6B5A09110102454B841E6D746D2BD1FD" Name="crx.props" Vital="yes" DiskId="1" Source="..\_Installs\crx.props" />
-                    <File Id="_848601E0FB77432AB8747350CD7AA9E4" Name="arxEntryPoint.h" Vital="yes" DiskId="1" Source="..\_Installs\arxEntryPoint.h"/>
+					<File Id="_848601E0FB77432AB8747350CD7AA9E4" Name="arxEntryPoint.h" Vital="yes" DiskId="1" Source="..\_Installs\arxEntryPoint.h"/>
 				</Component>
 			</Directory>
 		</Directory>
 
-  <!-- Visual Studio 2022 -->
-    <Directory Id="VS2022_ROOT_FOLDER">
-      <Directory Id ="D_VS2022COMMON7FOLDER" Name="Common7">
-        <Directory Id="D_VS22022IDEFOLDER" Name="IDE">
-          <Directory Id ="D_VS2022VCFOLDER" Name="VC">
-            <Directory Id="D__0AD8EEEF2AC34C67985E09326A0FA549" Name="vcprojects" >
-              <Directory Id="D__4173148965BA43B0A49BC46FD0A82CAD" Name="Autodesk" >
-                <Component Id="C__48D1BDED57B84CD1B42306D18579E7DG" Guid="{3CEC802F-F867-4AB2-99E1-2D369ED5942E}" KeyPath="yes">
-                  <Condition><![CDATA[VS2022_ROOT_FOLDER <> TARGETDIR]]></Condition>
-                  <File Id="_48D1BDED57B84CD1B42306D18579E7DG" Name="ArxAppWiz2025.ico" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCProjects\Autodesk\ArxAppWiz2025.ico" />
-                  <File Id="_BC568206D9E547D78106769B06E4EBBD" Name="ArxAppWiz2025.vsz" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCProjects\Autodesk\ArxAppWiz2025.vsz" />
-                  <File Id="_545328F7922842DDACE90A1E6F18B6CD" Name="ArxAppWiz2025.vsdir" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCProjects\Autodesk\ArxAppWiz2025.vsdir" />
-                  <File Id="_48D1BDED78B84CD1B89406D18579E7DF" Name="ArxAppWizOMF2025.ico" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCProjects\Autodesk\ArxAppWizOMF2025.ico" />
-                  <File Id="_BC568243D9E547D78105999B06E4EBBD" Name="ArxAppWizOMF2025.vsz" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCProjects\Autodesk\ArxAppWizOMF2025.vsz" />
-                  <File Id="_54532547922842756BE80A1E6F18B6CD" Name="ArxAppWizOMF2025.vsdir" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCProjects\Autodesk\ArxAppWizOMF2025.vsdir" />
-                </Component>
-              </Directory>
-            </Directory>
-            <!--Two Directories One For ArxProject and other for adding custom wrappers and classes-->
-            <Directory Id="D__62854D5D598C4882A86D57B876DA57CD" Name="vcprojectitems" >
-              <Directory Id="D__1DAFA0EE56B8404F846FB8EEB0EE9335" Name="ObjectARX" >
-                <Component Id="C__126D0E77114A47DB8812539796A8FFFC" Guid="{76E4CB97-74BA-4041-B231-F94973D91D4A}" KeyPath="yes">
-                  <Condition><![CDATA[VS2022_ROOT_FOLDER <> TARGETDIR]]></Condition>
-                  <File Id="_F7DE1D6EEEBB4798AFB48B156A1F8B0A" Name="ArxAtlWizComWrapper.ico" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCAddClass\ObjectARX2025\ArxAtlWizComWrapper.ico" />
-                  <File Id="_2E32B71BA98F4DEC805521BFFF31DF9E" Name="ArxAtlWizComWrapper.vsz" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCAddClass\ObjectARX2025\ArxAtlWizComWrapper.vsz" />
-                  <File Id="_7929ED8ED7FE4210B9EC47A457C983D5" Name="ArxAtlWizDynProp.ico" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCAddClass\ObjectARX2025\ArxAtlWizDynProp.ico" />
-                  <File Id="_EB2A71EB9B254C10B84DE59428BF378E" Name="ArxAtlWizDynProp.vsz" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCAddClass\ObjectARX2025\ArxAtlWizDynProp.vsz" />
-                  <File Id="_9E821712BE6353E388927D6571DF69EF" Name="ArxWizCustomObject.ico" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCAddClass\ObjectARX2025\ArxWizCustomObject.ico" />
-                  <File Id="_D389B4C73C4646E1AEEFB918C9A0009B" Name="ArxWizCustomObject.vsz" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCAddClass\ObjectARX2025\ArxWizCustomObject.vsz" />
-                  <File Id="_BF0602B410B8461BAFB9CD00794AD30A" Name="ArxWizJig.ico" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCAddClass\ObjectARX2025\ArxWizJig.ico" />
-                  <File Id="_126D0E77124B47DB8812539796A8FFFC" Name="ArxWizJig.vsz" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCAddClass\ObjectARX2025\ArxWizJig.vsz" />
-                  <File Id="_FA15D0D9C9EA21BC8120F7AF02BFF912" Name="ArxWizMFCSupport.ico" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCAddClass\ObjectARX2025\ArxWizMFCSupport.ico" />
-                  <File Id="_65970F6E622A4BE4968118ECB6B634C6" Name="ArxWizMFCSupport.vsz" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCAddClass\ObjectARX2025\ArxWizMFCSupport.vsz" />
-                  <File Id="_87B0D50A29823C80AF084C48D617EFC5" Name="ArxWizNETWrapper.ico" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCAddClass\ObjectARX2025\ArxWizNETWrapper.ico" />
-                  <File Id="_662760DEA2C451718060433C49AA98E2" Name="ArxWizNETWrapper.vsz" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCAddClass\ObjectARX2025\ArxWizNETWrapper.vsz" />
-                  <File Id="_B2027CB25B623F37AAB7CA5CD54C30EE" Name="ArxWizReactors.ico" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCAddClass\ObjectARX2025\ArxWizReactors.ico" />
-                  <File Id="_8A76692FB2E656409C2348A0E4F9F8DA" Name="ArxWizReactors.vsz" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCAddClass\ObjectARX2025\ArxWizReactors.vsz" />
-                </Component>
-              </Directory>
-            </Directory>
-          </Directory>
-        </Directory>
-      </Directory>
-    </Directory>
- </Directory>	
+		<!-- Visual Studio 2022 -->
+		<Directory Id="VS2022_ROOT_FOLDER">
+			<Directory Id ="D_VS2022COMMON7FOLDER" Name="Common7">
+				<Directory Id="D_VS22022IDEFOLDER" Name="IDE">
+					<Directory Id ="D_VS2022VCFOLDER" Name="VC">
+						<Directory Id="D__0AD8EEEF2AC34C67985E09326A0FA549" Name="vcprojects">
+							<Directory Id="D__4173148965BA43B0A49BC46FD0A82CAD" Name="Autodesk">
+								<Component Id="C__48D1BDED57B84CD1B42306D18579E7DG" Guid="{3CEC802F-F867-4AB2-99E1-2D369ED5942E}" KeyPath="yes">
+									<Condition><![CDATA[VS2022_ROOT_FOLDER <> TARGETDIR]]></Condition>
+									<File Id="_48D1BDED57B84CD1B42306D18579E7DG" Name="ArxAppWiz.ico" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCProjects\Autodesk\ArxAppWiz.ico" />
+									<File Id="_BC568206D9E547D78106769B06E4EBBD" Name="ArxAppWiz.vsz" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCProjects\Autodesk\ArxAppWiz.vsz" />
+									<File Id="_545328F7922842DDACE90A1E6F18B6CD" Name="ArxAppWiz.vsdir" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCProjects\Autodesk\ArxAppWiz.vsdir" />
+									<File Id="_48D1BDED78B84CD1B89406D18579E7DF" Name="ArxAppWizOMF.ico" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCProjects\Autodesk\ArxAppWizOMF.ico" />
+									<File Id="_BC568243D9E547D78105999B06E4EBBD" Name="ArxAppWizOMF.vsz" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCProjects\Autodesk\ArxAppWizOMF.vsz" />
+									<File Id="_54532547922842756BE80A1E6F18B6CD" Name="ArxAppWizOMF.vsdir" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCProjects\Autodesk\ArxAppWizOMF.vsdir" />
+								</Component>
+							</Directory>
+						</Directory>
+						<!--Two Directories One For ArxProject and other for adding custom wrappers and classes-->
+						<Directory Id="D__62854D5D598C4882A86D57B876DA57CD" Name="vcprojectitems">
+							<Directory Id="D__1DAFA0EE56B8404F846FB8EEB0EE9335" Name="ObjectARX">
+								<Component Id="C__126D0E77114A47DB8812539796A8FFFC" Guid="{76E4CB97-74BA-4041-B231-F94973D91D4A}" KeyPath="yes">
+									<Condition><![CDATA[VS2022_ROOT_FOLDER <> TARGETDIR]]></Condition>
+									<File Id="_F7DE1D6EEEBB4798AFB48B156A1F8B0A" Name="ArxAtlWizComWrapper.ico" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCAddClass\ObjectARX2026\ArxAtlWizComWrapper.ico" />
+									<File Id="_2E32B71BA98F4DEC805521BFFF31DF9E" Name="ArxAtlWizComWrapper.vsz" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCAddClass\ObjectARX2026\ArxAtlWizComWrapper.vsz" />
+									<File Id="_7929ED8ED7FE4210B9EC47A457C983D5" Name="ArxAtlWizDynProp.ico" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCAddClass\ObjectARX2026\ArxAtlWizDynProp.ico" />
+									<File Id="_EB2A71EB9B254C10B84DE59428BF378E" Name="ArxAtlWizDynProp.vsz" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCAddClass\ObjectARX2026\ArxAtlWizDynProp.vsz" />
+									<File Id="_9E821712BE6353E388927D6571DF69EF" Name="ArxWizCustomObject.ico" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCAddClass\ObjectARX2026\ArxWizCustomObject.ico" />
+									<File Id="_D389B4C73C4646E1AEEFB918C9A0009B" Name="ArxWizCustomObject.vsz" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCAddClass\ObjectARX2026\ArxWizCustomObject.vsz" />
+									<File Id="_BF0602B410B8461BAFB9CD00794AD30A" Name="ArxWizJig.ico" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCAddClass\ObjectARX2026\ArxWizJig.ico" />
+									<File Id="_126D0E77124B47DB8812539796A8FFFC" Name="ArxWizJig.vsz" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCAddClass\ObjectARX2026\ArxWizJig.vsz" />
+									<File Id="_FA15D0D9C9EA21BC8120F7AF02BFF912" Name="ArxWizMFCSupport.ico" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCAddClass\ObjectARX2026\ArxWizMFCSupport.ico" />
+									<File Id="_65970F6E622A4BE4968118ECB6B634C6" Name="ArxWizMFCSupport.vsz" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCAddClass\ObjectARX2026\ArxWizMFCSupport.vsz" />
+									<File Id="_87B0D50A29823C80AF084C48D617EFC5" Name="ArxWizNETWrapper.ico" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCAddClass\ObjectARX2026\ArxWizNETWrapper.ico" />
+									<File Id="_662760DEA2C451718060433C49AA98E2" Name="ArxWizNETWrapper.vsz" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCAddClass\ObjectARX2026\ArxWizNETWrapper.vsz" />
+									<File Id="_B2027CB25B623F37AAB7CA5CD54C30EE" Name="ArxWizReactors.ico" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCAddClass\ObjectARX2026\ArxWizReactors.ico" />
+									<File Id="_8A76692FB2E656409C2348A0E4F9F8DA" Name="ArxWizReactors.vsz" Vital="yes" DiskId="1" Source="..\_Installs\VC\VCAddClass\ObjectARX2026\ArxWizReactors.vsz" />
+								</Component>
+							</Directory>
+						</Directory>
+					</Directory>
+				</Directory>
+			</Directory>
+		</Directory>
+	</Directory>
 </Include>

@@ -45,8 +45,8 @@ function OnFinish(selProj, selObj) {
       wizard.AddSymbol("ARX_CLR_SUPPORT", "false");
     }
     //TOCHANGE Must change for every release.
-    CopyPropsFile("Autodesk.arx-2025.props", strProjectName);
-    CopyPropsFile("Autodesk.arx-2025-net.props", strProjectName);
+    CopyPropsFile("Autodesk.arx-2026.props", strProjectName);
+    CopyPropsFile("Autodesk.arx-2026-net.props", strProjectName);
     //TOCHANGE
     CopyPropsFile("crx.props", strProjectName);
 

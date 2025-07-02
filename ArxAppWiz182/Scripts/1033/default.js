@@ -259,6 +259,6 @@ function MakeOmfResourceProject(selProj, strProjectPath, strProjectName) {
 //-----------------------------------------------------------------------------
 //- See arxCommon.js for details
 function FindAutoCAD() {
-	var szPath = "C:\\Program Files\\Autodesk\\AutoCAD 2025\\";
+	var szPath = "C:\\Program Files\\Autodesk\\AutoCAD 2026\\";
 	return (szPath);
 }

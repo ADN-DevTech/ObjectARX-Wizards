@@ -25,7 +25,7 @@
 //-      but are changed infrequently
 //-----------------------------------------------------------------------------
 #pragma once
-#define [!output UPPER_CASE_PROJECT_NAME]_MODULE
+#define[!output UPPER_CASE_PROJECT_NAME] _MODULE
 
 /*
 #ifndef _ALLOW_RTCc_IN_STL
@@ -46,7 +46,7 @@
     [!endif]
 #pragma pack(push, 8)
 #pragma warning(disable : 4786 4996)
-    //#pragma warning(disable: 4098)
+    // #pragma warning(disable: 4098)
 
     [!if STD_COM_SERVER || ATL_COM_SERVER || MFC_EXT_SHARED]
 //-----------------------------------------------------------------------------
@@ -143,16 +143,16 @@
     //-----------------------------------------------------------------------------
     //- Include ObjectDBX/ObjectARX headers
     //- Uncomment one of the following lines to bring a given library in your project.
-    //#define _BREP_SUPPORT_					//- Support for the BRep API
-    //#define _HLR_SUPPORT_						//- Support for the Hidden Line Removal API
-    //#define _AMODELER_SUPPORT_				//- Support for the AModeler API
+    // #define _BREP_SUPPORT_					//- Support for the BRep API
+    // #define _HLR_SUPPORT_						//- Support for the Hidden Line Removal API
+    // #define _AMODELER_SUPPORT_				//- Support for the AModeler API
     [!if APP_ARX_TYPE || APP_CRX_TYPE]
-    //#define _ASE_SUPPORT_							//- Support for the ASI/ASE API
-    //#define _RENDER_SUPPORT_					//- Support for the AutoCAD Render API
+    // #define _ASE_SUPPORT_							//- Support for the ASI/ASE API
+    // #define _RENDER_SUPPORT_					//- Support for the AutoCAD Render API
     [!if !APP_CRX_TYPE]
-    //#define _ARX_CUSTOM_DRAG_N_DROP_	//- Support for the ObjectARX Drag'n Drop API
+    // #define _ARX_CUSTOM_DRAG_N_DROP_	//- Support for the ObjectARX Drag'n Drop API
     [!endif]
-//#define _INC_LEAGACY_HEADERS_			//- Include legacy headers in this project
+// #define _INC_LEAGACY_HEADERS_			//- Include legacy headers in this project
 #include "arxHeaders.h"
 
     [!else]
@@ -168,18 +168,19 @@
 #include "DocData.h" //- Your document specific data class holder
 
     //- Declare it as an extern here so that it becomes available in all modules
-    extern AcApDataManager<CDocData> DocVars;
+    extern AcApDataManager<CDocData>
+        DocVars;
 
 [!endif]
     [!if !ATL_COM_SERVER]
     [!if DBX_COM_IMPORT]
 //-----------------------------------------------------------------------------
-#import "axdb24enu.tlb" raw_interfaces_only no_namespace
+#import "axdb25enu.tlb" raw_interfaces_only no_namespace
 
     [!endif]
     [!if ACAD_COM_IMPORT]
 //-----------------------------------------------------------------------------
-#import "acax24enu.tlb" raw_interfaces_only no_namespace
+#import "acax25enu.tlb" raw_interfaces_only no_namespace
 
     [!endif]
     [!endif]

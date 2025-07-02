@@ -69,7 +69,7 @@ namespace ArxWizPatchFiles
             return (ActionResult.Success);
         }
 
-       
+
         [CustomAction]
         public static ActionResult PatchHTMLWizFiles(Session session)
         {
@@ -80,7 +80,7 @@ namespace ArxWizPatchFiles
             string TARGETDIR = session["TARGETDIR"];
             string RDS = session["RDS"];
             session.Log(" >> PatchHTMLWizFiles: RDS = " + RDS + " / TARGETDIR = " + TARGETDIR);
-            //C:\Program Files (x86)\Autodesk\ObjectARX 2025 Wizards\
+            //C:\Program Files (x86)\Autodesk\ObjectARX 2026 Wizards\
 
             DirectoryInfo di = new DirectoryInfo(TARGETDIR);
             FileInfo[] files = di.GetFiles("default.htm", SearchOption.AllDirectories)
@@ -113,18 +113,20 @@ namespace ArxWizPatchFiles
         [CustomAction]
         public static ActionResult PatchPropsWizFiles(Session session)
         {
+#if DEBUG
+            System.Diagnostics.Debugger.Launch();
+#endif
             session.Log("Begin PatchPropsWizFiles");
-            //Debugger.Break () ;
 
             string TARGETDIR = session["TARGETDIR"];
             string ARXPATH = session["ARXPATH"];
             session.Log(" >> PatchPropsWizFiles: ARXPATH = " + ARXPATH + " / TARGETDIR = " + TARGETDIR);
-            //C:\Program Files (x86)\Autodesk\ObjectARX 2025 Wizards\
+            //C:\Program Files (x86)\Autodesk\ObjectARX 2026 Wizards\
             string ACAD = session["ACAD"];
             session.Log(" >> PatchPropsWizFiles: ACAD = " + ACAD);
 
             DirectoryInfo di = new DirectoryInfo(TARGETDIR);
-            FileInfo[] files = di.GetFiles("*2025.props", SearchOption.AllDirectories).ToArray();
+            FileInfo[] files = di.GetFiles("*2026.props", SearchOption.AllDirectories).ToArray();
             session.Log(" >> PatchPropsWizFiles:   DirectoryInfo = " + files.Length.ToString());
             foreach (FileInfo file in files)
             {

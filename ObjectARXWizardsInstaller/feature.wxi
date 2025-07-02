@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?> 
+<?xml version="1.0" encoding="utf-8"?>
 <Include xmlns="http://schemas.microsoft.com/wix/2006/wi">
 
   <Feature Id="Complete" Absent="disallow" AllowAdvertise="system" Level="1" Title="Complete">
@@ -11,7 +11,7 @@
     <ComponentRef Id="C__083C55C1ED144D42B93CA344361A880D" />
     <ComponentRef Id="C__10FB4C7AABD04D499BA475F1F46026C6" />
     <ComponentRef Id="C__124490A32A154984B9099F86D9EB13AE" />
-    <!-- ArxAppWiz18_2 -->
+    <!-- ArxAppWiz182 -->
     <ComponentRef Id="C__73E0123020384B628787769A41D487DF" />
     <ComponentRef Id="C__512E235A092A4455A15E514D26BB0A62" />
     <ComponentRef Id="C__A49A5B5EF744419BB914369F1B1DAEFE" />
@@ -56,7 +56,7 @@
     <!-- ObjectARX -->
     <ComponentRef Id="C__3CB44E97F42E46E887E1610C0898A33F" />
     <!-- Visual Studio 2022 -->
-    <Feature Id="_VS2022_PRO_" Level="1">      
+    <Feature Id="_VS2022_PRO_" Level="1">
       <ComponentRef Id="C__48D1BDED57B84CD1B42306D18579E7DG" />
       <ComponentRef Id="C__126D0E77114A47DB8812539796A8FFFC" />
     </Feature>
