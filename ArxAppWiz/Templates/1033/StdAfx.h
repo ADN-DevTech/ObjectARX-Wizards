@@ -25,7 +25,7 @@
 //-      but are changed infrequently
 //-----------------------------------------------------------------------------
 #pragma once
-#define[!output UPPER_CASE_PROJECT_NAME] _MODULE
+#define [!output UPPER_CASE_PROJECT_NAME] _MODULE
 
 /*
 #ifndef _ALLOW_RTCc_IN_STL
