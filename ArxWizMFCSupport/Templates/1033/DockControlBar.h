@@ -45,7 +45,7 @@ public:
 	virtual ~[!output CLASS_NAME] ();
 
 protected:
-	virtual BOOL Create (CWnd *pParent, LPCSTR lpszTitle) ;
+	virtual BOOL Create (CWnd *pParent, LPCTSTR lpszTitle) ;
 	virtual void SizeChanged (CRect *lpRect, BOOL bFloating, int flags) ;
 
 	afx_msg int OnCreate (LPCREATESTRUCT lpCreateStruct) ;
