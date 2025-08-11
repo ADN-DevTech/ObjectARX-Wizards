@@ -74,9 +74,8 @@ static CLSID cls[!output CLASS_NAME] = {0xeab78c04, 0x2194, 0x47ad, {0xa4, 0xf2,
 #endif
 
 //-----------------------------------------------------------------------------
-BOOL [!output CLASS_NAME]::Create (CWnd *pParent, LPCSTR lpszTitle) {
-	CString strWndClass ;
-	strWndClass =AfxRegisterWndClass (CS_DBLCLKS, LoadCursor (NULL, IDC_ARROW)) ;
+BOOL [!output CLASS_NAME]::Create (CWnd *pParent, LPCTSTR lpszTitle) {
+	LPCTSTR strWndClass = AfxRegisterWndClass (CS_DBLCLKS, LoadCursor (NULL, IDC_ARROW)) ;
 	CRect rect (0, 0, 250, 200) ;
 	if (![!output BASE_CLASS]::Create (
 			strWndClass, lpszTitle, WS_VISIBLE | WS_CHILD | WS_CLIPCHILDREN,
